@@ -79,9 +79,15 @@ permalink: /resume/
 * Developed automated testing software for product in advance of FDA approval submission 
 * Created and maintained detailed documentation for all development goals and software changes
 
+<br/>
+
+Download \[[pdf][resume-pdf]\] \[[docx][resume-docx]\]
+
 [formlabs]: https://formlabs.com/
 [c2t]: http://www.change2target.com/
 [bmw]: https://www.bmwusfactory.com/
 [nus]: http://www.nus.edu.sg/
 [deka]: http://www.dekaresearch.com/
 [jupyter-dashboards]: https://github.com/jupyter/dashboards
+[resume-pdf]: /static/resume/Alec_Rosenbaum_Resume.pdf
+[resume-docx]: /static/resume/Alec_Rosenbaum_Resume.docx
