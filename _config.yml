@@ -16,8 +16,7 @@
 title: Alec Rosenbaum
 email: alec.p.rosenbaum@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  This is a small site that aims to show some of the things I enjoy working
-  on in my spare time!
+  This is a small site that aims to show some of weekend and afternoon projects!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://alecr95.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  alecr95
