@@ -25,7 +25,7 @@ permalink: /resume/
 ## Education
 
 ### Swanson School of Engineering, University of Pittsburgh
-* Computer Engineering – **GPA: 3.693 – Major GPA: 3.98**
+* Computer Engineering – **GPA: 3.693** – **Major GPA: 3.98**
 * Awarded Honor Student Designation within Swanson School
 * Expected Graduation **Dec 2017**
 
@@ -73,7 +73,7 @@ permalink: /resume/
 * Software used for device programming and data interaction 
 * Lab developed custom hardware and performed testing on-site using primates 
  
-### Computer Engineering (Intern) at [DEKA][deka]
+### Computer Engineer (Intern) at [DEKA][deka]
 #### Summer 2014
 * Member of team developing software for clients in medical device industry 
 * Developed automated testing software for product in advance of FDA approval submission 
