@@ -42,18 +42,18 @@ permalink: /resume/
 
 ## Projects
 
+#### Elevator Simulation and Analysis (Course Project)
+
+* Event-based simulator written in Python that logs actor's state changes to a local database
+* Implementation of various "smart" and simple elevator algorithms
+* Analytics performed using SQLite, Python, and matplotlib to show how the elevator algorithm influenced queue lengths, wait times, service times, and coorelations between these elements.
+
 #### Passive Notifications for Bus Arrival Times (Individual Project)
 
 * Wrote Flask server that interfaces with Port Authority's API to serve stop predictions as RSS.
 * Used Tasker to parse RSS and create a passive notification that updates while at home.
 * Writeup available [here]({% post_url 2017-08-22-truetime-rss-android %}
 )
-
-#### Elevator Simulation and Analysis (Course Project)
-
-* Event-based simulator written in Python that logs actor's state changes to a local database
-* Implementation of various "smart" and simple elevator algorithms
-* Analytics performed using SQLite, Python, and matplotlib to show how the elevator algorithm influenced queue lengths, wait times, service times, and coorelations between these elements.
 
 ## Experience
 
