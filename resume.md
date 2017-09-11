@@ -44,7 +44,7 @@ permalink: /resume/
 
 #### Elevator Simulation and Analysis (Course Project)
 
-* Event-based simulator written in Python that logs actor's state changes to a local database
+* Implemented an event-based simulator in Python that logs actor's state changes to a local database.
 * Implementation of various "smart" and simple elevator algorithms
 * Analytics performed using SQLite, Python, and matplotlib to show how the elevator algorithm influenced queue lengths, wait times, service times, and coorelations between these elements.
 
@@ -59,8 +59,8 @@ permalink: /resume/
 
 ### Software Engineer (Intern) at [Formlabs][formlabs]
 #### May 2017-August 2017
-* Used Python to make improvements to manufacturing software that enables automated calibration and testing.
-* Performed data analysis on manufacturing data to coorelate defects, software changes, device usage, and line operators.
+* Made improvements to manufacturing sofware that enables automated calibration and testing using Python.
+* Analyzed manufacturing data and correlated defects, software changes, device usage, and line operators.
 * Wrote, documented, reviewed, and deployed code integrated with Github 
 * Projects included:
     - Create netbooting factory architecture that allows safe and easy version control on the factory floor
@@ -72,7 +72,7 @@ permalink: /resume/
 
 ###  Engineering Data Analyst (Co-op) at [change2target][c2t]
 #### August 2016-April 2017
-* Continued work with BMW Manufacturing remotely, as a part time team-member.
+* Invited to continue BMW Manufacturing Co-op as a remote, Part-Time team-member.
 * Designed and developed Django-based automated reporting and analytics software.
 * Solved systems-level problems to increase reliability, maintainability, speed.
 * Created and maintained detailed documentation for all development goals and software changes.  
@@ -81,12 +81,12 @@ permalink: /resume/
 #### January-May 2015, January-August 2016
 * Designed and developed Django-based automated reporting and analytics software.
 * Solved systems-level problems to increase reliability, maintainability, and speed.
-* Wrote a python framework to automate daily reporting.
+* Wrote a automate daily reporting framework using Python.
 * Created and maintained detailed documentation for all development goals and software changes.
  
 ### Research Assistant at [National University of Singapore][nus]
 #### Summer 2015
-* Used C to implemented UART-based communication protocol for custom hardware used in nerve-based neuroprosthetics.
+* Implemented a UART-based communication protocol for custom hardware used in nerve-based neuroprosthetics using C.
 * Lab developed custom hardware and performed testing on-site using primates.
  
 ### Computer Engineer (Intern) at [DEKA][deka]
