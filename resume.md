@@ -72,7 +72,7 @@ permalink: /resume/
 
 ###  Engineering Data Analyst (Co-op) at [change2target][c2t]
 #### August 2016-April 2017
-* Invited to continue BMW Manufacturing Co-op as a remote, Part-Time team-member.
+* Invited to continue BMW Manufacturing Co-op as a remote, part-time team-member.
 * Designed and developed Django-based automated reporting and analytics software.
 * Solved systems-level problems to increase reliability, maintainability, speed.
 * Created and maintained detailed documentation for all development goals and software changes.  
