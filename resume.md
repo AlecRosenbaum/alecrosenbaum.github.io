@@ -81,7 +81,7 @@ permalink: /resume/
 #### January-May 2015, January-August 2016
 * Designed and developed Django-based automated reporting and analytics software.
 * Solved systems-level problems to increase reliability, maintainability, and speed.
-* Wrote a automate daily reporting framework using Python.
+* Wrote an automated daily reporting framework using Python.
 * Created and maintained detailed documentation for all development goals and software changes.
  
 ### Research Assistant at [National University of Singapore][nus]
