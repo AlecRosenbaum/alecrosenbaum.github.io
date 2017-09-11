@@ -45,7 +45,7 @@ permalink: /resume/
 #### Elevator Simulation and Analysis (Course Project)
 
 * Implemented an event-based simulator in Python that logs actor's state changes to a local database.
-* Implementated various "smart" and simple elevator algorithms.
+* Implemented various "smart" and simple elevator algorithms.
 * Performed analytics using SQLite, Python, and matplotlib to show how the elevator algorithm influenced queue lengths, wait times, service times, and coorelations between these elements.
 
 #### Passive Notifications for Bus Arrival Times (Individual Project)
@@ -59,7 +59,7 @@ permalink: /resume/
 
 ### Software Engineer (Intern) at [Formlabs][formlabs]
 #### May 2017-August 2017
-* Made improvements to manufacturing sofware that enables automated calibration and testing using Python.
+* Improved manufacturing sofware that enables automated calibration and testing using Python.
 * Analyzed manufacturing data and correlated defects, software changes, device usage, and line operators.
 * Wrote, documented, reviewed, and deployed code integrated with Github 
 * Projects included:
