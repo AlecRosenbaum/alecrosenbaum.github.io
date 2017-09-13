@@ -48,7 +48,7 @@ permalink: /resume/
 * Implemented various "smart" and simple elevator algorithms.
 * Performed analytics using SQLite, Python, and matplotlib to show how the elevator algorithm influenced queue lengths, wait times, service times, and correlations between these elements.
 
-#### Passive Notifications for Bus Arrival Times (Individual Project)
+#### Passive Android Notifications for Bus Arrival Times (Individual Project)
 
 * Wrote Flask server that interfaces with Port Authority's API to serve stop predictions as RSS.
 * Parsed RSS and created a passive notification that updates while at home using Tasker.
