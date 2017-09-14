@@ -46,9 +46,9 @@ function init_game(test) {
 
     if (test) {
         var p1_name = prompt("What is your name?"),
-            p1_ships = "A(A1-A5); B(B6-E6); S(H3-J3);", // prompt("Where are your ships?"),
+            p1_ships = prompt("Where are your ships?"),
             p2_name = prompt("What is your name?"),
-            p2_ships = "A(A1-A5); B(B6-E6); S(H3-J3);"; //prompt("Where are your ships?");
+            p2_ships = prompt("Where are your ships?");
 
         board = init_board(p1_name, p2_name);
 
