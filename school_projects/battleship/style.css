@@ -1,0 +1,15 @@
+.hit {
+    background-color: red;
+}
+
+.miss {
+    background-color: white;
+}
+
+.ocean {
+    background-color: lightblue;
+}
+
+.ship {
+    background-color: lightgreen;
+}
