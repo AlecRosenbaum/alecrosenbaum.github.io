@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "McDonalds Szechaun Sauce Locations"
-date:   2017-08-22 2:30:00 -0400
+date:   2017-10-04 2:30:00 -0400
 categories: szechaun sauce map fusion
 ---
 
