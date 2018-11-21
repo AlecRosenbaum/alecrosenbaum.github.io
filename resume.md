@@ -104,7 +104,7 @@ permalink: /resume/
 
 <br/>
 
-Download \[[pdf][resume-pdf]\]\]
+Download \[[pdf][resume-pdf]\]
 
 [drchrono]: https://www.drchrono.com/
 [formlabs]: https://formlabs.com/
