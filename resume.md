@@ -25,37 +25,30 @@ permalink: /resume/
 ## Education
 
 ### Swanson School of Engineering, University of Pittsburgh
-* Computer Engineering – **GPA: 3.693** – **Major GPA: 3.98**
+* Computer Engineering – **GPA: 3.72** – **Major GPA: 3.98**
 * Awarded Honor Student Designation within Swanson School
-* Expected Graduation **Dec 2017**
+* Graduated **Dec 2017**
 
 ## Skills
 
 ### Languages
 
-* Experienced: Python, SQL
-* Proficient: Java, HTML/CSS, Javascript
-* Prior Exposure: C, C++
+* Experienced: Python, SQL, HTML/CSS, Javascript
+* Prior Exposure: Java, C, C++
 
 ### Software
-* Django, Git/Github, Sublime Text, Lint, Ansible, Jupyter/iPython, Flask, Numpy, matplotlib
-
-## Projects
-
-#### Elevator Simulation and Analysis (Course Project)
-
-* Implemented an event-based simulator in Python that logs actor's state changes to a local database.
-* Implemented various "smart" and simple elevator algorithms.
-* Performed analytics using SQLite, Python, and matplotlib to show how the elevator algorithm influenced queue lengths, wait times, service times, and correlations between these elements.
-
-#### Passive Android Notifications for Bus Arrival Times (Individual Project)
-
-* Wrote Flask server that interfaces with Port Authority's API to serve stop predictions as RSS.
-* Parsed RSS and created a passive notification that updates while at home using Tasker.
-* Writeup available [here]({% post_url 2017-08-22-truetime-rss-android %}
-)
+* Django, Git/Github, Docker, Selenium, Sublime Text, Lint, Ansible, Jupyter/iPython, Flask, Numpy, matplotlib
 
 ## Experience
+
+### Full Stack Software Engineer at [drchrono][drchrono]
+#### Jan 2018 - Present
+* Responsible for new feature design, prototyping, development, testing, optimization, and deployment
+* Converted stack to use docker containers, orchestrated integration and end to end testing in CircleCI
+* Developed internal GraphQL API to simplify the frontend-backend interface
+* Developed internal CCDA serialization and parsing framework to meet Meaningful Use 2015 Standards
+* Refactored backend code to simplify models, reducing bugs through design and inline documentation
+* Tech stack includes Docker, Python, Django, Celery, AngularJS, Vanilla JS
 
 ### Software Engineer (Intern) at [Formlabs][formlabs]
 #### May 2017-August 2017
@@ -94,10 +87,26 @@ permalink: /resume/
 * Developed automated tests for android-based medical device controller in advance of FDA approval submission.
 * Created and maintained detailed documentation for all development goals and software changes.
 
+## Projects
+
+#### Elevator Simulation and Analysis (Course Project)
+
+* Implemented an event-based simulator in Python that logs actor's state changes to a local database.
+* Implemented various "smart" and simple elevator algorithms.
+* Performed analytics using SQLite, Python, and matplotlib to show how the elevator algorithm influenced queue lengths, wait times, service times, and correlations between these elements.
+
+#### Passive Android Notifications for Bus Arrival Times (Individual Project)
+
+* Wrote Flask server that interfaces with Port Authority's API to serve stop predictions as RSS.
+* Parsed RSS and created a passive notification that updates while at home using Tasker.
+* Writeup available [here]({% post_url 2017-08-22-truetime-rss-android %}
+)
+
 <br/>
 
-Download \[[pdf][resume-pdf]\] \[[docx][resume-docx]\]
+Download \[[pdf][resume-pdf]\]\]
 
+[drchrono]: https://www.drchrono.com/
 [formlabs]: https://formlabs.com/
 [c2t]: http://www.change2target.com/
 [bmw]: https://www.bmwusfactory.com/
@@ -105,4 +114,3 @@ Download \[[pdf][resume-pdf]\] \[[docx][resume-docx]\]
 [deka]: http://www.dekaresearch.com/
 [jupyter-dashboards]: https://github.com/jupyter/dashboards
 [resume-pdf]: /static/resume/Alec_Rosenbaum_Resume.pdf
-[resume-docx]: /static/resume/Alec_Rosenbaum_Resume.docx
