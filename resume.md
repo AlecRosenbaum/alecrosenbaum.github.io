@@ -27,27 +27,24 @@ permalink: /resume/
 ### Swanson School of Engineering, University of Pittsburgh
 * Computer Engineering – **GPA: 3.72** – **Major GPA: 3.98**
 * Awarded Honor Student Designation within Swanson School
-* Graduated **Dec 2017**
+* Class of 2017
 
 ## Skills
 
-### Languages
-
-* Experienced: Python, SQL, HTML/CSS, Javascript
-* Prior Exposure: Java, C, C++
-
 ### Software
-* Django, Git/Github, Docker, Selenium, Sublime Text, Lint, Ansible, Jupyter/iPython, Flask, Numpy, matplotlib
+* Django, Git/Github, Docker, AWS (Lambda, S3, EC2, etc.), pytest/pylint, Selenium, matplotlib
 
 ## Experience
 
-### Full Stack Software Engineer at [drchrono][drchrono]
-#### Jan 2018 - Present
+### Senior Software Engineer at [drchrono][drchrono]
+#### Software Engineer Jan 2018 - Feb 2019, Senior Software Engineer Feb 2019 - Present
 * Responsible for new feature design, prototyping, development, testing, optimization, and deployment
 * Converted stack to use docker containers, orchestrated integration and end to end testing in CircleCI
-* Developed internal GraphQL API to simplify the frontend-backend interface
+* Designed, developed, and deployed internal microservice to optimize pdf rendering pipeline (AWS Lambda)
+* Developed internal GraphQL API to simplify the frontend-backend interface(s)
 * Developed internal CCDA serialization and parsing framework to meet Meaningful Use 2015 Standards
-* Refactored backend code to simplify models, reducing bugs through design and inline documentation
+* Refactored backend data models, reducing bugs by improving architecture and inline documentation
+* Misc Responsibilities: On-call, PR Reviews, Page Optimization, Jr. Dev Mentorship, Dependency Upgrades
 * Tech stack includes Docker, Python, Django, Celery, AngularJS, Vanilla JS
 
 ### Software Engineer (Intern) at [Formlabs][formlabs]
