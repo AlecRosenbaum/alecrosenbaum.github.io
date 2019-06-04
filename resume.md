@@ -46,7 +46,7 @@ permalink: /resume/
 * Developed internal CCDA serialization and parsing framework to meet Meaningful Use 2015 Standards
 * Refactored backend data models, reducing bugs by improving architecture and inline documentation
 * Misc Responsibilities: On-call, PR Reviews, Page Optimization, Jr. Dev Mentorship, Dependency Upgrades
-* Tech stack includes Docker, Python, Django, Celery, AngularJS, Vanilla JS
+* Tech stack includes Docker, Python, Django, Celery, AWS, Rackspace
 
 ### Software Engineer (Intern) at [Formlabs][formlabs]
 #### May 2017-August 2017
