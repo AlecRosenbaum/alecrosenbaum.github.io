@@ -37,7 +37,8 @@ permalink: /resume/
 ## Experience
 
 ### Senior Software Engineer at [drchrono][drchrono]
-#### Software Engineer Jan 2018 - Feb 2019, Senior Software Engineer Feb 2019 - Present
+#### Senior Software Engineer Feb 2019 - Present
+#### Software Engineer Jan 2018 - Feb 2019
 * Responsible for new feature design, prototyping, development, testing, optimization, and deployment
 * Converted stack to use docker containers, orchestrated integration and end to end testing in CircleCI
 * Designed, developed, and deployed internal microservice to optimize pdf rendering pipeline (AWS Lambda)
