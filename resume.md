@@ -27,7 +27,7 @@ permalink: /resume/
 ### Swanson School of Engineering, University of Pittsburgh
 * Computer Engineering – **GPA: 3.72** – **Major GPA: 3.98**
 * Awarded Honor Student Designation within Swanson School
-* Class of 2017
+* Graduated December 2017
 
 ## Skills
 
