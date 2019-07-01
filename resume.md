@@ -22,13 +22,6 @@ permalink: /resume/
     }
 </style>
 
-## Education
-
-### Swanson School of Engineering, University of Pittsburgh
-* Computer Engineering – **GPA: 3.72** – **Major GPA: 3.98**
-* Awarded Honor Student Designation within Swanson School
-* Graduated December 2017
-
 ## Skills
 
 ### Software
@@ -84,6 +77,13 @@ permalink: /resume/
 #### Summer 2014
 * Developed automated tests for android-based medical device controller in advance of FDA approval submission.
 * Created and maintained detailed documentation for all development goals and software changes.
+
+## Education
+
+### Swanson School of Engineering, University of Pittsburgh
+* Computer Engineering – **GPA: 3.72** – **Major GPA: 3.98**
+* Awarded Honor Student Designation within Swanson School
+* Graduated December 2017
 
 ## Projects
 
