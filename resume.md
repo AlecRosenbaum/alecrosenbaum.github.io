@@ -29,8 +29,13 @@ permalink: /resume/
 
 ## Experience
 
+### Senior Software Engineer (Backend) at [Close.com][close]
+#### Sept 2019 - Present
+* TODO: Add more stuff here as I complete projects
+* Tech stack includes Docker, Python, Flask, Postgres, AWS
+
 ### Senior Software Engineer at [drchrono][drchrono]
-#### Senior Software Engineer Feb 2019 - Present
+#### Senior Software Engineer Feb 2019 - Sept 2019
 #### Software Engineer Jan 2018 - Feb 2019
 * Responsible for new feature design, prototyping, development, testing, optimization, and deployment
 * Converted stack to use docker containers, orchestrated integration and end to end testing in CircleCI
@@ -45,7 +50,7 @@ permalink: /resume/
 #### May 2017-August 2017
 * Improved manufacturing sofware that enables automated calibration and testing using Python.
 * Analyzed manufacturing data and correlated defects, software changes, device usage, and line operators.
-* Wrote, documented, reviewed, and deployed code integrated with Github 
+* Wrote, documented, reviewed, and deployed code integrated with Github
 * Projects included:
     - Create netbooting factory architecture that allows safe and easy version control on the factory floor
     - Deploy and develop web-based dashboards using [jupyter dashboards][jupyter-dashboards] for live data analytics
@@ -59,20 +64,20 @@ permalink: /resume/
 * Invited to continue BMW Manufacturing Co-op as a remote, part-time team-member.
 * Designed and developed Django-based automated reporting and analytics software.
 * Solved systems-level problems to increase reliability, maintainability, speed.
-* Created and maintained detailed documentation for all development goals and software changes.  
- 
+* Created and maintained detailed documentation for all development goals and software changes.
+
 ### Engineering Data Analyst (Co-op) at [BMW Manufacturing][bmw]
 #### January-May 2015, January-August 2016
 * Designed and developed Django-based automated reporting and analytics software.
 * Solved systems-level problems to increase reliability, maintainability, and speed.
 * Wrote an automated daily reporting framework using Python.
 * Created and maintained detailed documentation for all development goals and software changes.
- 
+
 ### Research Assistant at [National University of Singapore][nus]
 #### Summer 2015
 * Implemented a UART-based communication protocol for custom hardware used in nerve-based neuroprosthetics using C.
 * Lab developed custom hardware and performed testing on-site using primates.
- 
+
 ### Computer Engineer (Intern) at [DEKA][deka]
 #### Summer 2014
 * Developed automated tests for android-based medical device controller in advance of FDA approval submission.
@@ -104,6 +109,7 @@ permalink: /resume/
 
 Download \[[pdf][resume-pdf]\]
 
+[close]: https://www.close.com
 [drchrono]: https://www.drchrono.com/
 [formlabs]: https://formlabs.com/
 [c2t]: http://www.change2target.com/
