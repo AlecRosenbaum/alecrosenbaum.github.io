@@ -6,7 +6,6 @@ categories: wood woodworking restoration drill press
 ---
 
 
-  |
 :-------------------------:|:-------------------------:
 ![](/static/posts/drill_press/after-clean-left-side.jpg)  |  ![](/static/posts/drill_press/after-clean-right-side.jpg)
 
