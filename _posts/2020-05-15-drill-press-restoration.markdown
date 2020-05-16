@@ -2,7 +2,7 @@
 layout: post
 title:  "Vintage Drill Press Restoration"
 date:   2020-05-15 12:30:00 -0400
-categories: wood woodworking restoration drill press
+categories: woodworking
 ---
 
 
