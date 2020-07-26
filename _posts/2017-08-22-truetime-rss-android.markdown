@@ -3,9 +3,12 @@ layout: post
 title:  "Passive Bus Arrival Android Notifications"
 date:   2017-08-22 2:30:00 -0400
 categories: android truetime port-authority rss tasker flask python
+excerpt_separator: <!--more-->
 ---
 
 ![Lock Screen]({{ site.url }}/static/posts/truetime_rss/lock_screen_screenshot.png) ![Details]({{ site.url }}/static/posts/truetime_rss/notification_screenshot.png)
+
+<!--more-->
 
 As a student who lives a little far from campus and whose tuition includes free bus rides on the local public transit system (Port Authority), naturally I use them on a daily basis to get to classes. Port Authority also recently began providing an awesome service called [Truetime][truetime] that tracks where busses are in real time, and predicts when they'll arrive at certain stops.
 
@@ -67,7 +70,7 @@ Now, after spinning up a small t2.micro instance on AWS and installing the code 
 What can you do with an rss feed? Well, I chose an RSS feed because it's simple, easy to parse, and is a pretty standard way of transmitting this type of basic information. In my case, I want to have bus arrivals displayed passively on my phone in the notification tray. This seems like a job for [Tasker][tasker]!
 
 With tasker, it becomes relatively easy to a) create a task that will run every few minutes only when I'm home or near home, b) get/parse the rss, and c) create an updating notification that neatly displays the arrival times. First, I wrote a task that would produce the desired notification. This involved running a HTTP Get request, then doing a search/replace on a couple regex's to turn the feed into a csv format that can be passed to [AutoNotification][autonotification] (a tasker plugin) to diplay as a table.
-The details of how I set this up, are below: 
+The details of how I set this up, are below:
 
 ![Task]({{ site.url }}/static/posts/truetime_rss/task_screenshot.png) ![AutoNotification]({{ site.url }}/static/posts/truetime_rss/autonotification_screenshot.png)
 

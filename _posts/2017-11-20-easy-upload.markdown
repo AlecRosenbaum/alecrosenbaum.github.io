@@ -3,9 +3,12 @@ layout: post
 title:  "Easy Upload"
 date:   2017-11-20 2:30:00 -0400
 categories: go file transfer
+excerpt_separator: <!--more-->
 ---
 
-![Screenshot]({{ site.url }}/static/posts/easy_upload/main_page.png) 
+![Screenshot]({{ site.url }}/static/posts/easy_upload/main_page.png)
+
+<!--more-->
 
 So, this is a pretty small utility I wrote mostly because I had heard a lot about Go, and wanted to see what all of the hubub was about. It also provides a solution to the problem of "I want this file, over on this computer. Shit, I don't have my usb key." I have a number of little machines in my abode, one of them being plugged into the TV and acting as a media center. This script makes it way easier to transfer files over.
 
