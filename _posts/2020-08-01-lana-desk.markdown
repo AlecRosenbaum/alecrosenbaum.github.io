@@ -1,0 +1,55 @@
+---
+layout: post
+title:  "Cedar Sit-Stand Desk"
+date:   2020-08-01 00:00:00 -0400
+categories: woodworking
+---
+
+![](/static/posts/lana_desk/finished_2.jpg)
+
+I finished a desk for myself a few months ago, but my wife has been using a
+card table as her desk since we started working from home. Now she has a real
+desk!
+
+I started with some rough cut cedar from the saw mill.
+
+![](/static/posts/lana_desk/lumber_yard.jpg)
+
+Next was a lot of jointing and planing to get the boards ready for glue-up.
+They didn't all come out completely straight (particularly because these boards
+are way longer than the jointer I have), but they were good enough that if I
+oriented them correctly the gaps weren't too big. I took out all my big clamps
+for the glue up and some straight boards wrapped in cling wrap to try and
+keep everything aligned.
+
+![](/static/posts/lana_desk/glue_up.jpg)
+
+Once that had dried, I did quite a lot of sanding with a portable belt sander.
+Working may way up through the grits (80-320) took a lot of time and created
+_tons_ of fine red dust.
+
+:-------------------------:|:-------------------------:
+![](/static/posts/lana_desk/sanding_1.jpg) | ![](/static/posts/lana_desk/sanding_2.jpg)
+
+With sanding done, I cut the ends straight with a circular saw. I used a
+straight piece of wood as a guide, so the cuts came out pretty clean.
+
+Not pictured here is my failed attempt and salvage of a bad epoxy job. This
+cedar is pretty knotty, so there were a number of voids to fill to get a flat
+top. My test piece came out really well, so I moved on to the big table. It
+turns out my eyeballed mixture wasn't even. So it didn't harden. Fantastic.
+
+I was able to scrape and yank out most of what I poured, and tried again (this
+time with disposable measuring cups). Expoxy is pretty nasty stuff, so this
+process was slow and laden with PPE. The second pour hardened correctly, thank
+god. Unfortunately, the unhardened expoxy was liquid enough that it
+somewhat absored into the wood. This resulted in some dark splotches on the
+finished top. Thankfully, the cedar is pretty busy anyway so it doesn't look
+too bad.
+
+After that I put on two coats of water-based polyurethane with some light
+sanding.
+
+:-------------------------:|:-------------------------:
+![](/static/posts/lana_desk/finished_1.jpg) | ![](/static/posts/lana_desk/finished_2.jpg)
+
