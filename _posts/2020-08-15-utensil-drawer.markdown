@@ -35,11 +35,8 @@ easily stayed aligned whlie gluing.
 Below is when I remembered I should take some pictures, and shows
 me using an edger to trim the bottom flush.
 
-![](/static/posts/utensil_drawer/edge-trimmer.jpg)
-
-Lookin' good pre-finish!
-
-![](/static/posts/utensil_drawer/pre-finish.jpg)
+:-------------------------:|:-------------------------:
+![](/static/posts/utensil_drawer/edge-trimmer.jpg) | ![](/static/posts/utensil_drawer/pre-finish.jpg)
 
 
 Then just a few coats of polyurethane and Voila!
