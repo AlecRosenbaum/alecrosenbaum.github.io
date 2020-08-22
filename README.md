@@ -6,8 +6,14 @@
 
 ```bash
 for f in *.jpg;
-    do ffmpeg -y -i "$f" -q:v 2 -vf scale=-1:500 "${f%.jpg}.jpg";
+    do ffmpeg -y -i "$f" -q:v 1 -vf scale=-1:555 "${f%.jpg}.jpg";
 done
+```
+
+**Rotate an image with ffmpeg**
+
+```bash
+ffmpeg -i input.jpg -vf "transpose=clock" -y output.jpg
 ```
 
 **Run jekyll in docker**
