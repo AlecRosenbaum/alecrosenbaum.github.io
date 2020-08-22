@@ -18,6 +18,7 @@ type project. 3 months later, we were still using it with no sign of getting
 rid of it, so here we are. A slightly better version (with a hinge!).
 
 ![](/static/posts/puppy_gate/before.jpg)
+
 _Before_
 
 First things first, some designs. I knew I had some "reclaimed" (re: from
@@ -26,6 +27,7 @@ match the oak railings already in place. The dimensions for the pieces were
 largely based on what I had on-hand + the space between the banisters.
 
 ![](/static/posts/puppy_gate/sketch.jpg)
+
 _Sketch_
 
 Next, a whole lot of rabbets and dados. Each piece of the outer frame is joined
@@ -37,6 +39,7 @@ with a rabbet, and each vertical piece is dado'd in.
 Up next, glue.
 
 ![](/static/posts/puppy_gate/glue_up.jpg)
+
 _Glue Up_
 
 Finally, what turned out to be longest part of this process: painting. I knew
@@ -49,6 +52,7 @@ little bits of the previous finish were still on the surface in some places
 (making it unevenly glossy/flat).
 
 ![](/static/posts/puppy_gate/painting.jpg)
+
 _Painting the frame black_
 
 Once the black frame was done, I could peel off the tape masking off the
@@ -57,6 +61,7 @@ thing, I opted to use brush-on polyurethane instead of the stuff from a spray
 can. It's much easier to not get finish everywhere when it's brushed on.
 
 ![](/static/posts/puppy_gate/before_install.jpg)
+
 _Painting is done_
 
 To attach this to the existing bannister (without drilling into it), I attached
