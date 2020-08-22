@@ -2,11 +2,11 @@
 
 ## Snippets
 
-**Optimize a bunch of jpegs with ffmpeg**
+**Optimize and scale a bunch of jpegs with ffmpeg**
 
 ```bash
 for f in *.jpg;
-    do ffmpeg -y -i "$f" -q:v 5 "${f%.jpg}.jpg";
+    do ffmpeg -y -i "$f" -q:v 2 -vf scale=-1:500 "${f%.jpg}.jpg";
 done
 ```
 
