@@ -50,8 +50,10 @@ layout: default
 		    Accepts:
 				* An element description: {
 					tag: "tag",
-					classes: ["class"],
-					children: [{...}]
+					classes: ["class", ...],
+					styles: ["style: example;", ...],
+					events: [["event", callback], ...],
+					children: [{...}],
 				}
 				* a string (which is a text node)
 				* a DOM node (returned unchanged)
@@ -120,7 +122,7 @@ layout: default
 			{tag: "p", children: [{tag: "strong", children: [text]}]}
 		);
 
-		const properCase = (text) => (
+		const properCase = text => (
 			{
 				tag: "span",
 				styles: ["text-transform: capitalize"],
@@ -158,51 +160,55 @@ layout: default
 			}
 		};
 
+		const body = outerProps => (
+			{
+				tag: "div",
+				styles: [
+					_ => outerProps.collapsed ? "display: none" : "",
+				],
+				children: [
+					sectionHeader("Ingredients:"),
+					{
+						tag: "ul",
+						children: Object.entries(recipe.ingredients).map(
+							([name, amt], idx) => (
+								{
+									tag: "li",
+									children: [properCase(name), ` -- ${amt}`]
+								}
+							)
+						),
+					},
+					sectionHeader("Cookware:"),
+					{
+						tag: "ul",
+						children: recipe.cookware.map(
+							 item => (
+								 {tag: "li", children: [properCase(item)]}
+							 )
+						),
+					},
+					sectionHeader("Steps:"),
+					{
+						tag: "ul",
+						children: recipe.steps.map(
+							 step => ( {tag: "li", children: [step.text]} )
+						),
+					},
+				],
+			}
+		);
+
 		return createElement(
 			{
 				tag: "div",
 				children: [
 					{
 						tag: "div",
-						props: { collapsed: false, },
+						props: { collapsed: false },
 						children: [
 							props => header(props),
-							props => ({
-								tag: "div",
-								styles: [
-									_ => props.collapsed ? "display: none" : "",
-								],
-								children: [
-									sectionHeader("Ingredients:"),
-									{
-										tag: "ul",
-										children: Object.entries(recipe.ingredients).map(
-											([name, amt], idx) => (
-												{
-													tag: "li",
-													children: [properCase(name), ` -- ${amt}`]
-												}
-											)
-										),
-									},
-									sectionHeader("Cookware:"),
-									{
-										tag: "ul",
-										children: recipe.cookware.map(
-											 item => (
-												 {tag: "li", children: [properCase(item)]}
-											 )
-										),
-									},
-									sectionHeader("Steps:"),
-									{
-										tag: "ul",
-										children: recipe.steps.map(
-											 step => ( {tag: "li", children: [step.text]} )
-										),
-									},
-								],
-							}),
+							props => body(props),
 						],
 					},
 				],
