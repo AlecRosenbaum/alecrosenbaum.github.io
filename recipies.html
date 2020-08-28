@@ -34,18 +34,38 @@ layout: default
 		if (DEBUG) {
 			console.log(message);
 		}
+	};
+
+	const resolveFn = props => maybeFn => {
+		// if maybeFn is a function, call it
+		if (typeof maybeFn == "function") {
+			return maybeFn(props);
+		}
+		return maybeFn;
 	}
 
 	const createElement = (definition) => {
-		// Accepts:
-		//   {tag: "tag", classes: ["class"], children: [{...}]}
-		//   a string (which is a text node)
-		//   a DOM node (returned unchanged)
+		/*
+			Create a dom element. Supports nested children
+		    Accepts:
+				* An element description: {
+					tag: "tag",
+					classes: ["class"],
+					children: [{...}]
+				}
+				* a string (which is a text node)
+				* a DOM node (returned unchanged)
 
+			Values in element descriptions may be functions, which are called
+			as a result of rerender-triggering operations.
+		*/
+
+		// return DOM elements unchanged
 		if (definition instanceof HTMLElement) {
 			return definition;
 		}
 
+		// strings become text nodes
 		if (typeof(definition) == "string") {
 			return document.createTextNode(definition);
 		}
@@ -53,20 +73,44 @@ layout: default
 		// create element
 		const newElem = document.createElement(definition.tag);
 
+		// add props
+		const props = definition.props || {};
+		props._self = newElem;
+		newElem.props = props;
+
 		// add classes
 		const classes = definition.classes || [];
-		classes.map(newElem.classList.add);
+		classes.map(resolveFn(props)).map(newElem.classList.add);
 
 		// add styles
 		const styles = definition.styles || [];
 		newElem.setAttribute(
-			'style', styles.reduce((agg, i) => `${agg}; ${i}`, ""),
+			'style',
+			styles.map(resolveFn(props)).reduce((agg, i) => `${agg}; ${i}`, ""),
 		)
+
+		// add event listener
+		const eventListeners = definition.eventListeners || [];
+		eventListeners.map(
+			([evt, callback]) => {
+				newElem.addEventListener(
+					evt,
+					e => { callback(newElem.props)(e); return false; }
+				);
+			}
+		);
 
 		// add children
 		const children = definition.children || [];
-		const elems = children.map(createElement);
-		elems.map(x => newElem.appendChild(x));
+		children
+			.map(resolveFn(props))
+			.map(createElement)
+			.map(x => newElem.appendChild(x));
+
+		// create re-render function, which just replaces the node
+		newElem.rerender = () => {
+			return newElem.replaceWith(createElement(definition))
+		}
 
 		return newElem;
 	}
@@ -84,42 +128,86 @@ layout: default
 			}
 		);
 
+		const collapse = (collapsed, collapseCallback) => createElement(
+			{
+				tag: "span",
+				eventListeners: [
+					[
+						'click',
+						_ => e => collapseCallback(e),
+					],
+				],
+				children: [_ => collapsed ? "[+]" : "[-]"],
+			}
+		);
+
+		const header = outerProps => {
+			 return {
+				tag: "h2",
+				children: [
+					_ => collapse(
+						outerProps.collapsed,
+						e => {
+							outerProps.collapsed = !outerProps.collapsed;
+							outerProps._self.rerender()
+						},
+					),
+					" ",
+					recipe.name
+				],
+			}
+		};
+
 		return createElement(
 			{
 				tag: "div",
 				children: [
-					{ tag: "h2", children: [recipe.name] },
-					sectionHeader("Ingredients:"),
 					{
-						tag: "ul",
-						children: Object.entries(recipe.ingredients).map(
-							([name, amt], idx) => (
-								{
-									tag: "li",
-									children: [properCase(name), ` -- ${amt}`]
-								}
-							)
-						),
-					},
-					sectionHeader("Cookware:"),
-					{
-						tag: "ul",
-						children: recipe.cookware.map(
-							 item => (
-								 {tag: "li", children: [properCase(item)]}
-							 )
-						),
-					},
-					sectionHeader("Steps:"),
-					{
-						tag: "ul",
-						children: recipe.steps.map(
-							 step => ( {tag: "li", children: [step.text]} )
-						),
+						tag: "div",
+						props: { collapsed: false, },
+						children: [
+							props => header(props),
+							props => ({
+								tag: "div",
+								styles: [
+									_ => props.collapsed ? "display: none" : "",
+								],
+								children: [
+									sectionHeader("Ingredients:"),
+									{
+										tag: "ul",
+										children: Object.entries(recipe.ingredients).map(
+											([name, amt], idx) => (
+												{
+													tag: "li",
+													children: [properCase(name), ` -- ${amt}`]
+												}
+											)
+										),
+									},
+									sectionHeader("Cookware:"),
+									{
+										tag: "ul",
+										children: recipe.cookware.map(
+											 item => (
+												 {tag: "li", children: [properCase(item)]}
+											 )
+										),
+									},
+									sectionHeader("Steps:"),
+									{
+										tag: "ul",
+										children: recipe.steps.map(
+											 step => ( {tag: "li", children: [step.text]} )
+										),
+									},
+								],
+							}),
+						],
 					},
 				],
-			}
-		)
+			},
+		);
 	}
 
 	const _template = {
