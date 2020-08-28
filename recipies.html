@@ -1,0 +1,177 @@
+---
+layout: default
+---
+
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="wrapper">
+  <h1 style="text-align: center">Recipes</h1>
+
+  <div id="putta-da-recipes-here">
+	  <h3>
+	  </h3>
+  </div>
+
+</div>
+
+<script>
+
+	const DEBUG = true;
+
+	const log = (message) => {
+		if (DEBUG) {
+			console.log(message);
+		}
+	}
+
+	const createElement = (definition) => {
+		// Accepts:
+		//   {tag: "tag", classes: ["class"], children: [{...}]}
+		//   a string (which is a text node)
+		//   a DOM node (returned unchanged)
+
+		if (definition instanceof HTMLElement) {
+			return definition;
+		}
+
+		if (typeof(definition) == "string") {
+			return document.createTextNode(definition);
+		}
+
+		// create element
+		const newElem = document.createElement(definition.tag);
+
+		// add classes
+		const classes = definition.classes || [];
+		classes.map(newElem.classList.add);
+
+		// add styles
+		const styles = definition.styles || [];
+		newElem.setAttribute(
+			'style', styles.reduce((agg, i) => `${agg}; ${i}`, ""),
+		)
+
+		// add children
+		const children = definition.children || [];
+		const elems = children.map(createElement);
+		elems.map(x => newElem.appendChild(x));
+
+		return newElem;
+	}
+
+	const renderRecipe = (recipe) => {
+		const sectionHeader = (text) => (
+			{tag: "p", children: [{tag: "strong", children: [text]}]}
+		);
+
+		const properCase = (text) => (
+			{
+				tag: "span",
+				styles: ["text-transform: capitalize"],
+				children: [text],
+			}
+		);
+
+		return createElement(
+			{
+				tag: "div",
+				children: [
+					{ tag: "h2", children: [recipe.name] },
+					sectionHeader("Ingredients:"),
+					{
+						tag: "ul",
+						children: Object.entries(recipe.ingredients).map(
+							([name, amt], idx) => (
+								{
+									tag: "li",
+									children: [properCase(name), ` -- ${amt}`]
+								}
+							)
+						),
+					},
+					sectionHeader("Cookware:"),
+					{
+						tag: "ul",
+						children: recipe.cookware.map(
+							 item => (
+								 {tag: "li", children: [properCase(item)]}
+							 )
+						),
+					},
+					sectionHeader("Steps:"),
+					{
+						tag: "ul",
+						children: recipe.steps.map(
+							 step => ( {tag: "li", children: [step.text]} )
+						),
+					},
+				],
+			}
+		)
+	}
+
+	const _template = {
+		name: "name",
+		ingredients: {
+			"ingredient": "amount",
+		},
+		cookware: [
+			"description",
+		],
+		steps: [
+			{text: ""},
+		],
+	};
+	const recipes = [
+		{
+			name: "Tobasco-like Hot Sauce",
+			ingredients: {
+				peppers: "5 oz (est)",
+				"white wine vinegar": "1 cup (est)",
+				salt: "a pinch",
+			},
+			cookware: [
+				"medium-sized pot", "blender", "nitrile gloves (optional)"
+			],
+			steps: [
+				{
+					text: `Forwarning -- use good white wine vinegar. If it
+					       tastes like crap, so will the sauce.`
+				},
+				{text: "Put on some nitrile gloves."},
+				{text: "Slice the peppers in half, de-seed, and wash."},
+				{text: "Coarsely chop the peppers (quarter sized pieces)."},
+				{text: "Put the peppers into a small pot."},
+				{text: "Add enough white wine vinegar to completely cover them."},
+				{text: "Bring to a low boil, then saute for 15 minutes"},
+				{text: "Remove from heat and let cool for a few minutes."},
+				{text: "Put it in the blender, and blend the shit out of it."},
+				{
+					text: `This is the base of the hot sauce. Now (optionally)
+						   add citrus and and spices to taste.`
+				},
+				{
+					text: `(Optional) Add lime juice, garlic powder, onion
+						  powder, and cumin to taste.`
+				},
+			],
+		},
+	];
+
+	const baseElement = document.getElementById("putta-da-recipes-here");
+	recipes.map(renderRecipe).map(r => baseElement.appendChild(r));
+
+</script>
+
