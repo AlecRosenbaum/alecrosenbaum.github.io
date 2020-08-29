@@ -239,6 +239,7 @@ layout: default
 			cookware: [
 				"medium-sized pot", "blender", "nitrile gloves (optional)"
 			],
+			effort: "low+",
 			steps: [
 				{
 					text: `Forwarning -- use good white wine vinegar. If it
@@ -262,10 +263,95 @@ layout: default
 				},
 			],
 		},
+		{
+			name: "Garlic Hummus",
+			ingredients: {
+				"chickpeas": "2 cans",
+				"garlic": "2 cloves (minced)",
+				"sesame seeds (hulled, lighter color)": "1 cup",
+				"olive oil": "7 tbsp",
+				"lemon juice": "1/2 cup (~2 lemons)",
+				"salt": "a pinch",
+				"cumin": "a pinch",
+				"paprika": "a pinch",
+			},
+			cookware: [
+				"food processor",
+				"wooden spoon",
+			],
+			effort: "medium",
+			steps: [
+				{
+					text: `
+						(optional) If the sesame seeds aren't toasted, toast
+						them in a pan for a minute or two.
+					`
+				},
+				{
+					text: `
+						Add the seeds to the food processor. Process them
+						until they're a crumbly paste. ~1 min
+					`
+				},
+				{
+					text: `
+						Add 3 tablespoons of olive oil, and continue processing
+						until it becomes smooth. Stop to scrape the sides if
+						it gums up. Use a wooden utencil, the food processor
+						slices right through silicon. ~3 min
+					`
+				},
+				{
+					text: `
+						Add a pinch of salt (to taste), then process for a few
+						seconds to combine. The tahini is now done.
+					`
+				},
+				{
+					text: `
+						Add the lemon juice. Mix to combine, about 30 seconds.
+					`
+				},
+				{
+					text: `
+						Add the remaining olive oil, cumin, garlic (minced),
+						and salt. Process for another minute or so, scraping
+						the sides as needed.
+					`
+				},
+				{
+					text: `
+						Now for the chickpeas. Add them in 4 smaller batches.
+						Process each batch for about a minute. Scape the sides
+						as needed in between.
+					`
+				},
+				{
+					text: `
+						(optional) It's probably still too thick. With the
+						processor running, dribble in some cold water (from a
+						tap). Only add up to about 5 tbsp of water at most.
+					`
+				},
+				{
+					text: `
+						(optional) Once it's ready to serve, add some paprika
+						and drizzle on some more olive oil.
+					`
+				},
+			],
+		},
 	];
 
 	const baseElement = document.getElementById("putta-da-recipes-here");
-	recipes.map(renderRecipe).map(r => baseElement.appendChild(r));
+	recipes
+		.sort(
+			(a, b) => (
+				(a.name.toLowerCase() < b.name.toLowerCase()) ? -1 : 1
+			)
+		)
+		.map(renderRecipe)
+		.map(r => baseElement.appendChild(r));
 
 </script>
 
