@@ -26,6 +26,11 @@ layout: default
 
 </div>
 
+<style type="text/css" media="screen">
+  .underline-on-hover:hover {
+	  text-decoration: underline;
+  }
+</style>
 <script>
 
 	const DEBUG = true;
@@ -82,7 +87,7 @@ layout: default
 
 		// add classes
 		const classes = definition.classes || [];
-		classes.map(resolveFn(props)).map(newElem.classList.add);
+		classes.map(resolveFn(props)).map(x => newElem.classList.add(x));
 
 		// add styles
 		const styles = definition.styles || [];
@@ -133,6 +138,7 @@ layout: default
 		const collapse = (collapsed, collapseCallback) => createElement(
 			{
 				tag: "span",
+				classes: ["underline-on-hover"],
 				eventListeners: [
 					[
 						'click',
@@ -205,7 +211,7 @@ layout: default
 				children: [
 					{
 						tag: "div",
-						props: { collapsed: false },
+						props: { collapsed: true },
 						children: [
 							props => header(props),
 							props => body(props),
