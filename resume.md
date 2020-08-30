@@ -25,14 +25,19 @@ permalink: /resume/
 ## Skills
 
 ### Software
-* Django, Git/Github, Docker, AWS (Lambda, S3, EC2, etc.), pytest/pylint, Selenium, matplotlib
+* Python, Django, Flask, Git/Github, Docker, AWS (Lambda, S3, EC2, etc.), pytest/pylint, Selenium, MariaDB, MongoDB, Postgres
 
 ## Experience
 
 ### Senior Software Engineer (Backend) at [Close.com][close]
 #### Sept 2019 - Present
-* TODO: Add more stuff here as I complete projects
-* Tech stack includes Docker, Python, Flask, Postgres, AWS
+* Led project-specific teams while also functioning as an individual contributor.
+* Designated tech-area lead for Backend Architecture.
+* Customer-facing projects include [Zoom integration][closezoom], [User Groups][closegroups]
+* Engaged with Open Source community by supporting [tasktiger][tasktiger], [sync-engine][syncengine]
+* Wrote a [technical blog post][closepython3] about close's migration to Python 3.
+* Misc Responsibilities: On-call, PR Reviews, Optimization, Dependency Upgrades
+* Tech stack includes Docker, Python, GraphQL, Flask, Postgres, MongoDB, AWS
 
 ### Senior Software Engineer at [drchrono][drchrono]
 #### Senior Software Engineer Feb 2019 - Sept 2019
@@ -110,6 +115,11 @@ permalink: /resume/
 Download \[[pdf][resume-pdf]\]
 
 [close]: https://www.close.com
+[closezoom]: https://close.com/zoom/
+[closegroups]: https://blog.close.com/user-groups/
+[closepython3]: https://engineering.close.com/posts/python-3
+[tasktiger]: https://github.com/closeio/tasktiger
+[syncengine]: https://github.com/closeio/sync-engine
 [drchrono]: https://www.drchrono.com/
 [formlabs]: https://formlabs.com/
 [c2t]: http://www.change2target.com/
