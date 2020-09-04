@@ -6,7 +6,7 @@ categories: woodworking
 ---
 
 :-------------------------:|:-------------------------:
-![](/static/posts/tp_holder/finished_no_tp.jpg) | ![](/static/posts/tp_holder/finished_tp.jpg)
+![](/static/posts/tp_holder/finished_closeup.jpg) | ![](/static/posts/tp_holder/finished_counter.jpg)
 
 Another afternoon project made with scraps. One of our bathrooms is a small
 half-bath with no cabinets. To avoid a _shitty_ situation, I put a dowel into
@@ -17,5 +17,5 @@ on-hand at all times.
 This was a pretty simple project, so no in-progress pictures.
 
 :-------------------------:|:-------------------------:
-![](/static/posts/tp_holder/finished_closeup.jpg) | ![](/static/posts/tp_holder/finished_counter.jpg)
+![](/static/posts/tp_holder/finished_no_tp.jpg) | ![](/static/posts/tp_holder/finished_tp.jpg)
 
