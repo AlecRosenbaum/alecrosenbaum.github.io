@@ -16,16 +16,25 @@ scale () {
     done
 }
 
+process-image () {
+    # process images without scaling them. This usually reduces the file size
+    # quite significantly from the right-off-the-phone version.
+    for f in $@; do
+	    backup_file $f;
+        ffmpeg -y -i "$f" "${f%.jpg}.jpg";
+    done
+}
+
 rotate_clock () {
   for f in $@; do
 	backup_file $f;
-    ffmpeg -i "$f" -vf "transpose=2" -y "$1";
+    ffmpeg -i "$f" -vf "transpose=clock" -y "$f";
   done
 }
 
 rotate_cclock () {
   for f in $@; do
 	backup_file $f;
-    ffmpeg -i "$f" -vf "transpose=2" -y "$1";
+    ffmpeg -i "$f" -vf "transpose=2" -y "$f";
   done
 }
