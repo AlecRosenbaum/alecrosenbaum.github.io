@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "Black Frames"
+date:   2020-10-10 00:00:00 -0400
+categories: woodworking
+---
+
+:-------------------------:|:-------------------------:
+![](/static/posts/frames/99_frames_done.jpg) | ![](/static/posts/frames/TODO.jpg)
+
+_Finished_
+
+Doing some decoration in my office, I had these smaller, square paintings just
+on particle board and no frame. Some of the other paintings I have were framed
+with a thick, black edge. I had some poplar around big enough to span the full
+edge, so I made some matching frames. This isn't particularly complicated, but
+making miters sized correctly that also look pretty can be a bit fiddly.
+
+The first step was cutting all the edges to size.
+
+:-------------------------:|:-------------------------:
+![](/static/posts/frames/10_cuts.jpg) | ![](/static/posts/frames/20_cut_pieces.jpg)
+
+Then I used painters tape and a square to do the glue up. The painters tape did
+a very good job of keeping all the edges flush and applying good clamping
+force.
+
+![](/static/posts/frames/50_glue_up.jpg)
+
+With the glue done and the frames square, next step was paiting. I just used
+some scrap cutoffs to stand them off my table, then spray painted them with
+black primer/paint spray paint (3 light coats).
+
+![](/static/posts/frames/75_painted.jpg)
+
+I didn't snag a picture, but once the paint dried I carefuly glued the
+paintings to the frames (with just some wood glue). The paintings are acrylic,
+so I really needed to be careful with any pressure on them. I used some paper
+and just weighted it down with my cordless drills and some heavy-ish tools
+so it was flat against the frame.
+
+And that's it! Finished:
+
+:-------------------------:|:-------------------------:
+![](/static/posts/frames/99_frames_done.jpg) | ![](/static/posts/frames/TODO.jpg)
+
