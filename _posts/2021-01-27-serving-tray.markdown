@@ -71,7 +71,7 @@ And now on to the fun part: making the handles into handles! This probably
 wouldn't have been too hard to cut out with a jigsaw, but I don't really trust
 the jigsaw I have for anything remotely precise. Instead I drilled some tiny
 holes pretty much everywhere there was a corner. From there I stuck a coping
-through the holes and cut between each of the holes.
+saw through the holes and cut between each of the holes.
 
 :-------------------------:|:-------------------------:
 ![](/static/posts/serving_tray/64_side_partially_drilled.jpg) | ![](/static/posts/serving_tray/65_sides_drilled.jpg)
@@ -87,7 +87,7 @@ From there, it was finally time to bring it all together into a real tray:
 :-------------------------:|:-------------------------:
 ![](/static/posts/serving_tray/85_parts_laid_out.jpg) | ![](/static/posts/serving_tray/83_dry_fit.jpg)
 
-Then just add some glue and pressure and bing bang boom we've got ourselves a
+Then just add some glue + pressure and bing bang boom we've got ourselves a
 serving tray.
 
 ![](/static/posts/serving_tray/90_glueup_clamped.jpg)
