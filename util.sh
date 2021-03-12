@@ -9,10 +9,10 @@ backup_file () {
 
 
 scale () {
-    # scale images down to 555px wide
+    # scale images down to 1080px wide
     for f in $@; do
 	    backup_file $f;
-        ffmpeg -y -i "$f" -q:v 1 -vf scale=-1:555 "${f%.jpg}.jpg";
+        ffmpeg -y -i "$f" -q:v 1 -vf scale=-1:1080 "${f%.jpg}.jpg";
     done
 }
 
