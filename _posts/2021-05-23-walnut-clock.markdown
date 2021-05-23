@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Walnut And Hickory Clock"
-date:   2021-05-23 00:00:00 -0400
+date:   2021-03-13 00:00:00 -0400
 categories: woodworking
 ---
 
