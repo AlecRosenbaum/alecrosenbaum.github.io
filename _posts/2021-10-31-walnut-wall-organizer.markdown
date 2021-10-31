@@ -11,7 +11,7 @@ _Finished_
 
 I've been looking for small projects to use wood from the scrap bin, and this
 one had been requested for a while. I picked out some pieces, then cut them to
-rough dimension. I resawed one 2" piece of walnut into two 1" pieces I could
+rough dimension. I resawed one 2" thick piece of walnut into two 1" pieces I could
 use for the back and bottom, and picked out a piece of aluminum rod from the
 scrap metal bin. I think it came from a slide-out dvd organizer?
 
