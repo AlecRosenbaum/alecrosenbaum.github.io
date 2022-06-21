@@ -27,3 +27,17 @@ rotate () {
 docker run -p 8080:4000 -v $(pwd):/site bretfisher/jekyll-serve
 ```
 
+or to get a shell:
+
+```bash
+docker run -it -p 8080:4000 -v $(pwd):/site bretfisher/jekyll-serve bash
+```
+
+### Upgrade
+
+Within a shell ^: `bundle update`
+
+### Build/serve
+
+Within a shell ^: `bundle exec jekyll serve -H 0.0.0.0 -P 4000`
+
