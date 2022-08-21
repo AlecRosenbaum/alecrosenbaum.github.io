@@ -5,11 +5,9 @@ date:   2022-08-21 00:12:00 -0400
 categories: woodworking
 ---
 
+![](/static/posts/walnut_slab_table/92_finished_table_leg.jpg) | ![](/static/posts/walnut_slab_table/91_finished_table.jpg)
+
 _Finished shots first!_
-
-![](/static/posts/walnut_slab_table/92_finished_table_leg.jpg)
-![](/static/posts/walnut_slab_table/91_finished_table.jpg)
-
 
 But this is what it looked like when I started:
 
