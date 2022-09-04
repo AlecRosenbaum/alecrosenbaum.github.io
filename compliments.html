@@ -1,0 +1,231 @@
+---
+layout: default
+title: Compliments
+permalink: /compliments/
+---
+
+<style type="text/css" media="screen">
+  .container {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  h1 {
+    margin: 30px 0;
+    font-size: 4em;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+</style>
+
+<div class="wrapper" id="body-wrapper">
+  <h1 style="text-align: center">Compliment Inspiration</h1>
+  <h3 id="compliment"></h3>
+</div>
+
+<style type="text/css" media="screen">
+  .underline-on-hover:hover {
+    text-decoration: underline;
+  }
+</style>
+<script>
+
+  const selectCompliment = () => {
+    return COMPLIMENTS[Math.floor(Math.random()*COMPLIMENTS.length)];
+  }
+  const setup = () => {
+    const container = document.getElementById("body-wrapper");
+    const elem = document.getElementById("compliment");
+    elem.innerText = selectCompliment();
+	container.addEventListener("click", () => {
+      const selected = selectCompliment();
+      navigator.clipboard.writeText(selected)
+      elem.innerText = selected;
+	});
+  };
+
+  COMPLIMENTS = [
+    "Our community is better because you're in it.",
+    "Your eyes are breathtaking.",
+    "You help me be the best version of myself.",
+    "Hanging out with you is always a blast.",
+    "That color is perfect on you.",
+    "You have such a great personality.",
+    "You're a great listener.",
+    "Everyday is just BLAH when I don't see you For reals!",
+    "You deserve a hug right now.",
+    "Everyone gets knocked down sometimes, but you always get back up and keep going.",
+    "Everything would be better if more people were like you.",
+    "When you say, 'I meant to do that,' I totally believe you.",
+    "I really enjoy talking to you.",
+    "You're so thoughtful.",
+    "I bet you sweat glitter.",
+    "You smell really good.",
+    "You're like sunshine on a rainy day.",
+    "Your name suits you to a T.",
+    "You always find something special in the most ordinary things.",
+    "If you were a scented candle they'd call it Perfectly Imperfect (and it would smell like summer).",
+    "I like your style.",
+    "You're strong.",
+    "You're a great example to others.",
+    "Our community is better because you're in it.",
+    "When you make up your mind about something, nothing stands in your way.",
+    "You're someone's reason to smile.",
+    "Your quirks are so you -- and I love that.",
+    "You're one of a kind!",
+    "If cartoon bluebirds were real, a couple of 'em would be sitting on your shoulders singing right now.",
+    "Your smile is contagious.",
+    "You're a great example to others.",
+    "You always know how to find that silver lining.",
+    "Your kindness is a balm to all who encounter it.",
+    "You have cute elbows. For reals!",
+    "You're a candle in the darkness.",
+    "You're someone's reason to smile.",
+    "You could survive a Zombie apocalypse.",
+    "You should be thanked more often. Thank you.",
+    "How is it that you always look great, even in sweatpants?",
+    "Somehow you make time stop and fly all at the same time.",
+    "You're like a breath of fresh air.",
+    "You are enough.",
+    "The way you always know when someone needs something is amazing.",
+    "Your hair looks so great today.",
+    "Your hair looks stunning.",
+    "You're an awesome friend.",
+    "Someone is getting through something hard right now because you've got their back.",
+    "You are making a difference.",
+    "Your voice is magnificent.",
+    "Defenseless animals are drawn to you.",
+    "On a scale from 1 to 10, you're an 11.",
+    "You have a good head on your shoulders.",
+    "You have such a great sense of style.",
+    "Being around you is like being on a happy little vacation.",
+    "You're inspiring.",
+    "When you're not afraid to be yourself is when you're most incredible.",
+    "You're better than a triple-scoop ice cream cone. With sprinkles.",
+    "Your bellybutton is kind of adorable.",
+    "You're one of a kind.",
+    "You have the courage of your convictions.",
+    "You are perfect just the way you are.",
+    "On a scale from 1 to 10, you're an 11.",
+    "You are brave.",
+    "You help me feel more joy in life.",
+    "You may dance like no one's watching, but everyone's watching because you're an amazing dancer!",
+    "I appreciate you.",
+    "You look great today.",
+    "Hanging out with you is always fun.",
+    "You were cool way before hipsters were cool.",
+    "If you were a box of crayons, you'd be the giant name-brand one with the built-in sharpener.",
+    "Actions speak louder than words, and yours tell an incredible story.",
+    "You are an incredible human.",
+    "You're better than a triple-scoop ice cream cone. With sprinkles.",
+    "When you make a mistake, you fix it.",
+    "If you were a box of crayons, you'd be the giant name-brand one with the built-in sharpener.",
+    "You light up the room.",
+    "You've got all the right moves.",
+    "You have a great sense of humor.",
+    "You make my insides jump around in the best way.",
+    "You have cute elbows. For real.",
+    "That thing you don't like about yourself is what makes you so interesting.",
+    "Babies and small animals probably love you.",
+    "How is it that you always look so great, even if you're in ratty pajamas?",
+    "Any team would be lucky to have you on it.",
+    "You are really kind to people around you.",
+    "If you were a scented candle they'd have to call it Perfectly Imperfect (and it would smell like summer).",
+    "Everything would be better if more people were like you!",
+    "You're inspiring.",
+    "Being around you is like a happy little vacation.",
+    "When you make up your mind, nothing stands in your way.",
+    "You're strong.",
+    "You are beautiful on the inside and outside.",
+    "I am so proud of you, and I hope you are too!",
+    "You seem to really know who you are.",
+    "You should be proud of yourself.",
+    "Jokes are funnier when you tell them.",
+    "You're a great listener.",
+    "You're always learning new things and trying to better yourself, which is awesome.",
+    "You're more fun than a ball pit filled with candy.",
+    "You're a smart cookie.",
+    "You have the best laugh.",
+    "You're a smart cookie.",
+    "You have impeccable manners.",
+    "Someone is getting through something hard right now because you've got their back.",
+    "You're irresistible when you blush.",
+    "You're that 'Nothing' when people ask me what I'm thinking about.",
+    "You're wonderful.",
+    "You may dance like no one's watching, but everyone's watching because you're mesmerizing.",
+    "Has anyone ever told you that you have great posture?",
+    "You're more fun than a ball pit filled with candy. (And seriously, what could be more fun than that?)",
+    "When you make a mistake, you try to fix it.",
+    "There's ordinary, and then there's you.",
+    "Your ability to recall random factoids at just the right time is impressive.",
+    "When you're not afraid to be yourself is when you're most incredible.",
+    "You're irresistible when you blush.",
+    "Your belly button is kind of adorable.",
+    "Colors seem brighter when you're around.",
+    "You're always learning new things and trying to better yourself, which is awesome.",
+    "You always know just what to say.",
+    "If you were a scented candle they'd call it Perfectly Imperfect (and it would smell like summer).",
+    "Being around you makes everything better.",
+    "You're gorgeous \u2014 and that's the least interesting thing about you, too.",
+    "You're great at figuring stuff out.",
+    "Somehow you make time stop and fly at the same time.",
+    "You're all that and a super-size bag of chips.",
+    "If someone based an Internet meme on you, it would have impeccable grammar.",
+    "You're the coolest person I know.",
+    "I bet you do the crossword puzzle in ink.",
+    "Being around you makes everything better!",
+    "You have the best ideas.",
+    "You're really something special.",
+    "That thing you don't like about yourself is what makes you so interesting.",
+    "You're really something special.",
+    "You've got all the right moves!",
+    "Your perspective is refreshing.",
+    "Who raised you? They deserve a medal for a job well done.",
+    "You always know \u2014 and say \u2014 exactly what I need to hear when I need to hear it.",
+    "You're more fun than bubble wrap.",
+    "Thank you for being you.",
+    "You're all that and a super-size bag of chips.",
+    "Aside from food. You're my favorite.",
+    "How do you keep being so funny and making everyone laugh?",
+    "When you say you will do something, I trust you.",
+    "There's ordinary, and then there's you.",
+    "If you were a box of crayons, you'd be the big industrial name-brand one with a built-in sharpener.",
+    "You're more fun than bubble wrap.",
+    "Your ability to recall random factoids at just the right times is impressive.",
+    "Colors seem brighter when you're around.",
+    "You're great at figuring stuff out.",
+    "If cartoon bluebirds were real, a bunch of them would be sitting on your shoulders singing right now.",
+    "You're like a breath of fresh air.",
+    "When I'm down you always say something encouraging to help me feel better.",
+    "I bet you make babies smile.",
+    "You're even better than a unicorn because you're real.",
+    "You're more helpful than you realize.",
+    "You're more helpful than you realize.",
+    "You're even more beautiful on the inside than you are on the outside.",
+    "You should be thanked more often. So thank you!!",
+    "The people you love are lucky to have you in their lives.",
+    "You're a gift to those around you.",
+    "You are the most perfect you there is.",
+    "In high school I bet you were voted \"most likely to keep being awesome.\"",
+    "You're even better than a unicorn, because you're real.",
+    "In high school I bet you were voted 'most likely to keep being awesome.'",
+    "You may dance like no one's watching, but everyone's watching because you're an amazing dancer!",
+    "The way you treasure your loved ones is incredible.",
+    "You're a gift to those around you.",
+    "You're even better than a unicorn, because you're real.",
+    "You're like sunshine on a rainy day.",
+    "Your creative potential seems limitless.",
+    "You're more fun than a ball pit filled with candy. (And seriously, what could be more fun than that?)",
+    "You're wonderful.",
+    "You're so thoughtful.",
+    "You're one of a kind!",
+    "You bring out the best in other people.",
+    "You always know -- and say -- exactly what I need to hear when I need to hear it.",
+    "Is that your picture next to 'charming' in the dictionary?",
+    "You're a candle in the darkness."
+  ]
+
+   setup();
+
+</script>
+
