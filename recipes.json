@@ -1,0 +1,294 @@
+[
+  {
+    "name": "Mushroom Risotto (Instant-Pot)",
+    "ingredients": {
+      "risotto rice": "2 cups",
+      "chicken breast": "2",
+      "white onion": "1/2",
+      "button mushroom": "2 cups",
+      "white wine": "1/2 cup",
+      "chicken boullion": "2 cups worth",
+      "garlic (minced)": "2 tbsp",
+      "shredded parmasean": "2 cups",
+      "olive oil": "a drizzle",
+      "canola oil": "a drizzle",
+      "salt": "a pinch",
+      "pepper": "a pinch",
+      "garlic powder": "a pinch"
+    },
+    "cookware": [
+      "instant pot",
+      "cast iron pan",
+      "thermometer"
+    ],
+    "effort": "medium+",
+    "steps": [
+      {
+        "text": "Set the instant pot on saute. Add a drizzle of olive oil to coat the bottom."
+      },
+      {
+        "text": "Finely dice the onion, and add it to the instant pot."
+      },
+      {
+        "text": "Finely dice the garlic if needed, and add it to the instant pot."
+      },
+      {
+        "text": "Finely dice the mushrooms, and add them to the instant pot."
+      },
+      {
+        "text": "Take out and prep the chicken. Cut off any bad bits."
+      },
+      {
+        "text": "Add the risotto rice to the instant pot. Let it cook until transluscent. ~2m"
+      },
+      {
+        "text": "Pound the chicken flat (use your palm). Season one side with salt, pepper, and garlic powder."
+      },
+      {
+        "text": "Add the white wine to the instant pot."
+      },
+      {
+        "text": "Take out the cast iron pan, put it under medium-high heat, and drizzle with a high-heat oil."
+      },
+      {
+        "text": "The alcohol will have boiled off the wine at this point. Mix the boulion with hot water to create chicken stock. Add it to the instant pot."
+      },
+      {
+        "text": "Put the lid on the instant pot, and set it to high pressure for 5 minutes."
+      },
+      {
+        "text": "Put the chicken in the pan, seasoned side down. Season the other side the same way."
+      },
+      {
+        "text": "Flip the chicken as need until it reaches an internal temperature of 155-165 F. Then take it off the pan and let it rest for 5 minutes."
+      },
+      {
+        "text": "Once the instant pot is done, depressurize. Stir everything up and add the shredded parmasean cheese."
+      },
+      {
+        "text": "Slice the chicken into thin strip, and plate. You're done."
+      }
+    ]
+  },
+  {
+    "name": "Cashew-based Cream of Corn Soup",
+    "ingredients": {
+      "corn": "1-2 cups",
+      "bell peppers": "2-3 peppers",
+      "cashews": "2 1/2 cups",
+      "white onion": "1/2 medium-sized",
+      "olive oil": "a few tbsp",
+      "chicken or vegetable boulion": "enough for 4 cups, (1 tbsp?)",
+      "salt": "a pinch",
+      "pepper": "a pinch",
+      "garlic powder": "a pinch"
+    },
+    "cookware": [
+      "blender",
+      "large pot",
+      "glass measuring cup"
+    ],
+    "effort": "medium",
+    "steps": [
+      {
+        "text": "Put the cashews into the blender. Cover them with tab water (they should be completely covered). Let them sit. DO NOT BLEND THEM."
+      },
+      {
+        "text": "Finely chop up the onion."
+      },
+      {
+        "text": "Put the pot on the stove, put some olive oil in it, and put it on medium heat. When the oil shimmers, put the onion in."
+      },
+      {
+        "text": "Chop the bell peppers into thin strips. Once the onions are semi-transparent, add the bell peppers and mix."
+      },
+      {
+        "text": "Heat up some water to mix the boulion. Microwave is usually easiest. Once it's hot, add the boulion and mix thoroughly."
+      },
+      {
+        "text": "Add the boulion stock to the pot, with enough additional hot water to total 4-ish cups of liquid added."
+      },
+      {
+        "text": "Once the water is back to a simmer, add the corn."
+      },
+      {
+        "text": "The pot will be looking pretty soupy at this point. Now is time to make it creamy. Blend the cashews that have been soaking in water in the blender. Really blend the shit out of it. It should turn into a really thick, creamy white paste. Pour that paste into the pot. If needed, use extra water to rinse out the blender and get the last of it in."
+      },
+      {
+        "text": "Stir and bring back to a low simmer, then cut the heat. The soup is pretty much done. It just needs seasoning. Add to taste: salt, pepper, and garlic powder."
+      },
+      {
+        "text": "(Optional) The soup will absorb and enhance pretty much any spices put into it. Common ones include: Old bay, chili powder, paprika, cumin, curry powder."
+      }
+    ]
+  },
+  {
+    "name": "Tobasco-like Hot Sauce",
+    "ingredients": {
+      "peppers": "5 oz (est)",
+      "white wine vinegar": "1 cup (est)",
+      "salt": "a pinch"
+    },
+    "cookware": [
+      "medium-sized pot",
+      "blender",
+      "nitrile gloves (optional)"
+    ],
+    "effort": "low+",
+    "steps": [
+      {
+        "text": "Forwarning -- use good white wine vinegar. If it tastes like crap, so will the sauce."
+      },
+      {
+        "text": "Put on some nitrile gloves."
+      },
+      {
+        "text": "Slice the peppers in half, de-seed, and wash."
+      },
+      {
+        "text": "Coarsely chop the peppers (quarter sized pieces)."
+      },
+      {
+        "text": "Put the peppers into a small pot."
+      },
+      {
+        "text": "Add enough white wine vinegar to completely cover them."
+      },
+      {
+        "text": "Bring to a low boil, then saute for 15 minutes"
+      },
+      {
+        "text": "Remove from heat and let cool for a few minutes."
+      },
+      {
+        "text": "Put it in the blender, and blend the shit out of it."
+      },
+      {
+        "text": "This is the base of the hot sauce. Now (optionally) add citrus and and spices to taste."
+      },
+      {
+        "text": "(Optional) Add lime juice, garlic powder, onion powder, and cumin to taste."
+      }
+    ]
+  },
+  {
+    "name": "Garlic Hummus",
+    "ingredients": {
+      "chickpeas": "2 cans",
+      "garlic": "2 cloves (minced)",
+      "sesame seeds (hulled, lighter color)": "1 cup",
+      "olive oil": "7 tbsp",
+      "lemon juice": "1/2 cup (~2 lemons)",
+      "salt": "a pinch",
+      "cumin": "a pinch",
+      "paprika": "a pinch"
+    },
+    "cookware": [
+      "food processor",
+      "wooden spoon"
+    ],
+    "effort": "medium",
+    "steps": [
+      {
+        "text": "(optional) If the sesame seeds aren't toasted, toast them in a pan for a minute or two."
+      },
+      {
+        "text": "Add the seeds to the food processor. Process them until they're a crumbly paste. ~1 min"
+      },
+      {
+        "text": "Add 3 tablespoons of olive oil, and continue processing until it becomes smooth. Stop to scrape the sides if it gums up. Use a wooden utencil, the food processor slices right through silicon. ~3 min"
+      },
+      {
+        "text": "Add a pinch of salt (to taste), then process for a few seconds to combine. The tahini is now done."
+      },
+      {
+        "text": "Add the lemon juice. Mix to combine, about 30 seconds."
+      },
+      {
+        "text": "Add the remaining olive oil, cumin, garlic (minced), and salt. Process for another minute or so, scraping the sides as needed."
+      },
+      {
+        "text": "Now for the chickpeas. Add them in 4 smaller batches. Process each batch for about a minute. Scape the sides as needed in between."
+      },
+      {
+        "text": "(optional) It's probably still too thick. With the processor running, dribble in some cold water (from a tap). Only add up to about 5 tbsp of water at most."
+      },
+      {
+        "text": "(optional) Once it's ready to serve, add some paprika and drizzle on some more olive oil."
+      }
+    ]
+  },
+  {
+    "name": "Paprika Salmon",
+    "ingredients": {
+      "paprika": "1/4 cup",
+      "ground cumin": "1 tbsp",
+      "brown sugar": "1 tbsp",
+      "chili powder": "1 tbsp",
+      "kosher salt": "3/4 tsp",
+      "ground black pepper": "1 tbsp",
+      "cayenne pepper": "1-2 tsp",
+      "ground cloves": "1/4 tsp",
+      "salmon fillets": "4, each 6-8oz"
+    },
+    "cookware": [
+      "oven"
+    ],
+    "effort": "low+",
+    "steps": [
+      {
+        "text": "Preheat the broiler."
+      },
+      {
+        "text": "Combine spices in a small bowl."
+      },
+      {
+        "text": "Rub spices on salmon. Drizzle on olive oil on afterwards."
+      },
+      {
+        "text": "Oil a baking sheet."
+      },
+      {
+        "text": "Put the fillets under the broiler for 5-7 min, until the salmon is done."
+      }
+    ]
+  },
+  {
+    "name": "Perfect Peanut Butter Protein Bars",
+    "ingredients": {
+      "oat flour": "120g",
+      "protein powder (vanilla)": "30g",
+      "peanut butter": "140g",
+      "honey": "75g",
+      "coconut oil (melted)": "30g",
+      "salt": "a pinch"
+    },
+    "cookware": [
+      "scale"
+    ],
+    "effort": "low+",
+    "steps": [
+      {
+        "text": "Put a large mixing bowl on a scale."
+      },
+      {
+        "text": "Add dry ingredients and mix to combine."
+      },
+      {
+        "text": "Add wet ingredients and mix to combine."
+      },
+      {
+        "text": "The consistency should be playdough-like. If not, add peanut butter to wet or oat flour to dry."
+      },
+      {
+        "text": "Line a flat pan with wax paper, and press the dough in until flat."
+      },
+      {
+        "text": "Refrigerate for 1h before cutting into bars."
+      },
+      {
+        "text": "Keep refrigerated for 1h."
+      }
+    ]
+  }
+]
