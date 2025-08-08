@@ -290,5 +290,41 @@
         "text": "Keep refrigerated for 1h."
       }
     ]
+  },
+  {
+    "name": "High-Protein Plant-Based Overnight Oats (Bulk Prep - 5 Servings)",
+    "ingredients": {
+      "steel-cut oats (dry)": "1.5 cups",
+      "unsweetened soy milk": "3 cups",
+      "banana (mashed)": "3 medium",
+      "powdered peanut butter (e.g. PB2)": "5 tbsp",
+      "plant-based protein powder": "2 scoops"
+    },
+    "cookware": [
+      "large mixing bowl or blender",
+      "whisk or spoon",
+      "5 meal prep jars or containers"
+    ],
+    "effort": "low+",
+    "steps": [
+      {
+        "text": "Mash bananas in a large bowl or blend with the liquids if smoother texture is desired."
+      },
+      {
+        "text": "Add soy milk, protein powder, and powdered peanut butter. Whisk or blend until smooth."
+      },
+      {
+        "text": "Stir in the steel-cut oats and mix until fully incorporated."
+      },
+      {
+        "text": "Divide the mixture evenly between 5 jars or containers (~1 cup per serving)."
+      },
+      {
+        "text": "Refrigerate for at least 8 hours or overnight."
+      },
+      {
+        "text": "Stir before eating. Add soy milk before serving if texture is too thick."
+      }
+    ]
   }
 ]
