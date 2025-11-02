@@ -326,5 +326,51 @@
         "text": "Stir before eating. Add soy milk before serving if texture is too thick."
       }
     ]
+  },
+  {
+    "name": "Cornbread",
+    "ingredients": {
+      "cornmeal": "1/2 cup (110g)",
+      "flour": "3/4 cup (140g + 2 TBS)",
+      "sugar": "1/4 cup",
+      "salt": "1 tsp",
+      "baking powder": "2 tsp",
+      "baking soda": "1/2 tsp",
+      "milk": "1/3 cup (or 1 cup soy milk + 1 TBS lemon juice as alternative)",
+      "buttermilk": "1/3 cup",
+      "eggs": "2",
+      "melted unsalted butter": "8 TBS (4 TBS + 3 + 1)"
+    },
+    "cookware": [
+      "oven",
+      "skillet"
+    ],
+    "effort": "medium",
+    "steps": [
+      {
+        "text": "Preheat oven to 425°F"
+      },
+      {
+        "text": "Whisk cornmeal, flour, sugar, salt, baking powder, baking soda"
+      },
+      {
+        "text": "Whisk in milk, buttermilk, eggs"
+      },
+      {
+        "text": "Whisk in 7 TBS butter, saving 1 TBS for later"
+      },
+      {
+        "text": "Remove skillet, reduce oven temp to 375°F"
+      },
+      {
+        "text": "Coat skillet with 1 TBS butter"
+      },
+      {
+        "text": "Pour in batter"
+      },
+      {
+        "text": "Bake 20-25 minutes"
+      }
+    ]
   }
 ]
