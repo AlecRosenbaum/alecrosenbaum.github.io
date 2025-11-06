@@ -372,5 +372,43 @@
         "text": "Bake 20-25 minutes"
       }
     ]
+  },
+  {
+    "name": "Crock Pot Beef and Broccoli",
+    "ingredients": {
+      "sirloin steak or boneless beef chuck roast (sliced thin)": "2 pounds",
+      "beef broth": "1 cup",
+      "low sodium soy sauce": "1/2 cup",
+      "brown sugar": "1/4 cup",
+      "sesame oil": "1 tbsp",
+      "garlic (minced)": "3 cloves",
+      "cornstarch": "4 tbsp",
+      "water": "4 tbsp",
+      "frozen broccoli florets": "12 oz (1 bag)",
+      "white rice": "to serve with (optional)"
+    },
+    "cookware": [
+      "6 quart crock pot",
+      "small bowl",
+      "whisk"
+    ],
+    "effort": "low+",
+    "steps": [
+      {
+        "text": "In the insert of a 6 quart crock pot, whisk together beef broth, soy sauce, brown sugar, sesame oil, and garlic."
+      },
+      {
+        "text": "Place slices of beef in the liquid and toss to coat. Cover with lid and cook on low heat for 5 hours."
+      },
+      {
+        "text": "When beef is done cooking, whisk together cornstarch and water in small bowl. Pour into crock pot and stir to mix well."
+      },
+      {
+        "text": "Add the frozen broccoli over the beef and sauce. Gently stir to combine. Cover with lid and cook 30 minutes to cook broccoli and thicken sauce."
+      },
+      {
+        "text": "Serve over warm white rice. Enjoy!"
+      }
+    ]
   }
 ]
