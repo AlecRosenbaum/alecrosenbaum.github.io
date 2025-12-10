@@ -23,6 +23,7 @@ github_username:  alecrosenbaum
 
 header_pages:
   - recipes.html
+  - hn.html
   - resume.md
 
 # Google Analytics
@@ -39,6 +40,7 @@ plugins:
 # to override the default setting.
 exclude:
   - _posts/2017-10-04-mcdonalds-szechuan-sauce.markdown
+  - vendor
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
