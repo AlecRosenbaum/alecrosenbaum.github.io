@@ -21,7 +21,7 @@
 
 {{- /* Main stylesheet - using Hugo Pipes for SCSS */ -}}
 {{ $scss := resources.Get "sass/main.scss" }}
-{{ $style := $scss | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+{{ $style := $scss | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
 {{- /* Google Analytics */ -}}
