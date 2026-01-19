@@ -62,7 +62,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, blockquote, pre, ul, ol, dl, figure {
-  margin-bottom: calc($spacing-unit / 2);
+  margin-bottom: calc(#{$spacing-unit} / 2);
+}
+
+// Fix for p tags that wrap figure/gallery elements (from markdown rendering)
+p:has(> figure.post-image:only-child),
+p:has(> .gallery:first-child) {
+  margin: 0;
+  display: contents;
 }
 
 main {
@@ -95,8 +102,8 @@ li > ul, li > ol {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-top: calc($spacing-unit / 2);
-  margin-bottom: calc($spacing-unit / 4);
+  margin-top: calc(#{$spacing-unit} / 2);
+  margin-bottom: calc(#{$spacing-unit} / 4);
 }
 
 a {
@@ -116,7 +123,7 @@ a {
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
-  padding-left: calc($spacing-unit / 2);
+  padding-left: calc(#{$spacing-unit} / 2);
   @include relative-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
@@ -158,8 +165,8 @@ pre {
 
   @include media-query($on-laptop) {
     max-width: calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: calc($spacing-unit / 2);
-    padding-left: calc($spacing-unit / 2);
+    padding-right: calc(#{$spacing-unit} / 2);
+    padding-left: calc(#{$spacing-unit} / 2);
   }
 }
 
@@ -208,7 +215,7 @@ pre {
   @include media-query($on-palm) {
     position: absolute;
     top: 9px;
-    right: calc($spacing-unit / 2);
+    right: calc(#{$spacing-unit} / 2);
     background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
@@ -267,7 +274,7 @@ pre {
 
 .footer-heading {
   @include relative-font-size(1.125);
-  margin-bottom: calc($spacing-unit / 2);
+  margin-bottom: calc(#{$spacing-unit} / 2);
 }
 
 .contact-list,
@@ -279,14 +286,14 @@ pre {
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
   color: $grey-color;
-  margin-left: calc($spacing-unit / -2);
+  margin-left: calc(#{$spacing-unit} / -2);
   display: flex;
   flex-wrap: wrap;
 }
 
 .footer-col {
-  margin-bottom: calc($spacing-unit / 2);
-  padding-left: calc($spacing-unit / 2);
+  margin-bottom: calc(#{$spacing-unit} / 2);
+  padding-left: calc(#{$spacing-unit} / 2);
 }
 
 .footer-col-1 {
@@ -330,6 +337,17 @@ pre {
 
   > li {
     margin-bottom: $spacing-unit;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+
+  // Reduce margins for galleries/images in summaries
+  .gallery,
+  .post-image {
+    margin: 4px 0;
   }
 }
 
@@ -451,7 +469,7 @@ pre {
 
 // Images
 .post-image {
-  margin: calc($spacing-unit / 2) 0;
+  margin: calc(#{$spacing-unit} / 2) 0;
 
   picture {
     display: block;
@@ -464,8 +482,8 @@ pre {
   }
 
   &.full-width {
-    margin-left: calc(-1 * $spacing-unit);
-    margin-right: calc(-1 * $spacing-unit);
+    margin-left: calc(-1 * #{$spacing-unit});
+    margin-right: calc(-1 * #{$spacing-unit});
 
     img {
       width: 100%;
@@ -477,12 +495,12 @@ pre {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: calc($spacing-unit / 2) 0;
+  gap: 4px;
+  margin: calc(#{$spacing-unit} / 2) 0;
 }
 
 .gallery-item {
-  flex: 1 1 calc(50% - 5px);
+  flex: 1 1 calc(50% - 2px);
   min-width: 250px;
   margin: 0;
 

@@ -70,9 +70,7 @@ using thick matte black angle brackets.
 {{< gallery >}}
 ![](installed_eye_level.jpg)
 ![](installed_elevated.jpg)
-{{< /gallery >}}
 
-{{< gallery >}}
 ![](installed_sideways.jpg)
 ![](installed_underneath.jpg)
 {{< /gallery >}}

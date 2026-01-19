@@ -20,9 +20,7 @@ clock.
 {{< gallery >}}
 ![](00_start.jpg)
 ![](05_new_hands.jpg)
-{{< /gallery >}}
 
-{{< gallery >}}
 ![](10_splitting_scrap_walnut.jpg)
 ![](15_scrap_hickory_dividers.jpg)
 {{< /gallery >}}

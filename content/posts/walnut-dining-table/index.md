@@ -35,9 +35,7 @@ the glue up.
 {{< gallery >}}
 ![Flattened boards](10_flattened.jpg)
 ![Joining boards](11_joining.jpg)
-{{< /gallery >}}
 
-{{< gallery >}}
 ![Glue up process](15_glue_up.jpg)
 ![Glue up clamped](16_glue_up.jpg)
 {{< /gallery >}}

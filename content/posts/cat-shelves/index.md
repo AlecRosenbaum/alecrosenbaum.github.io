@@ -19,9 +19,7 @@ hung with simple L brackets.
 {{< gallery >}}
 ![](01_rough_plan.jpg)
 ![](05_cut_carpet.jpg)
-{{< /gallery >}}
 
-{{< gallery >}}
 ![](10_folded_over_carpet.jpg)
 ![](15_bottom_backets.jpg)
 {{< /gallery >}}

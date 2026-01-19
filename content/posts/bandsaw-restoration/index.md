@@ -45,9 +45,7 @@ sit further back.
 {{< gallery >}}
 ![](blade-alignment.jpg)
 ![](bottom-wheel-tracking.jpg)
-{{< /gallery >}}
 
-{{< gallery >}}
 ![](all-put-together-no-electric.jpg)
 ![](sketchy-plug-todo.jpg)
 {{< /gallery >}}

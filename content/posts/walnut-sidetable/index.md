@@ -62,8 +62,7 @@ some glue and finish! I just used spray laquer this time.
 {{< gallery >}}
 ![](51_dry_fit.jpg)
 ![](56_glue_up.jpg)
-{{< /gallery >}}
-{{< gallery >}}
+
 ![](57_glue_up.jpg)
 ![](61_apply_finish.jpg)
 {{< /gallery >}}

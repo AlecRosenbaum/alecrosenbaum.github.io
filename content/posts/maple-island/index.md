@@ -71,9 +71,7 @@ for the top, since the shelf would mostly be hidden anyway.
 {{< gallery >}}
 ![](20_resurface_top_plan.jpg)
 ![](21_resurface_top_partial.jpg)
-{{< /gallery >}}
 
-{{< gallery >}}
 ![](22_resurface_top_partial_closeup.jpg)
 ![](23_resurface_top_rough_sanded.jpg)
 {{< /gallery >}}

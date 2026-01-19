@@ -18,8 +18,7 @@ But this is what it looked like when I started:
 {{< gallery >}}
 ![](00_raw_slab.jpg)
 ![](02_raw_slabs.jpg)
-{{< /gallery >}}
-{{< gallery >}}
+
 ![](03_raw_slabs.jpg)
 ![](01_raw_slab.jpg)
 {{< /gallery >}}

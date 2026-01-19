@@ -18,9 +18,7 @@ everything was.
 {{< gallery >}}
 ![](00_rough.jpg)
 ![](03_rough.jpg)
-{{< /gallery >}}
 
-{{< gallery >}}
 ![](01_rough.jpg)
 ![](02_rough.jpg)
 {{< /gallery >}}
@@ -34,9 +32,7 @@ Getting the side together, then dry fitting all the base:
 {{< gallery >}}
 ![](10_side.jpg)
 ![](11_side.jpg)
-{{< /gallery >}}
 
-{{< gallery >}}
 ![](20_dry_fit_base.jpg)
 ![](21_dry_fit_base.jpg)
 {{< /gallery >}}
