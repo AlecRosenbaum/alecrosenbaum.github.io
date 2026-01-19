@@ -7,8 +7,7 @@ title = "Alec Rosenbaum"
   pagerSize = 10
   path = "page"
 
-# Use the built-in theme we're creating
-theme = ""
+# Using custom layouts instead of a theme
 
 # Taxonomy settings
 [taxonomies]
