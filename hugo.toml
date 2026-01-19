@@ -3,8 +3,9 @@ languageCode = "en-us"
 title = "Alec Rosenbaum"
 
 # Pagination - 10 posts per page on the home/list pages
-paginate = 10
-paginatePath = "page"
+[pagination]
+  pagerSize = 10
+  path = "page"
 
 # Use the built-in theme we're creating
 theme = ""
