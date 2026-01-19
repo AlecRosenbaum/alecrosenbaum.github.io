@@ -5,8 +5,11 @@ categories:
   - woodworking
 ---
 
-:-------------------------:|:-------------------------:
-![](finished_closeup.jpg) | ![](finished_counter.jpg)
+{{< gallery >}}
+![](finished_closeup.jpg)
+![](finished_counter.jpg)
+{{< /gallery >}}
+<!--more-->
 
 Another afternoon project made with scraps. One of our bathrooms is a small
 half-bath with no cabinets. To avoid a _shitty_ situation, I put a dowel into
@@ -16,5 +19,7 @@ on-hand at all times.
 
 This was a pretty simple project, so no in-progress pictures.
 
-:-------------------------:|:-------------------------:
-![](finished_no_tp.jpg) | ![](finished_tp.jpg)
+{{< gallery >}}
+![](finished_no_tp.jpg)
+![](finished_tp.jpg)
+{{< /gallery >}}

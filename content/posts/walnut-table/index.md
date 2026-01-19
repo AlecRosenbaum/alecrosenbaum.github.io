@@ -6,6 +6,7 @@ categories:
 ---
 
 ![](100_delivered.jpg)
+<!--more-->
 
 _Finished_
 
@@ -21,7 +22,10 @@ to remove some of the twist in the wood. These were too wide for my jointer,
 so I hand planed one side until it laid flat on my workbench. From that point
 I ran it through the thickness planer.
 
-![](10_planed_boards.jpg) | ![](11_planed_boards.jpg)
+{{< gallery >}}
+![](10_planed_boards.jpg)
+![](11_planed_boards.jpg)
+{{< /gallery >}}
 
 That was a lot of manual work, phew. Next I planed them all to the same
 thickness and prep'd them for gluing. I bought a biscuit jointer to help with
@@ -55,17 +59,29 @@ it goes on.
 Then I wiped it down with mineral spirits and put on a few coats of water based
 polyurethane.
 
-![](42_top_glued.jpg) | ![](45_top_glued.jpg)
+{{< gallery >}}
+![](42_top_glued.jpg)
+![](45_top_glued.jpg)
+{{< /gallery >}}
 
 I did the same thing for the base, too.
 
-![](75_parts_finished.jpg) | ![](76_parts_finished.jpg)
+{{< gallery >}}
+![](75_parts_finished.jpg)
+![](76_parts_finished.jpg)
+{{< /gallery >}}
 
 Then came the last step, marrying the two halves:
 
-![](91_assembled.jpg) | ![](92_assembled.jpg)
+{{< gallery >}}
+![](91_assembled.jpg)
+![](92_assembled.jpg)
+{{< /gallery >}}
 
 Then finally it was done! My mom came down to visit and pick up the table, then
 swapped it out when she got home. What a difference!
 
-![](99_old_table.jpg) | ![](100_delivered.jpg)
+{{< gallery >}}
+![](99_old_table.jpg)
+![](100_delivered.jpg)
+{{< /gallery >}}

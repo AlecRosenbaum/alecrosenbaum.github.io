@@ -5,14 +5,21 @@ categories:
   - woodworking
 ---
 
-![](90_finished.jpg) | ![](91_finished.jpg)
+{{< gallery >}}
+![](90_finished.jpg)
+![](91_finished.jpg)
+{{< /gallery >}}
+<!--more-->
 
 This coat rack just uses some of the offcut scraps from the walnut table I
 recently built.
 
 First, I cleaned up the bark and camped together the pieces into a mockup:
 
-![](01_mockup.jpg) | ![](02_mockup.jpg)
+{{< gallery >}}
+![](01_mockup.jpg)
+![](02_mockup.jpg)
+{{< /gallery >}}
 
 Then cleaned up the pieces and sanded them a bit.
 

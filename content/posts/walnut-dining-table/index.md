@@ -3,13 +3,14 @@ title: "Walnut Dining Table"
 date: 2024-06-29T00:12:00-04:00
 categories:
   - woodworking
-summary: "A dining table built for my Dad using rough cut walnut boards."
 ---
 
 {{< gallery >}}
 ![Finished table front view](95_finished.jpg)
 ![Finished table angle view](97_finished.jpg)
 {{< /gallery >}}
+
+<!--more-->
 
 *Finished*
 

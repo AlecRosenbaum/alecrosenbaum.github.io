@@ -7,6 +7,8 @@ categories:
 
 ![](finished_set_up.jpg)
 
+<!--more-->
+
 I started this without a totally clear picture of what it was going to look
 like when done, but I think it turned out pretty well.
 

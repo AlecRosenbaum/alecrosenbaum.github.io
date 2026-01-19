@@ -6,6 +6,7 @@ categories:
 ---
 
 ![](90_finished.jpg)
+<!--more-->
 
 _Finished_
 
@@ -16,13 +17,19 @@ The seller surprised us with "you'll have to unbolt it from the floor and also
 cut it to get it out of here", but such is craigslist. Unfortunately he only
 had a hand saw, and I didn't think to bring a circular saw :(
 
-![](01_trailer.jpg) | ![](00_trailer.jpg)
+{{< gallery >}}
+![](01_trailer.jpg)
+![](00_trailer.jpg)
+{{< /gallery >}}
 
 The rough saw marks didn't exactly look great, so we took the pockets off of
 the back and salvaged some wood with a matching finish. It covers the sawn
 edge, and provides a litle bit of support for the floating bench.
 
-![](10_back_pocket.jpg) | ![](50_driveway.jpg)
+{{< gallery >}}
+![](10_back_pocket.jpg)
+![](50_driveway.jpg)
+{{< /gallery >}}
 
 And moved inside:
 

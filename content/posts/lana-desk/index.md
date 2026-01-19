@@ -6,6 +6,7 @@ categories:
 ---
 
 ![](finished_2.jpg)
+<!--more-->
 
 I finished a desk for myself a few months ago, but my wife has been using a
 card table as her desk since we started working from home. Now she has a real
@@ -28,8 +29,10 @@ Once that had dried, I did quite a lot of sanding with a portable belt sander.
 Working may way up through the grits (80-320) took a lot of time and created
 _tons_ of fine red dust.
 
-:-------------------------:|:-------------------------:
-![](sanding_1.jpg) | ![](sanding_2.jpg)
+{{< gallery >}}
+![](sanding_1.jpg)
+![](sanding_2.jpg)
+{{< /gallery >}}
 
 With sanding done, I cut the ends straight with a circular saw. I used a
 straight piece of wood as a guide, so the cuts came out pretty clean.
@@ -50,5 +53,7 @@ too bad.
 After that I put on two coats of water-based polyurethane with some light
 sanding.
 
-:-------------------------:|:-------------------------:
-![](finished_1.jpg) | ![](finished_2.jpg)
+{{< gallery >}}
+![](finished_1.jpg)
+![](finished_2.jpg)
+{{< /gallery >}}

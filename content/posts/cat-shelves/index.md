@@ -6,6 +6,7 @@ categories:
 ---
 
 ![](99_theo_enjoying.jpg)
+<!--more-->
 
 _Finished, lazy cat :)_
 
@@ -15,11 +16,15 @@ an afternoon. Here's a few different versions.
 The most basic version was just 1x12, cut to length, covered with carpet, then
 hung with simple L brackets.
 
-:-------------------------:|:-------------------------:
-![](01_rough_plan.jpg) | ![](05_cut_carpet.jpg)
+{{< gallery >}}
+![](01_rough_plan.jpg)
+![](05_cut_carpet.jpg)
+{{< /gallery >}}
 
-:-------------------------:|:-------------------------:
-![](10_folded_over_carpet.jpg) | ![](15_bottom_backets.jpg)
+{{< gallery >}}
+![](10_folded_over_carpet.jpg)
+![](15_bottom_backets.jpg)
+{{< /gallery >}}
 
 This actually seemed to work out pretty well. The carpet was a pretty good
 texture for the cats to scratch at, and they loved the height. The only issue
@@ -28,8 +33,10 @@ the brackets weren't quite up to handling Theo's chonk without flexing. For
 the most part they were fine, but when he jumped between them there was some
 noticable give.
 
-:-------------------------:|:-------------------------:
-![](20_theo_on_old.jpg) | ![](21_both_cats_on_old.jpg)
+{{< gallery >}}
+![](20_theo_on_old.jpg)
+![](21_both_cats_on_old.jpg)
+{{< /gallery >}}
 
 
 So, some time later I revisted the design and mocked up something slightly
@@ -41,10 +48,14 @@ afternoon project, but there were two main modifications:
 The first one I did was just a quick mockup (though we left it up), then the
 next one I painted to make it look a little more finished.
 
-:-------------------------:|:-------------------------:
-![](25_lower.jpg) | ![](40_higher.jpg)
+{{< gallery >}}
+![](25_lower.jpg)
+![](40_higher.jpg)
+{{< /gallery >}}
 
 And they love it!
 
-:-------------------------:|:-------------------------:
-![](50_both_together.jpg) | ![](99_theo_enjoying.jpg)
+{{< gallery >}}
+![](50_both_together.jpg)
+![](99_theo_enjoying.jpg)
+{{< /gallery >}}

@@ -7,6 +7,8 @@ categories:
 
 ![](81_finished_upright.jpg)
 
+<!--more-->
+
 _Finished_
 
 I've been using a rubber mallet and poorly constructed rubber hammer to get

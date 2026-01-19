@@ -7,6 +7,8 @@ categories:
 
 ![](finished.jpg)
 
+<!--more-->
+
 No WIP pictures, unfortunately. Made with a board of curly maple.
 
 * Started with a rough maple board

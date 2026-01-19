@@ -5,7 +5,11 @@ categories:
   - woodworking
 ---
 
-![](81_installed_closeup.jpg) | ![](80_installed.jpg)
+{{< gallery >}}
+![](81_installed_closeup.jpg)
+![](80_installed.jpg)
+{{< /gallery >}}
+<!--more-->
 
 _Finished_
 
@@ -23,6 +27,9 @@ Well then I just assembled it with some screws, and it was pretty much done!
 
 ![](50_assembled.jpg)
 
-![](81_installed_closeup.jpg) | ![](80_installed.jpg)
+{{< gallery >}}
+![](81_installed_closeup.jpg)
+![](80_installed.jpg)
+{{< /gallery >}}
 
 ![](82_installed_step_back.jpg)

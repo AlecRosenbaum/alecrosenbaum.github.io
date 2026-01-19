@@ -5,14 +5,24 @@ categories:
   - woodworking
 ---
 
-![](92_finished_table_leg.jpg) | ![](91_finished_table.jpg)
+{{< gallery >}}
+![](92_finished_table_leg.jpg)
+![](91_finished_table.jpg)
+{{< /gallery >}}
+<!--more-->
 
 _Finished shots first!_
 
 But this is what it looked like when I started:
 
-![](00_raw_slab.jpg) | ![](02_raw_slabs.jpg)
-![](03_raw_slabs.jpg) | ![](01_raw_slab.jpg)
+{{< gallery >}}
+![](00_raw_slab.jpg)
+![](02_raw_slabs.jpg)
+{{< /gallery >}}
+{{< gallery >}}
+![](03_raw_slabs.jpg)
+![](01_raw_slab.jpg)
+{{< /gallery >}}
 
 The Sawmill had a huge CNC router setup, which took care of flattening each of the slabs. Then a Festool track saw to cut the joint (it's really impressive how clean of a line that leaves).
 
@@ -43,13 +53,19 @@ needing screws to come out.
 ![](36_leg_first_dry_fit.jpg)
 ![](45_glue_base_side.jpg)
 
-![](40_full_base_dry_fit.jpg) | ![](41_full_base_dry_fit.jpg)
+{{< gallery >}}
+![](40_full_base_dry_fit.jpg)
+![](41_full_base_dry_fit.jpg)
+{{< /gallery >}}
 ![](42_base_dry_fit_wedge.jpg)
 
 The plan is to hold the top on using machine screws + inserts. So basically
 drill a hole, then screw in threaded inserts which then work with machine screws.
 
-![](50_upside_down_dry_fit_top.jpg) | ![](51_upside_down_dry_fit_top.jpg)
+{{< gallery >}}
+![](50_upside_down_dry_fit_top.jpg)
+![](51_upside_down_dry_fit_top.jpg)
+{{< /gallery >}}
 
 I haven't yet finished the extension, but it has a big crack in it and needed
 some butterflies.

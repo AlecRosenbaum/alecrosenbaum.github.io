@@ -6,6 +6,7 @@ categories:
 ---
 
 ![](99_frames_done.jpg)
+<!--more-->
 
 _Finished_
 
@@ -17,8 +18,10 @@ making miters sized correctly that also look pretty can be a bit fiddly.
 
 The first step was cutting all the edges to size.
 
-:-------------------------:|:-------------------------:
-![](10_cuts.jpg) | ![](20_cut_pieces.jpg)
+{{< gallery >}}
+![](10_cuts.jpg)
+![](20_cut_pieces.jpg)
+{{< /gallery >}}
 
 Then I used painters tape and a square to do the glue up. The painters tape did
 a very good job of keeping all the edges flush and applying good clamping

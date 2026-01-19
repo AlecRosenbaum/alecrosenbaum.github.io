@@ -5,7 +5,11 @@ categories:
   - woodworking
 ---
 
-![](90_done.jpg) | ![](91_done.jpg)
+{{< gallery >}}
+![](90_done.jpg)
+![](91_done.jpg)
+{{< /gallery >}}
+<!--more-->
 
 _Finished_
 
@@ -16,7 +20,10 @@ This design is roughly based off of this table my dad made around 2014-ish. I
 used these photos I took at the time for reference. Unfortunately the scraps
 I had weren't quite as thick or good quality, but free wood is free.
 
-![](01_reference.jpg) | ![](02_reference.jpg)
+{{< gallery >}}
+![](01_reference.jpg)
+![](02_reference.jpg)
+{{< /gallery >}}
 
 So I guessed at all the dimensions and held a tape measure up against my
 couch to picture where it would go. From that, I scrounged around for matching
@@ -41,7 +48,10 @@ leg. I first created a flat face using a hand saw/chisel, then set up a jig on
 the drill press to drill a round mortise. From there I rounded each tenon by
 hand, following lines from a compass.
 
-![](31_mortise_tennon_base.jpg) | ![](40_angled_tennon.jpg)
+{{< gallery >}}
+![](31_mortise_tennon_base.jpg)
+![](40_angled_tennon.jpg)
+{{< /gallery >}}
 
 And with that, everything was in place for a dry fit! Now comes the part about
 no sanding though. Instead of using my power sander, I used a small smoothing
@@ -49,9 +59,18 @@ plane to get out all the burn marks from the legs, smooth the table surfaces,
 knock down sharp corners, and do any final tweaks on fit. Then it was time for
 some glue and finish! I just used spray laquer this time.
 
-![](51_dry_fit.jpg) | ![](56_glue_up.jpg)
-![](57_glue_up.jpg) | ![](61_apply_finish.jpg)
+{{< gallery >}}
+![](51_dry_fit.jpg)
+![](56_glue_up.jpg)
+{{< /gallery >}}
+{{< gallery >}}
+![](57_glue_up.jpg)
+![](61_apply_finish.jpg)
+{{< /gallery >}}
 
 And then it was done!
 
-![](90_done.jpg) | ![](91_done.jpg)
+{{< gallery >}}
+![](90_done.jpg)
+![](91_done.jpg)
+{{< /gallery >}}

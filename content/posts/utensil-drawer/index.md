@@ -6,6 +6,7 @@ categories:
 ---
 
 ![](installed.jpg)
+<!--more-->
 
 _Finished_
 
@@ -35,11 +36,15 @@ easily stayed aligned whlie gluing.
 Below is when I remembered I should take some pictures, and shows
 me using an edger to trim the bottom flush.
 
-:-------------------------:|:-------------------------:
-![](edge-trimmer.jpg) | ![](pre-finish.jpg)
+{{< gallery >}}
+![](edge-trimmer.jpg)
+![](pre-finish.jpg)
+{{< /gallery >}}
 
 
 Then just a few coats of polyurethane and Voila!
 
-:-------------------------:|:-------------------------:
-![](installed.jpg) | ![](comparison.jpg)
+{{< gallery >}}
+![](installed.jpg)
+![](comparison.jpg)
+{{< /gallery >}}

@@ -5,7 +5,11 @@ categories:
   - woodworking
 ---
 
-![](98_finished.jpg) | ![](99_finished.jpg)
+{{< gallery >}}
+![](98_finished.jpg)
+![](99_finished.jpg)
+{{< /gallery >}}
+<!--more-->
 
 
 In 2021 a nearby bowling alley was being demolished and they gave away sections
@@ -16,7 +20,10 @@ anything made from it. They wanted a kitchen island, so off to the races I
 went.
 
 
-![](00_loaded_alley.jpg) | ![](01_alley_starting.jpg)
+{{< gallery >}}
+![](00_loaded_alley.jpg)
+![](01_alley_starting.jpg)
+{{< /gallery >}}
 
 _Alley loaded on a trailed behind my then car, a GTI clearly fit for hauling.
 Then then what each section looked like when I started_
@@ -25,7 +32,10 @@ I got a base on etsy made of square tubing, delivered to my house. It was just
 raw metal. But it looked really good so I just put a coat of clear laquer on it
 to prevent rust.
 
-![](05_laquer_base.jpg) | ![](06_base.jpg)
+{{< gallery >}}
+![](05_laquer_base.jpg)
+![](06_base.jpg)
+{{< /gallery >}}
 
 Part of why I haven't used these lanes is because the material is very dfficult
 to work with. The strips of maple are _stapled_ together, with enormous 2 inch
@@ -38,7 +48,10 @@ still held together, but would flex significantly and was not structurally
 sound. This meant I could take some _actually_ straight boards and re-join them
 to the top to make it both flat and structurally stable.
 
-![](10_stapled_lanes.jpg) | ![](11_stapled_lanes.jpg)
+{{< gallery >}}
+![](10_stapled_lanes.jpg)
+![](11_stapled_lanes.jpg)
+{{< /gallery >}}
 
 ![](15_rejoined_lanes.jpg)
 
@@ -55,9 +68,15 @@ swap the sled to ride the carved out sections and route the elevated sections
 instead. Afterwards I much less sanding to smooth it all out. I only did this
 for the top, since the shelf would mostly be hidden anyway.
 
-![](20_resurface_top_plan.jpg) | ![](21_resurface_top_partial.jpg)
+{{< gallery >}}
+![](20_resurface_top_plan.jpg)
+![](21_resurface_top_partial.jpg)
+{{< /gallery >}}
 
-![](22_resurface_top_partial_closeup.jpg) | ![](23_resurface_top_rough_sanded.jpg)
+{{< gallery >}}
+![](22_resurface_top_partial_closeup.jpg)
+![](23_resurface_top_rough_sanded.jpg)
+{{< /gallery >}}
 
 ![](25_resurfaced_top.jpg)
 
@@ -70,7 +89,10 @@ hard and by the end of this project I had chipped off quite a few of the
 carbide teeth on my circular saw blade. After cutting to width I chamfered the
 structural 2x6's underneath so they wouldn't easily be visible from above.
 
-![](30_cut_to_width.jpg) | ![](40_chamfer_structure.jpg)
+{{< gallery >}}
+![](30_cut_to_width.jpg)
+![](40_chamfer_structure.jpg)
+{{< /gallery >}}
 
 And of course cutting it to width left a bunch of staples on the edges to be
 pulled. I used vice grips to create a sort of head of the cut off ends, then
@@ -92,7 +114,10 @@ And that was just half! Then I had to repeat everything for the shelf.
 
 First, rough cut to length.
 
-![](70_cut_shelf_to_length.jpg) | ![](71_rough_shelf_surface.jpg)
+{{< gallery >}}
+![](70_cut_shelf_to_length.jpg)
+![](71_rough_shelf_surface.jpg)
+{{< /gallery >}}
 
 Then flatten / readd structure with 2x6's.
 
@@ -100,7 +125,10 @@ Then flatten / readd structure with 2x6's.
 
 Then measure / cut / fit to the interior width of the base.
 
-![](80_shelf_width_fit.jpg) | ![](81_shelf_width_fit.jpg)
+{{< gallery >}}
+![](80_shelf_width_fit.jpg)
+![](81_shelf_width_fit.jpg)
+{{< /gallery >}}
 
 Once fit to width I went back and finish sanded, and added some breadboard ends
 similar to what I did on the top. On the top I attached them with screws with
@@ -117,7 +145,10 @@ machine screw inserts, then screwing everything in.
 
 ![](91_shelf_attach_base.jpg)
 
-![](92_done_upside_down.jpg) | ![](93_done_upside_down_side.jpg)
+{{< gallery >}}
+![](92_done_upside_down.jpg)
+![](93_done_upside_down_side.jpg)
+{{< /gallery >}}
 
 All that, and it _should_ be done? But it turns out it's too heavy for me to
 flip over alone in my shop. I actually had to get a mini manual forklift to

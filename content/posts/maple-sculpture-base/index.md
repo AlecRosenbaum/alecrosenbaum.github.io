@@ -5,8 +5,11 @@ categories:
   - woodworking
 ---
 
-:-------------------------:|:-------------------------:
-![](80_in_place.jpg) | ![](85_up_close.jpg)
+{{< gallery >}}
+![](80_in_place.jpg)
+![](85_up_close.jpg)
+{{< /gallery >}}
+<!--more-->
 
 _Finished_
 
@@ -18,8 +21,10 @@ footprint to be stable (and stand up in the face of curious animals).
 
 So I set out to make a new base.
 
-:-------------------------:|:-------------------------:
-![](05_mockup_and_before.jpg) | ![](00_sketch.jpg)
+{{< gallery >}}
+![](05_mockup_and_before.jpg)
+![](00_sketch.jpg)
+{{< /gallery >}}
 
 _Before, and the rough sketch I based my design on._
 
@@ -29,8 +34,10 @@ of the one maple block. I also had a few leftover black angle brackets from
 shelving I recently put up, so I could use those to frame the base and
 further highlight the contrast.
 
-:-------------------------:|:-------------------------:
-![](10_single_piece_cuts.jpg) | ![](15_cut_pieces.jpg)
+{{< gallery >}}
+![](10_single_piece_cuts.jpg)
+![](15_cut_pieces.jpg)
+{{< /gallery >}}
 
 <table>
   <tbody>
@@ -65,13 +72,17 @@ further highlight the contrast.
   </tbody>
 </table>
 
-:-------------------------:|:-------------------------:
-![](21_dry_fit_base_only.jpg) | ![](25_dry_fit.jpg)
+{{< gallery >}}
+![](21_dry_fit_base_only.jpg)
+![](25_dry_fit.jpg)
+{{< /gallery >}}
 
 This is now coming together pretty nicely. All that's left is some extra
 sanding to knock down sharp edges, and then a few coats of polyurethane.
 
 And that's it! Finished:
 
-:-------------------------:|:-------------------------:
-![](80_in_place.jpg) | ![](85_up_close.jpg)
+{{< gallery >}}
+![](80_in_place.jpg)
+![](85_up_close.jpg)
+{{< /gallery >}}

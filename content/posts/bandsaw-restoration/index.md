@@ -5,8 +5,11 @@ categories:
   - woodworking
 ---
 
-:-------------------------:|:-------------------------:
-![](all-put-together-no-electric.jpg) | ![](cut.jpg)
+{{< gallery >}}
+![](all-put-together-no-electric.jpg)
+![](cut.jpg)
+{{< /gallery >}}
+<!--more-->
 
 I did end up using this monstrosity for a few months but ultimately replaced
 it. Mainly because it vibrated, and the motor I had on it didn't go the right
@@ -22,24 +25,32 @@ the saw as a whole. I also couldn't easily fix it.
 
 So I made a replacement wheel out of thick MDF.
 
-:-------------------------:|:-------------------------:
-![](wheel-truing-clamp-setup.jpg) | ![](wheel-truing.jpg)
+{{< gallery >}}
+![](wheel-truing-clamp-setup.jpg)
+![](wheel-truing.jpg)
+{{< /gallery >}}
 
 ![](wheel-turning-to-size.jpg)
 
-:-------------------------:|:-------------------------:
-![](wheel-installed.jpg) | ![](top-wheel-tracking.jpg)
+{{< gallery >}}
+![](wheel-installed.jpg)
+![](top-wheel-tracking.jpg)
+{{< /gallery >}}
 
 It _did_ actually work, but the blade was _way_ too far forward (pictured
 below). I did spend some time after this picture was taken getting it to track
 further back, which involved thinning the glued on piece so the top wheel could
 sit further back.
 
-:-------------------------:|:-------------------------:
-![](blade-alignment.jpg) | ![](bottom-wheel-tracking.jpg)
+{{< gallery >}}
+![](blade-alignment.jpg)
+![](bottom-wheel-tracking.jpg)
+{{< /gallery >}}
 
-:-------------------------:|:-------------------------:
-![](all-put-together-no-electric.jpg) | ![](sketchy-plug-todo.jpg)
+{{< gallery >}}
+![](all-put-together-no-electric.jpg)
+![](sketchy-plug-todo.jpg)
+{{< /gallery >}}
 
 Not pictured is some more electrical work I did to make the switch a bit less
 sketchy.

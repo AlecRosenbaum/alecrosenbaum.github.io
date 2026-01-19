@@ -5,8 +5,11 @@ categories:
   - woodworking
 ---
 
-:-------------------------:|:-------------------------:
-![](finished_outside.jpg) | ![](finished_puppy.jpg)
+{{< gallery >}}
+![](finished_outside.jpg)
+![](finished_puppy.jpg)
+{{< /gallery >}}
+<!--more-->
 
 _Finished_
 
@@ -33,8 +36,10 @@ _Sketch_
 Next, a whole lot of rabbets and dados. Each piece of the outer frame is joined
 with a rabbet, and each vertical piece is dado'd in.
 
-:-------------------------:|:-------------------------:
-![](first_rabbet.jpg) | ![](dry_fit.jpg)
+{{< gallery >}}
+![](first_rabbet.jpg)
+![](dry_fit.jpg)
+{{< /gallery >}}
 
 Up next, glue.
 
@@ -72,7 +77,9 @@ that this setup works pretty well. The hinges attach to the long piece of oak
 and to the plywood on the frame. I also scavenged a spring and screwed it in
 so that the gate gently pulls itself closed.
 
-:-------------------------:|:-------------------------:
-![](finished_outside.jpg) | ![](finished_puppy.jpg)
+{{< gallery >}}
+![](finished_outside.jpg)
+![](finished_puppy.jpg)
+{{< /gallery >}}
 
 _Finished_

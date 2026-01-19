@@ -7,6 +7,7 @@ categories:
 
 
 ![](80_all_together.jpg)
+<!--more-->
 
 _Finished_
 
@@ -53,6 +54,9 @@ red oak I used for the column. I could fix it by using a bigger or harder piece
 of wood, but I think this is fine for now. Everything is just screwed/wedged
 together, so it should be easy to replace if it really bothers me.
 
-![](51_all_together.jpg) | ![](80_all_together.jpg)
+{{< gallery >}}
+![](51_all_together.jpg)
+![](80_all_together.jpg)
+{{< /gallery >}}
 
 ![](90_top_down.jpg)

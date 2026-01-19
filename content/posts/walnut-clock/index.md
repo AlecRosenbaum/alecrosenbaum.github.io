@@ -5,8 +5,11 @@ categories:
   - woodworking
 ---
 
-:-------------------------:|:-------------------------:
-![](95_on_wall.jpg) | ![](99_on_wall_closeup.jpg)
+{{< gallery >}}
+![](95_on_wall.jpg)
+![](99_on_wall_closeup.jpg)
+{{< /gallery >}}
+<!--more-->
 
 _Finished_
 
@@ -14,20 +17,28 @@ I started with a thrift store clock, which I was going to make some minor
 improvements to. Turns out it ballooned and I ended up remaking the entire
 clock.
 
-:-------------------------:|:-------------------------:
-![](00_start.jpg) | ![](05_new_hands.jpg)
+{{< gallery >}}
+![](00_start.jpg)
+![](05_new_hands.jpg)
+{{< /gallery >}}
 
-:-------------------------:|:-------------------------:
-![](10_splitting_scrap_walnut.jpg) |  ![](15_scrap_hickory_dividers.jpg)
+{{< gallery >}}
+![](10_splitting_scrap_walnut.jpg)
+![](15_scrap_hickory_dividers.jpg)
+{{< /gallery >}}
 
 ![](20_glue_walnut_widen.jpg)
 ![](25_glued_quarters.jpg)
 ![](30_face_glueup.jpg)
 
-:-------------------------:|:-------------------------:
-![](79_wax_applied.jpg) | ![](80_wax_applied.jpg)
+{{< gallery >}}
+![](79_wax_applied.jpg)
+![](80_wax_applied.jpg)
+{{< /gallery >}}
 
 ![](85_finished_on_desk.jpg)
 
-:-------------------------:|:-------------------------:
-![](95_on_wall.jpg) | ![](99_on_wall_closeup.jpg)
+{{< gallery >}}
+![](95_on_wall.jpg)
+![](99_on_wall_closeup.jpg)
+{{< /gallery >}}

@@ -5,8 +5,11 @@ categories:
   - woodworking
 ---
 
-:-------------------------:|:-------------------------:
-![](70_installed_temp_legs.jpg) | ![](71_installed_temp_legs.jpg)
+{{< gallery >}}
+![](70_installed_temp_legs.jpg)
+![](71_installed_temp_legs.jpg)
+{{< /gallery >}}
+<!--more-->
 
 _Finished_
 
@@ -19,8 +22,10 @@ this wood laying around. I figured I could use it (and I did), so I brought it
 back with me.
 
 
-:-------------------------:|:-------------------------:
-![](00_raw_wood.jpg) | ![](05_laid_out_flat.jpg)
+{{< gallery >}}
+![](00_raw_wood.jpg)
+![](05_laid_out_flat.jpg)
+{{< /gallery >}}
 
 Nearly all of these pieces weren't flat, and none of them were over 1" thick.
 Unfortunately, the counter I planned was 1.5" thick. RIP. So rip I did, into
@@ -38,8 +43,10 @@ glueups of a half each, then a final glueup of both halves. This way I could
 make each half thin enough to fit into my thickness planer and end up with nice
 uniform surfaces.
 
-:-------------------------:|:-------------------------:
-![](20_first_glueup.jpg) | ![](22_dry_fit_second_glueup.jpg)
+{{< gallery >}}
+![](20_first_glueup.jpg)
+![](22_dry_fit_second_glueup.jpg)
+{{< /gallery >}}
 
 With the halves glued up, it was time to put my plan into motion. My jointer
 isn't quite this wide, so I started with a hand plane on the bottom side to
@@ -63,14 +70,18 @@ flat panels I will certainly be using it again.
 Below are pictures of the halves aftering being rubbed down with mineral
 spirits.
 
-:-------------------------:|:-------------------------:
-![](35_scraped_cleaned_halves.jpg) | ![](36_scraped_cleaned_halves.jpg)
+{{< gallery >}}
+![](35_scraped_cleaned_halves.jpg)
+![](36_scraped_cleaned_halves.jpg)
+{{< /gallery >}}
 
 Up next: the big glue up. It was time to glue both halves together to form the
 actual counter.
 
-:-------------------------:|:-------------------------:
-![](40_big_glue_up.jpg) | ![](45_glued_scraped.jpg)
+{{< gallery >}}
+![](40_big_glue_up.jpg)
+![](45_glued_scraped.jpg)
+{{< /gallery >}}
 
 At this point the counter is actually pretty big -- big enough that I can't
 neatly fit it on any of my go-to tools. It took a little setup, but I was able
@@ -87,13 +98,17 @@ more rounds of howard's butcher block conditioner (which contains wax as well).
 
 Here's the result before installation:
 
-:-------------------------:|:-------------------------:
-![](58_cut_scraped_clean.jpg) | ![](60_cut_scraped_clean.jpg)
+{{< gallery >}}
+![](58_cut_scraped_clean.jpg)
+![](60_cut_scraped_clean.jpg)
+{{< /gallery >}}
 
 I also ordered some powder black aluminum legs, but they didn't arrive in time
 for our visit. So the morning of, I whipped up some makeshift legs out of
 2x4's. These will be replaced 1 for 1 with the final legs when they arrive in
 the mail (shipped directly to them).
 
-:-------------------------:|:-------------------------:
-![](70_installed_temp_legs.jpg) | ![](71_installed_temp_legs.jpg)
+{{< gallery >}}
+![](70_installed_temp_legs.jpg)
+![](71_installed_temp_legs.jpg)
+{{< /gallery >}}

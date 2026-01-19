@@ -6,6 +6,7 @@ categories:
 ---
 
 ![](installed_elevated.jpg)
+<!--more-->
 
 _Finished_
 
@@ -43,25 +44,35 @@ _Finished_
   </tbody>
 </table>
 
-:-------------------------:|:-------------------------:
-![](cut_and_stripped.jpg) | ![](cut_and_stripped_zoomed.jpg)
+{{< gallery >}}
+![](cut_and_stripped.jpg)
+![](cut_and_stripped_zoomed.jpg)
+{{< /gallery >}}
 
 Next came filling in some of the voids with expoxy. Aluminum tape and
 disposable measuring cups make epoxy work so much easier.
 
-:-------------------------:|:-------------------------:
-![](large_epoxied.jpg) | ![](small_epoxied.jpg)
+{{< gallery >}}
+![](large_epoxied.jpg)
+![](small_epoxied.jpg)
+{{< /gallery >}}
 
 Then just lots of passes sanding and finishing.
 
-:-------------------------:|:-------------------------:
-![](large_epoxy_fill.jpg) | ![](sanded_and_finished.jpg)
+{{< gallery >}}
+![](large_epoxy_fill.jpg)
+![](sanded_and_finished.jpg)
+{{< /gallery >}}
 
 The shelves themselves were then done, and I installed them into some studs
 using thick matte black angle brackets.
 
-:-------------------------:|:-------------------------:
-![](installed_eye_level.jpg) | ![](installed_elevated.jpg)
+{{< gallery >}}
+![](installed_eye_level.jpg)
+![](installed_elevated.jpg)
+{{< /gallery >}}
 
-:-------------------------:|:-------------------------:
-![](installed_sideways.jpg) | ![](installed_underneath.jpg)
+{{< gallery >}}
+![](installed_sideways.jpg)
+![](installed_underneath.jpg)
+{{< /gallery >}}

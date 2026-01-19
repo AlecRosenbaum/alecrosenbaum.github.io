@@ -5,8 +5,11 @@ categories:
   - woodworking
 ---
 
-:-------------------------:|:-------------------------:
-![](85_finished_base_only.jpg) | ![](90_finished.jpg)
+{{< gallery >}}
+![](85_finished_base_only.jpg)
+![](90_finished.jpg)
+{{< /gallery >}}
+<!--more-->
 
 _Finished_
 
