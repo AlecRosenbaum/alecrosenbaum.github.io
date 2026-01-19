@@ -1,6 +1,6 @@
 ---
 title: "Cedar Sit-Stand Desk"
-date: 2020-08-01 00:00:00 -0400
+date: 2020-08-01T00:00:00-04:00
 categories:
   - woodworking
 ---

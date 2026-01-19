@@ -1,6 +1,6 @@
 ---
 title: "Maple Kitchen Island"
-date: 2023-12-17 00:12:00 -0400
+date: 2023-12-17T00:12:00-04:00
 categories:
   - woodworking
 ---

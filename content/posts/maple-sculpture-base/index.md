@@ -1,6 +1,6 @@
 ---
 title: "Maple Scupture Base"
-date: 2020-10-7 00:00:00 -0400
+date: 2020-10-07T00:00:00-04:00
 categories:
   - woodworking
 ---

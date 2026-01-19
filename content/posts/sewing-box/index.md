@@ -1,6 +1,6 @@
 ---
 title: "Sewing Box"
-date: 2020-07-24 00:00:00 -0400
+date: 2020-07-24T00:00:00-04:00
 categories:
   - woodworking
 ---

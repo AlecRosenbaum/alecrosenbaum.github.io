@@ -1,6 +1,6 @@
 ---
 title: "Black Frames"
-date: 2020-10-10 00:00:00 -0400
+date: 2020-10-10T00:00:00-04:00
 categories:
   - woodworking
 ---

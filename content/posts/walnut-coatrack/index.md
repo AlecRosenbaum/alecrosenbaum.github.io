@@ -1,6 +1,6 @@
 ---
 title: "Walnut Coatrack"
-date: 2022-09-30 00:12:00 -0400
+date: 2022-09-30T00:12:00-04:00
 categories:
   - woodworking
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Puppy Gate"
-date: 2020-08-05 00:00:00 -0400
+date: 2020-08-05T00:00:00-04:00
 categories:
   - woodworking
 ---

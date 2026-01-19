@@ -1,6 +1,6 @@
 ---
 title: "Walnut Dining Table"
-date: 2021-10-05 00:12:00 -0400
+date: 2021-10-05T00:12:00-04:00
 categories:
   - woodworking
 ---

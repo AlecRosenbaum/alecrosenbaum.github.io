@@ -1,6 +1,6 @@
 ---
 title: "White Oak Dog Crate"
-date: 2023-10-06 00:12:00 -0400
+date: 2023-10-06T00:12:00-04:00
 categories:
   - woodworking
 ---

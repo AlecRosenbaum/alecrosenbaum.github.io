@@ -1,6 +1,6 @@
 ---
 title: "Serving Tray"
-date: 2021-01-27 00:00:00 -0400
+date: 2021-01-27T00:00:00-04:00
 categories:
   - woodworking
 ---

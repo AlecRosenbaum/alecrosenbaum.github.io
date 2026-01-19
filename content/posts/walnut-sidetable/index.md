@@ -1,6 +1,6 @@
 ---
 title: "Walnut Side Table"
-date: 2021-10-09 00:12:00 -0400
+date: 2021-10-09T00:12:00-04:00
 categories:
   - woodworking
 ---

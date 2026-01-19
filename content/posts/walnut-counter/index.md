@@ -1,6 +1,6 @@
 ---
 title: "Walnut Counter Top"
-date: 2021-03-10 00:00:00 -0400
+date: 2021-03-10T00:00:00-04:00
 categories:
   - woodworking
 ---

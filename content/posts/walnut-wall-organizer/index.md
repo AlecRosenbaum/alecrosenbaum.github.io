@@ -1,6 +1,6 @@
 ---
 title: "Walnut Wall Organizer"
-date: 2021-10-31 00:12:00 -0400
+date: 2021-10-31T00:12:00-04:00
 categories:
   - woodworking
 ---

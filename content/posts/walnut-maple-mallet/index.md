@@ -1,6 +1,6 @@
 ---
 title: "Walnut and Maple Mallet"
-date: 2021-07-30 00:02:00 -0400
+date: 2021-07-30T00:02:00-04:00
 categories:
   - woodworking
 ---

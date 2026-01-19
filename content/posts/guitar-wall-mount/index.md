@@ -1,6 +1,6 @@
 ---
 title: "Guitar Wall Mount"
-date: 2020-06-28 00:00:00 -0400
+date: 2020-06-28T00:00:00-04:00
 categories:
   - woodworking
 ---

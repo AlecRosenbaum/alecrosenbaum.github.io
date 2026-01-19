@@ -1,6 +1,6 @@
 ---
 title: "TP Holder"
-date: 2020-08-22 00:00:00 -0400
+date: 2020-08-22T00:00:00-04:00
 categories:
   - woodworking
 ---

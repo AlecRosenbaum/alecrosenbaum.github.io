@@ -1,6 +1,6 @@
 ---
 title: "Vintage Drill Press Restoration"
-date: 2020-05-15 12:30:00 -0400
+date: 2020-05-15T12:30:00-04:00
 categories:
   - woodworking
 ---

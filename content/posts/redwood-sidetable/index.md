@@ -1,6 +1,6 @@
 ---
 title: "Redwood Side Table"
-date: 2021-10-08 00:12:00 -0400
+date: 2021-10-08T00:12:00-04:00
 categories:
   - woodworking
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Utensil Drawer Divider"
-date: 2020-08-15 00:00:00 -0400
+date: 2020-08-15T00:00:00-04:00
 categories:
   - woodworking
 ---

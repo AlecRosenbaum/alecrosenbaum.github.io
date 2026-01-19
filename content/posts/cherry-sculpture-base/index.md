@@ -1,6 +1,6 @@
 ---
 title: "Cherry Sclupture Base"
-date: 2021-04-03 00:00:00 -0400
+date: 2021-04-03T00:00:00-04:00
 categories:
   - woodworking
 ---

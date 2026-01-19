@@ -1,6 +1,6 @@
 ---
 title: "Walnut Slab Table"
-date: 2022-08-21 00:12:00 -0400
+date: 2022-08-21T00:12:00-04:00
 categories:
   - woodworking
 ---

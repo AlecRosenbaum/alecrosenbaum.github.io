@@ -1,6 +1,6 @@
 ---
 title: "Salvaged Pew Bench"
-date: 2021-09-01 00:12:00 -0400
+date: 2021-09-01T00:12:00-04:00
 categories:
   - woodworking
 ---

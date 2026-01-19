@@ -1,6 +1,6 @@
 ---
 title: "Vintage Band Saw Restoration"
-date: 2020-07-23 00:00:00 -0400
+date: 2020-07-23T00:00:00-04:00
 categories:
   - woodworking
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Hickory Faced Spice Baskets"
-date: 2021-02-07 00:00:00 -0400
+date: 2021-02-07T00:00:00-04:00
 categories:
   - woodworking
 ---

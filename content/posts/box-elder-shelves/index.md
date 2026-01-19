@@ -1,6 +1,6 @@
 ---
 title: "Live-Edge Box Elder Shelves"
-date: 2020-09-10 00:00:00 -0400
+date: 2020-09-10T00:00:00-04:00
 categories:
   - woodworking
 ---
