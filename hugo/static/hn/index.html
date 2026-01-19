@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=800, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Hacker News reader optimized for e-ink devices">
+  <meta name="robots" content="noindex, nofollow">
+  <title>HN for E-Ink</title>
+
+<style>
+  /* E-ink optimized styles - no animations, high contrast, large touch targets */
+  * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    font-family: Georgia, serif;  /* Better for e-ink readability */
+    width: 800px;
+    overflow-x: hidden;
+  }
+
+  .hn-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0;
+    padding: 10px;
+    background: #ffffff;
+    color: #1e1e1e;
+    font-family: Georgia, serif;
+    min-height: 550px;  /* Account for browser chrome on 600px height */
+  }
+
+  .hn-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1e1e1e;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .hn-header > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .hn-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 8px;
+    display: inline-block;
+  }
+
+  .refresh-button {
+    min-width: 36px;
+    height: 30px;
+    padding: 6px 10px;
+    margin-left: 8px;
+    background: #ffffff;
+    color: #1e1e1e;
+    border: 2px solid #1e1e1e;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .refresh-button:active,
+  .refresh-button:focus {
+    background: #1e1e1e;
+    color: #ffffff;
+    outline: none;
+  }
+
+  .refresh-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .nav-button {
+    min-width: 60px;
+    height: 30px;
+    padding: 6px 10px;
+    background: #ffffff;
+    color: #1e1e1e;
+    border: 2px solid #1e1e1e;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .nav-button:active,
+  .nav-button:focus {
+    background: #1e1e1e;
+    color: #ffffff;
+    outline: none;
+  }
+
+  .nav-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    background: #f0f0f0;
+  }
+
+  .page-indicator {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 0 8px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .page-indicator strong {
+    font-size: 14px;
+  }
+
+  .stories-container {
+    min-height: 460px;
+    margin: 10px 0 20px 0;
+  }
+
+  .story-card {
+    border: 1px solid #1e1e1e;
+    padding: 10px;
+    margin: 8px 0;
+    background: #ffffff;
+    position: relative;
+  }
+
+  .story-card:focus-within {
+    outline: 3px solid #1e1e1e;
+    outline-offset: 2px;
+  }
+
+  .story-meta {
+    font-size: 11px;
+    color: #555;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  .story-meta span {
+    margin-right: 6px;
+  }
+
+  .score {
+    font-weight: 600;
+    color: #1e1e1e;
+  }
+
+  .story-title {
+    font-size: 15px;
+    line-height: 1.25;
+    margin: 0 140px 4px 0;  /* Add right margin for button */
+    font-weight: 600;
+  }
+
+  .story-title a {
+    color: #1e1e1e;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+  }
+
+  .story-title a:focus,
+  .story-title a:active {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  .comments-link {
+    color: #1e1e1e;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    border: 2px solid #1e1e1e;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    min-width: 120px;
+    text-align: center;
+    background: #ffffff;
+  }
+
+  .comments-link:focus,
+  .comments-link:active {
+    background: #1e1e1e;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .domain {
+    margin-left: 6px;
+    color: #888;
+    font-size: 10px;
+  }
+
+  .loading-message,
+  .error-message {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    min-height: 200px;
+    line-height: 200px;
+  }
+
+  .error-message {
+    color: #d00;
+    border: 2px solid #d00;
+    margin: 10px 0;
+    background: #fff5f5;
+  }
+
+  .cache-info {
+    font-size: 10px;
+    color: #666;
+    padding: 0 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* Optimized specifically for 800x600 e-ink displays */
+  @media screen and (max-width: 800px) {
+    body {
+      width: 100%;
+    }
+
+    .hn-container {
+      padding: 8px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="hn-container">
+  <div class="hn-header">
+    <button class="nav-button" id="prev-btn" onclick="navigateToPage(currentPage - 1)" disabled>
+      ← Prev
+    </button>
+    <h1 class="hn-title">HN</h1>
+    <span class="page-indicator">
+      Page <strong id="current-page">1</strong>/<strong id="total-pages">-</strong>
+    </span>
+    <div class="cache-info" id="cache-info"></div>
+    <button class="nav-button" id="next-btn" onclick="navigateToPage(currentPage + 1)" disabled>
+      Next →
+    </button>
+    <button class="refresh-button" onclick="refreshStories()">↻</button>
+  </div>
+
+  <div id="stories-container" class="stories-container">
+    <div class="loading-message">Loading stories...</div>
+  </div>
+</div>
+
+<script>
+  // Configuration
+  var STORIES_PER_PAGE = 6;  // Optimized for 800x600 display with compact cards
+  var CACHE_DURATION = 10 * 60 * 1000; // 10 minutes
+  var TOTAL_STORIES_TO_FETCH = 30; // 5 pages worth
+
+  // State
+  var allStories = [];
+  var currentPage = 1;
+  var totalPages = 0;
+  var isLoading = false;
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get page from URL parameters
+    var pageParam = getUrlParameter('page');
+    if (pageParam && parseInt(pageParam) > 0) {
+      currentPage = parseInt(pageParam);
+    }
+
+    // Load stories
+    loadStories();
+
+    // Set up keyboard navigation
+    setupKeyboardNavigation();
+  });
+
+  // Helper function to get URL parameters
+  function getUrlParameter(name) {
+    var url = window.location.href;
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+    var results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  // Setup keyboard navigation with arrow keys
+  function setupKeyboardNavigation() {
+    document.addEventListener('keydown', function(e) {
+      if (isLoading) return;
+
+      var key = e.key || e.keyCode;
+      if ((key === 'ArrowLeft' || key === 37) && currentPage > 1) {
+        navigateToPage(currentPage - 1);
+      } else if ((key === 'ArrowRight' || key === 39) && currentPage < totalPages) {
+        navigateToPage(currentPage + 1);
+      } else if (key === 'r' || key === 'R' || key === 82) {
+        refreshStories();
+      }
+    });
+  }
+
+  // Navigate to a specific page
+  function navigateToPage(page) {
+    if (page < 1 || page > totalPages || isLoading) return;
+
+    // Update URL without reloading
+    var newUrl = window.location.pathname + '?page=' + page;
+    if (window.history && window.history.pushState) {
+      window.history.pushState({}, '', newUrl);
+    }
+
+    currentPage = page;
+    displayStories();
+    updatePaginationControls();
+
+    // Scroll to top for e-ink devices
+    window.scrollTo(0, 0);
+  }
+
+  // Load stories (from cache or API)
+  function loadStories() {
+    var container = document.getElementById('stories-container');
+
+    isLoading = true;
+    container.innerHTML = '<div class="loading-message">Loading stories...</div>';
+    updateLoadingState();
+
+    // Try to get from cache first
+    var cached = getCachedStories();
+    if (cached) {
+      allStories = cached;
+      displayCacheInfo(false);
+      totalPages = Math.ceil(allStories.length / STORIES_PER_PAGE);
+      displayStories();
+      updatePaginationControls();
+      isLoading = false;
+      updateLoadingState();
+    } else {
+      // Fetch from HN API
+      fetchStoriesFromAPI(function(stories, error) {
+        if (error) {
+          console.error('Error loading stories:', error);
+          container.innerHTML = '<div class="error-message">' +
+            'Error loading stories. Please try again.<br>' +
+            '<small>' + (error.message || 'Unknown error') + '</small>' +
+            '</div>';
+          isLoading = false;
+          updateLoadingState();
+        } else if (stories) {
+          allStories = stories;
+          cacheStories(allStories);
+          displayCacheInfo(true);
+          totalPages = Math.ceil(allStories.length / STORIES_PER_PAGE);
+          displayStories();
+          updatePaginationControls();
+          isLoading = false;
+          updateLoadingState();
+        }
+      });
+    }
+  }
+
+  // Fetch stories from Hacker News API
+  function fetchStoriesFromAPI(callback) {
+    // Get top story IDs
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://hacker-news.firebaseio.com/v0/topstories.json', true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var storyIds = JSON.parse(xhr.responseText);
+          var idsToFetch = storyIds.slice(0, TOTAL_STORIES_TO_FETCH);
+
+          // Fetch individual stories
+          var stories = [];
+          var completed = 0;
+
+          function checkComplete() {
+            completed++;
+            if (completed === idsToFetch.length) {
+              // Filter out null results and add computed fields
+              var validStories = [];
+              for (var i = 0; i < stories.length; i++) {
+                var story = stories[i];
+                if (story && story.title) {
+                  story.commentCount = story.kids ? story.kids.length : 0;
+                  story.hnUrl = 'https://news.ycombinator.com/item?id=' + story.id;
+                  validStories.push(story);
+                }
+              }
+              callback(validStories);
+            }
+          }
+
+          // Fetch each story
+          for (var i = 0; i < idsToFetch.length; i++) {
+            (function(index) {
+              var storyXhr = new XMLHttpRequest();
+              storyXhr.open('GET', 'https://hacker-news.firebaseio.com/v0/item/' + idsToFetch[index] + '.json', true);
+              storyXhr.onreadystatechange = function() {
+                if (storyXhr.readyState === 4) {
+                  if (storyXhr.status === 200) {
+                    stories[index] = JSON.parse(storyXhr.responseText);
+                  } else {
+                    stories[index] = null;
+                  }
+                  checkComplete();
+                }
+              };
+              storyXhr.send();
+            })(i);
+          }
+        } else {
+          callback(null, new Error('Failed to fetch story IDs'));
+        }
+      }
+    };
+    xhr.send();
+  }
+
+  // Cache management
+  function getCachedStories() {
+    var cached = localStorage.getItem('hn_stories');
+    var cacheTime = localStorage.getItem('hn_cache_time');
+
+    if (cached && cacheTime) {
+      var age = Date.now() - parseInt(cacheTime);
+      if (age < CACHE_DURATION) {
+        return JSON.parse(cached);
+      }
+    }
+    return null;
+  }
+
+  function cacheStories(stories) {
+    try {
+      localStorage.setItem('hn_stories', JSON.stringify(stories));
+      localStorage.setItem('hn_cache_time', Date.now().toString());
+    } catch (e) {
+      console.warn('Failed to cache stories:', e);
+    }
+  }
+
+  function clearCache() {
+    localStorage.removeItem('hn_stories');
+    localStorage.removeItem('hn_cache_time');
+  }
+
+  // Display stories for current page
+  function displayStories() {
+    var container = document.getElementById('stories-container');
+    var startIndex = (currentPage - 1) * STORIES_PER_PAGE;
+    var endIndex = startIndex + STORIES_PER_PAGE;
+    var pageStories = allStories.slice(startIndex, endIndex);
+
+    if (pageStories.length === 0) {
+      container.innerHTML = '<div class="error-message">No stories to display</div>';
+      return;
+    }
+
+    var storiesHtml = [];
+    for (var i = 0; i < pageStories.length; i++) {
+      storiesHtml.push(createStoryCard(pageStories[i]));
+    }
+    container.innerHTML = storiesHtml.join('');
+  }
+
+  // Create HTML for a single story
+  function createStoryCard(story) {
+    var timeAgo = getTimeAgo(story.time);
+    var domain = story.url ? getDomain(story.url) : 'news.ycombinator.com';
+
+    var html = '<div class="story-card">' +
+      '<a href="/hn-comments?id=' + story.id + '" class="comments-link">' +
+      story.commentCount + ' comments' +
+      '</a>' +
+      '<h2 class="story-title">' +
+      '<a href="' + (story.url || story.hnUrl) + '" target="_blank" rel="noopener">' +
+      escapeHtml(story.title) +
+      '</a>' +
+      '</h2>' +
+      '<div class="story-meta">' +
+      '<span class="score">' + story.score + 'p</span>' +
+      '<span>• ' + story.by + '</span>' +
+      '<span>• ' + timeAgo + '</span>';
+
+    if (story.url) {
+      html += '<span class="domain">(' + domain + ')</span>';
+    }
+
+    html += '</div></div>';
+
+    return html;
+  }
+
+  // Update pagination controls
+  function updatePaginationControls() {
+    // Update page indicators
+    document.getElementById('current-page').textContent = currentPage;
+    document.getElementById('total-pages').textContent = totalPages;
+
+    // Update button states
+    var prevBtn = document.getElementById('prev-btn');
+    var nextBtn = document.getElementById('next-btn');
+
+    if (prevBtn) prevBtn.disabled = currentPage <= 1;
+    if (nextBtn) nextBtn.disabled = currentPage >= totalPages;
+  }
+
+  // Update loading state
+  function updateLoadingState() {
+    var refreshBtns = document.getElementsByClassName('refresh-button');
+    if (refreshBtns.length > 0) {
+      var refreshBtn = refreshBtns[0];
+      refreshBtn.disabled = isLoading;
+      refreshBtn.textContent = isLoading ? '⟳' : '↻';
+    }
+  }
+
+  // Display cache information
+  function displayCacheInfo(justFetched) {
+    var cacheInfo = document.getElementById('cache-info');
+    var cacheTime = localStorage.getItem('hn_cache_time');
+
+    if (cacheTime) {
+      var age = Date.now() - parseInt(cacheTime);
+      var minutes = Math.floor(age / 60000);
+
+      if (justFetched) {
+        cacheInfo.textContent = 'Updated';
+      } else if (minutes === 0) {
+        cacheInfo.textContent = 'Fresh';
+      } else {
+        cacheInfo.textContent = minutes + 'm old';
+      }
+    }
+  }
+
+  // Refresh stories (clear cache and reload)
+  function refreshStories() {
+    if (isLoading) return;
+    clearCache();
+    loadStories();
+  }
+
+  // Utility functions
+  function getTimeAgo(unixTime) {
+    var seconds = Math.floor(Date.now() / 1000 - unixTime);
+    var minutes = Math.floor(seconds / 60);
+    var hours = Math.floor(minutes / 60);
+    var days = Math.floor(hours / 24);
+
+    if (days > 0) return days + 'd';
+    if (hours > 0) return hours + 'h';
+    if (minutes > 0) return minutes + 'm';
+    return 'now';
+  }
+
+  function getDomain(url) {
+    try {
+      // Try using URL constructor if available
+      if (typeof URL !== 'undefined') {
+        var u = new URL(url);
+        return u.hostname.replace('www.', '');
+      } else {
+        // Fallback for old browsers
+        var match = url.match(/^https?:\/\/([^\/]+)/);
+        if (match && match[1]) {
+          return match[1].replace('www.', '');
+        }
+        return '';
+      }
+    } catch (e) {
+      // Additional fallback using regex
+      var match = url.match(/^https?:\/\/([^\/]+)/);
+      if (match && match[1]) {
+        return match[1].replace('www.', '');
+      }
+      return '';
+    }
+  }
+
+  function escapeHtml(text) {
+    var map = {
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#039;'
+    };
+    return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+  }
+</script>
+
+</body>
+</html>

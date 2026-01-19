@@ -1,0 +1,78 @@
+baseURL = "https://alec.rosenbaum.io/"
+languageCode = "en-us"
+title = "Alec Rosenbaum"
+
+# Pagination - 10 posts per page on the home/list pages
+paginate = 10
+paginatePath = "page"
+
+# Use the built-in theme we're creating
+theme = ""
+
+# Taxonomy settings
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Site parameters
+[params]
+  description = "Alec Rosenbaum's Personal Website."
+  email = "alec@rosenbaum.io"
+  github = "alecrosenbaum"
+  googleAnalytics = "UA-174252239-1"
+
+# Menu configuration (header navigation)
+[menus]
+  [[menus.main]]
+    name = "Recipes"
+    url = "/recipes/"
+    weight = 10
+  [[menus.main]]
+    name = "E-ink HN"
+    url = "/hn/"
+    weight = 20
+  [[menus.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 30
+
+# Image processing configuration
+[imaging]
+  # Default quality for JPEG/WebP
+  quality = 85
+  # Resampling filter for resizing
+  resampleFilter = "Lanczos"
+  # Hint for image processing (photo, picture, drawing, icon, text)
+  hint = "photo"
+  # Enable EXIF data extraction
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = ""
+    excludeFields = ""
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+# RSS configuration
+[services.rss]
+  limit = 20
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML in markdown
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+
+# Build settings
+[build]
+  writeStats = true
+
+# Minify output for production
+[minify]
+  minifyOutput = false

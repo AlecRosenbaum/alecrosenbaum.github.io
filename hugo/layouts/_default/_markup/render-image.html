@@ -1,0 +1,94 @@
+{{- /*
+  Hugo Image Render Hook
+
+  Provides automatic image processing for images in markdown:
+  - Generates responsive images with srcset
+  - Creates WebP versions for modern browsers
+  - Supports width parameter: ![alt](image.jpg?width=500)
+  - Falls back gracefully for external images
+
+  Usage in markdown:
+    ![My alt text](image.jpg)              - Standard image
+    ![My alt text](image.jpg?width=600)    - Specify max width
+*/ -}}
+
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $title := .Title -}}
+
+{{- /* Parse query parameters for width */ -}}
+{{- $maxWidth := 800 -}}
+{{- if strings.Contains $src "?" -}}
+  {{- $parts := split $src "?" -}}
+  {{- $src = index $parts 0 -}}
+  {{- $query := index $parts 1 -}}
+  {{- if strings.Contains $query "width=" -}}
+    {{- $widthStr := replaceRE ".*width=([0-9]+).*" "$1" $query -}}
+    {{- $maxWidth = int $widthStr -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Check if this is a local image we can process */ -}}
+{{- $isProcessable := false -}}
+{{- $image := false -}}
+
+{{- /* Try to get image from page resources first */ -}}
+{{- with .Page.Resources.GetMatch $src -}}
+  {{- $image = . -}}
+  {{- $isProcessable = true -}}
+{{- end -}}
+
+{{- /* Try global resources if not found in page bundle */ -}}
+{{- if not $image -}}
+  {{- with resources.Get $src -}}
+    {{- $image = . -}}
+    {{- $isProcessable = true -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $isProcessable -}}
+  {{- /* Process the image */ -}}
+  {{- $small := $image.Resize (printf "%dx q85 Lanczos" (int (mul $maxWidth 0.5))) -}}
+  {{- $medium := $image.Resize (printf "%dx q85 Lanczos" $maxWidth) -}}
+  {{- $large := $image.Resize (printf "%dx q85 Lanczos" (int (mul $maxWidth 1.5))) -}}
+
+  {{- /* Generate WebP versions */ -}}
+  {{- $smallWebp := $small.Resize (printf "%dx webp q85" (int $small.Width)) -}}
+  {{- $mediumWebp := $medium.Resize (printf "%dx webp q85" (int $medium.Width)) -}}
+  {{- $largeWebp := $large.Resize (printf "%dx webp q85" (int $large.Width)) -}}
+
+  <figure class="post-image">
+    <picture>
+      {{- /* WebP sources for modern browsers */ -}}
+      <source
+        type="image/webp"
+        srcset="{{ $smallWebp.RelPermalink }} {{ $small.Width }}w,
+                {{ $mediumWebp.RelPermalink }} {{ $medium.Width }}w,
+                {{ $largeWebp.RelPermalink }} {{ $large.Width }}w"
+        sizes="(max-width: 600px) 100vw, {{ $maxWidth }}px">
+
+      {{- /* Fallback image sources */ -}}
+      <source
+        srcset="{{ $small.RelPermalink }} {{ $small.Width }}w,
+                {{ $medium.RelPermalink }} {{ $medium.Width }}w,
+                {{ $large.RelPermalink }} {{ $large.Width }}w"
+        sizes="(max-width: 600px) 100vw, {{ $maxWidth }}px">
+
+      <img
+        src="{{ $medium.RelPermalink }}"
+        alt="{{ $alt }}"
+        width="{{ $medium.Width }}"
+        height="{{ $medium.Height }}"
+        loading="lazy"
+        decoding="async"
+        {{ with $title }}title="{{ . }}"{{ end }}>
+    </picture>
+    {{- with $title }}
+    <figcaption>{{ . }}</figcaption>
+    {{- end }}
+  </figure>
+
+{{- else -}}
+  {{- /* Fallback for external images or non-processable images */ -}}
+  <img src="{{ .Destination | safeURL }}" alt="{{ $alt }}"{{ with $title }} title="{{ . }}"{{ end }} loading="lazy">
+{{- end -}}

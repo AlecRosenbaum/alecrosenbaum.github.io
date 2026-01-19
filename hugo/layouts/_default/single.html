@@ -1,0 +1,34 @@
+{{ define "main" }}
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ .Title }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">
+        {{ .Date.Format "Jan 2, 2006" }}
+      </time>
+      {{- with .Params.categories }}
+      <span class="post-categories">
+        in {{ range $i, $cat := . }}{{ if $i }}, {{ end }}<a href="{{ "categories/" | relURL }}{{ $cat | urlize }}/">{{ $cat }}</a>{{ end }}
+      </span>
+      {{- end }}
+    </p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ .Content }}
+  </div>
+
+  {{- /* Post navigation */ -}}
+  <nav class="post-navigation">
+    {{- with .PrevInSection }}
+    <a class="prev" href="{{ .RelPermalink }}">&laquo; {{ .Title }}</a>
+    {{- end }}
+    {{- with .NextInSection }}
+    <a class="next" href="{{ .RelPermalink }}">{{ .Title }} &raquo;</a>
+    {{- end }}
+  </nav>
+
+  <a class="u-url" href="{{ .Permalink }}" hidden></a>
+</article>
+{{ end }}

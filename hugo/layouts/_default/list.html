@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="home">
+  <h1 class="page-heading">{{ .Title }}</h1>
+
+  {{ .Content }}
+
+  {{- $paginator := .Paginate .Pages -}}
+
+  <ul class="post-list">
+    {{- range $paginator.Pages }}
+    <li>
+      <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <h2>
+        <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      {{ .Summary }}
+      <a class="tag" href="{{ .RelPermalink }}">[more...]</a>
+    </li>
+    {{- end }}
+  </ul>
+
+  {{- /* Pagination navigation */ -}}
+  {{- if gt $paginator.TotalPages 1 }}
+  <nav class="pagination" aria-label="Pagination">
+    <ul class="pagination-list">
+      {{- if $paginator.HasPrev }}
+      <li class="pagination-item">
+        <a href="{{ $paginator.Prev.URL }}" class="pagination-link">&laquo; Newer</a>
+      </li>
+      {{- end }}
+
+      {{- range $paginator.Pagers }}
+      <li class="pagination-item">
+        {{- if eq . $paginator }}
+        <span class="pagination-link pagination-current" aria-current="page">{{ .PageNumber }}</span>
+        {{- else }}
+        <a href="{{ .URL }}" class="pagination-link">{{ .PageNumber }}</a>
+        {{- end }}
+      </li>
+      {{- end }}
+
+      {{- if $paginator.HasNext }}
+      <li class="pagination-item">
+        <a href="{{ $paginator.Next.URL }}" class="pagination-link">Older &raquo;</a>
+      </li>
+      {{- end }}
+    </ul>
+  </nav>
+  {{- end }}
+</div>
+{{ end }}
