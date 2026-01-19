@@ -410,5 +410,62 @@
         "text": "Serve over warm white rice. Enjoy!"
       }
     ]
+  },
+  {
+    "name": "Basic Jambalaya (Creole-style)",
+    "ingredients": {
+      "oil (olive or neutral)": "2 tbsp",
+      "smoked sausage (andouille preferred), sliced": "1 lb (450g)",
+      "onion, diced": "1",
+      "green bell pepper, diced": "1",
+      "celery stalks, diced": "2 (optional)",
+      "garlic, minced": "3-4 cloves",
+      "long-grain rice (uncooked)": "1½ cups",
+      "diced tomatoes": "1 can (14-15 oz), optional",
+      "chicken broth or stock": "3 cups",
+      "paprika": "1 tsp",
+      "cayenne": "½-1 tsp (optional, to taste)",
+      "dried thyme": "1 tsp (or Italian seasoning)",
+      "bay leaves": "1-2 (optional)",
+      "salt": "to taste",
+      "black pepper": "to taste",
+      "chicken thighs or breast, diced": "1 lb (450g), optional",
+      "shrimp, peeled/deveined": "½-1 lb (optional)",
+      "green onions, parsley, lemon": "for serving (optional)"
+    },
+    "cookware": [
+      "large pot or Dutch oven",
+      "plate"
+    ],
+    "effort": "medium",
+    "steps": [
+      {
+        "text": "Brown the sausage: Heat oil in a big pot/Dutch oven over medium-high. Brown sausage 3-5 min. Scoop onto a plate (leave the drippings)."
+      },
+      {
+        "text": "Sauté the veggies: Add onion, bell pepper, celery. Cook 5-7 min until soft. Add garlic for 30 seconds."
+      },
+      {
+        "text": "(Optional) Brown chicken: Add diced chicken, season with salt/pepper, cook 3-4 min until it loses its pink color."
+      },
+      {
+        "text": "Toast rice + season: Stir in rice, paprika, cayenne, thyme, and a little pepper. Cook 1 minute, stirring."
+      },
+      {
+        "text": "Simmer: Add tomatoes (if using), broth, bay leaves, and the sausage back in. Bring to a boil, then cover and reduce to low."
+      },
+      {
+        "text": "Cook covered: Simmer 20-25 min (don't stir much). Rice should be tender and liquid absorbed."
+      },
+      {
+        "text": "Add shrimp (if using): Stir in shrimp, cover 3-5 min until pink and cooked through."
+      },
+      {
+        "text": "Finish: Taste and adjust salt/spice. Let rest 5 minutes off heat. Top with green onions/parsley and a squeeze of lemon."
+      },
+      {
+        "text": "Tips: No celery? Still great. No sausage? Use chicken only, add extra seasoning + a bit more salt. Too dry? Splash in broth and cover a few minutes. Too wet? Uncover and simmer a few minutes to reduce."
+      }
+    ]
   }
 ]
