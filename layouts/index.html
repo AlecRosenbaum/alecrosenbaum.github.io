@@ -9,12 +9,20 @@
 
   <ul class="post-list">
     {{- range $paginator.Pages }}
+    {{- $postUrl := .RelPermalink -}}
+    {{- $summary := .Summary | string -}}
+    {{- /* Replace existing image links with post link */ -}}
+    {{- $summary = replaceRE `<a href="[^"]*"([^>]*)>(\s*<picture)` (printf `<a href="%s"$1>$2` $postUrl) $summary -}}
+    {{- $summary = replaceRE `<a href="[^"]*"([^>]*)>(\s*<img)` (printf `<a href="%s"$1>$2` $postUrl) $summary -}}
+    {{- /* Wrap unwrapped images in post link */ -}}
+    {{- $summary = replaceRE `(<figure class="post-image">)\s*(<picture)` (printf `$1<a href="%s">$2` $postUrl) $summary -}}
+    {{- $summary = replaceRE `(</picture>)\s*(</figure>)` `$1</a>$2` $summary -}}
     <li>
       <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }}</span>
       <h2>
         <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
       </h2>
-      {{ .Summary }}
+      {{ $summary | safeHTML }}
       <a class="tag" href="{{ .RelPermalink }}">[more...]</a>
     </li>
     {{- end }}
