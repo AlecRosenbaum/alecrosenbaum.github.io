@@ -1,0 +1,78 @@
+{{ define "main" }}
+<div class="home">
+  <h1 class="page-heading">Posts</h1>
+
+  {{ .Content }}
+
+  {{- /* Paginate posts */ -}}
+  {{- $paginator := .Paginate (where .Site.RegularPages "Section" "posts") -}}
+
+  <ul class="post-list">
+    {{- range $paginator.Pages }}
+    {{- $postUrl := .RelPermalink -}}
+    {{- $summary := .Summary | string -}}
+    {{- /* Replace existing image links with post link */ -}}
+    {{- $summary = replaceRE `<a href="[^"]*"([^>]*)>(\s*<picture)` (printf `<a href="%s"$1>$2` $postUrl) $summary -}}
+    {{- $summary = replaceRE `<a href="[^"]*"([^>]*)>(\s*<img)` (printf `<a href="%s"$1>$2` $postUrl) $summary -}}
+    {{- /* Wrap unwrapped images in post link */ -}}
+    {{- $summary = replaceRE `(<figure class="post-image">)\s*(<picture)` (printf `$1<a href="%s">$2` $postUrl) $summary -}}
+    {{- $summary = replaceRE `(</picture>)\s*(</figure>)` `$1</a>$2` $summary -}}
+    <li>
+      <span class="post-meta">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <h2>
+        <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+      {{ $summary | safeHTML }}
+      <a class="tag" href="{{ .RelPermalink }}">[more...]</a>
+    </li>
+    {{- end }}
+  </ul>
+
+  {{- /* Pagination navigation */ -}}
+  {{- if gt $paginator.TotalPages 1 }}
+  <nav class="pagination" aria-label="Pagination">
+    <ul class="pagination-list">
+      {{- if $paginator.HasPrev }}
+      <li class="pagination-item">
+        <a href="{{ $paginator.Prev.URL }}" class="pagination-link" aria-label="Previous page">&laquo; Newer</a>
+      </li>
+      {{- end }}
+
+      {{- /* Page numbers */ -}}
+      {{- $start := 1 -}}
+      {{- $end := $paginator.TotalPages -}}
+      {{- if gt $paginator.TotalPages 5 -}}
+        {{- $start = sub $paginator.PageNumber 2 -}}
+        {{- $end = add $paginator.PageNumber 2 -}}
+        {{- if lt $start 1 -}}
+          {{- $start = 1 -}}
+          {{- $end = 5 -}}
+        {{- end -}}
+        {{- if gt $end $paginator.TotalPages -}}
+          {{- $end = $paginator.TotalPages -}}
+          {{- $start = sub $end 4 -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{- range seq $start $end }}
+      <li class="pagination-item">
+        {{- if eq . $paginator.PageNumber }}
+        <span class="pagination-link pagination-current" aria-current="page">{{ . }}</span>
+        {{- else }}
+        <a href="{{ (index $paginator.Pagers (sub . 1)).URL }}" class="pagination-link">{{ . }}</a>
+        {{- end }}
+      </li>
+      {{- end }}
+
+      {{- if $paginator.HasNext }}
+      <li class="pagination-item">
+        <a href="{{ $paginator.Next.URL }}" class="pagination-link" aria-label="Next page">Older &raquo;</a>
+      </li>
+      {{- end }}
+    </ul>
+  </nav>
+  {{- end }}
+
+  <p class="rss-subscribe">subscribe <a href="{{ "index.xml" | relURL }}">via RSS</a></p>
+</div>
+{{ end }}

@@ -1,0 +1,78 @@
+{{- /*
+  Advanced Image Shortcode
+
+  Usage:
+    {{< img src="image.jpg" alt="Description" >}}
+    {{< img src="image.jpg" alt="Description" width="600" >}}
+    {{< img src="image.jpg" alt="Description" width="600" class="full-width" >}}
+    {{< img src="image.jpg" alt="Description" gallery="true" >}}
+*/ -}}
+
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $title := .Get "title" -}}
+{{- $width := .Get "width" | default "800" | int -}}
+{{- $class := .Get "class" | default "" -}}
+{{- $gallery := .Get "gallery" | default false -}}
+
+{{- /* Get the image resource */ -}}
+{{- $image := false -}}
+
+{{- with $.Page.Resources.GetMatch $src -}}
+  {{- $image = . -}}
+{{- end -}}
+
+{{- if not $image -}}
+  {{- with resources.Get $src -}}
+    {{- $image = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $image -}}
+  {{- /* Process image at multiple sizes */ -}}
+  {{- $sizes := slice 400 600 800 1200 -}}
+  {{- $processed := slice -}}
+
+  {{- range $sizes -}}
+    {{- if le . $image.Width -}}
+      {{- $resized := $image.Resize (printf "%dx q85 Lanczos" .) -}}
+      {{- $processed = $processed | append (dict "img" $resized "width" .) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- /* Add original if smaller than max size */ -}}
+  {{- if lt $image.Width 1200 -}}
+    {{- $processed = $processed | append (dict "img" $image "width" $image.Width) -}}
+  {{- end -}}
+
+  {{- /* Build srcset */ -}}
+  {{- $srcset := slice -}}
+  {{- range $processed -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" .img.RelPermalink .width) -}}
+  {{- end -}}
+
+  {{- /* Get medium size for default src */ -}}
+  {{- $default := $image.Resize (printf "%dx q85 Lanczos" $width) -}}
+
+  <figure class="post-image {{ $class }}">
+    <a href="{{ $image.RelPermalink }}"{{ if $gallery }} data-gallery="true"{{ end }}>
+      <img
+        src="{{ $default.RelPermalink }}"
+        srcset="{{ delimit $srcset ", " }}"
+        sizes="(max-width: 600px) 100vw, {{ $width }}px"
+        alt="{{ $alt }}"
+        width="{{ $default.Width }}"
+        height="{{ $default.Height }}"
+        loading="lazy"
+        decoding="async"
+        {{ with $title }}title="{{ . }}"{{ end }}>
+    </a>
+    {{- with $title }}
+    <figcaption>{{ . }}</figcaption>
+    {{- end }}
+  </figure>
+
+{{- else -}}
+  {{- /* Fallback for non-found images */ -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy"{{ with $title }} title="{{ . }}"{{ end }}{{ with $class }} class="{{ . }}"{{ end }}>
+{{- end -}}

@@ -21,23 +21,29 @@ rotate () {
 }
 ```
 
-**Run jekyll in docker**
+**Run hugo locally**
 
 ```bash
-docker run -p 8080:4000 -v $(pwd):/site bretfisher/jekyll-serve
+hugo server
 ```
 
-or to get a shell:
+Or with drafts:
 
 ```bash
-docker run -it -p 8080:4000 -v $(pwd):/site bretfisher/jekyll-serve bash
+hugo server -D
 ```
 
-### Upgrade
+### Create a new post
 
-Within a shell ^: `bundle update`
+```bash
+hugo new posts/my-post-name/index.md
+```
 
-### Build/serve
+Then add images to the `content/posts/my-post-name/` directory.
 
-Within a shell ^: `bundle exec jekyll serve -H 0.0.0.0 -P 4000`
+### Build
+
+```bash
+hugo --gc --minify
+```
 

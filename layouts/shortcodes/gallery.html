@@ -1,0 +1,50 @@
+{{- /*
+  Gallery Shortcode for side-by-side images
+
+  Usage:
+    {{< gallery >}}
+    ![Alt text](image1.jpg)
+    ![Alt text](image2.jpg)
+    {{< /gallery >}}
+
+  This renders images in a responsive flex container that stacks on mobile.
+*/ -}}
+
+<div class="gallery">
+  {{- $content := .Inner -}}
+  {{- $images := findRE `!\[([^\]]*)\]\(([^)]+)\)` $content -}}
+
+  {{- range $images -}}
+    {{- $alt := replaceRE `!\[([^\]]*)\]\(([^)]+)\)` "$1" . -}}
+    {{- $src := replaceRE `!\[([^\]]*)\]\(([^)]+)\)` "$2" . -}}
+
+    {{- /* Try to get the image from page resources */ -}}
+    {{- $image := $.Page.Resources.GetMatch $src -}}
+
+    {{- if $image -}}
+      {{- /* Process the image */ -}}
+      {{- $processed := $image.Resize "600x q85 Lanczos" -}}
+      {{- $webp := $processed.Resize (printf "%dx webp q85" (int $processed.Width)) -}}
+
+      <figure class="gallery-item">
+        <a href="{{ $image.RelPermalink }}">
+          <picture>
+            <source type="image/webp" srcset="{{ $webp.RelPermalink }}">
+            <img
+              src="{{ $processed.RelPermalink }}"
+              alt="{{ $alt }}"
+              width="{{ $processed.Width }}"
+              height="{{ $processed.Height }}"
+              loading="lazy"
+              decoding="async">
+          </picture>
+        </a>
+      </figure>
+    {{- else -}}
+      {{- /* Fallback for non-bundle images */ -}}
+      <figure class="gallery-item">
+        <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy">
+      </figure>
+    {{- end -}}
+  {{- end -}}
+</div>
