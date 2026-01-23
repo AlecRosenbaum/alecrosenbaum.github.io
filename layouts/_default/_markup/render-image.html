@@ -58,31 +58,33 @@
   {{- $largeWebp := $large.Resize (printf "%dx webp q85" (int $large.Width)) -}}
 
   <figure class="post-image">
-    <picture>
-      {{- /* WebP sources for modern browsers */ -}}
-      <source
-        type="image/webp"
-        srcset="{{ $smallWebp.RelPermalink }} {{ $small.Width }}w,
-                {{ $mediumWebp.RelPermalink }} {{ $medium.Width }}w,
-                {{ $largeWebp.RelPermalink }} {{ $large.Width }}w"
-        sizes="(max-width: 600px) 100vw, {{ $maxWidth }}px">
+    <a href="{{ $image.RelPermalink }}">
+      <picture>
+        {{- /* WebP sources for modern browsers */ -}}
+        <source
+          type="image/webp"
+          srcset="{{ $smallWebp.RelPermalink }} {{ $small.Width }}w,
+                  {{ $mediumWebp.RelPermalink }} {{ $medium.Width }}w,
+                  {{ $largeWebp.RelPermalink }} {{ $large.Width }}w"
+          sizes="(max-width: 600px) 100vw, {{ $maxWidth }}px">
 
-      {{- /* Fallback image sources */ -}}
-      <source
-        srcset="{{ $small.RelPermalink }} {{ $small.Width }}w,
-                {{ $medium.RelPermalink }} {{ $medium.Width }}w,
-                {{ $large.RelPermalink }} {{ $large.Width }}w"
-        sizes="(max-width: 600px) 100vw, {{ $maxWidth }}px">
+        {{- /* Fallback image sources */ -}}
+        <source
+          srcset="{{ $small.RelPermalink }} {{ $small.Width }}w,
+                  {{ $medium.RelPermalink }} {{ $medium.Width }}w,
+                  {{ $large.RelPermalink }} {{ $large.Width }}w"
+          sizes="(max-width: 600px) 100vw, {{ $maxWidth }}px">
 
-      <img
-        src="{{ $medium.RelPermalink }}"
-        alt="{{ $alt }}"
-        width="{{ $medium.Width }}"
-        height="{{ $medium.Height }}"
-        loading="lazy"
-        decoding="async"
-        {{ with $title }}title="{{ . }}"{{ end }}>
-    </picture>
+        <img
+          src="{{ $medium.RelPermalink }}"
+          alt="{{ $alt }}"
+          width="{{ $medium.Width }}"
+          height="{{ $medium.Height }}"
+          loading="lazy"
+          decoding="async"
+          {{ with $title }}title="{{ . }}"{{ end }}>
+      </picture>
+    </a>
     {{- with $title }}
     <figcaption>{{ . }}</figcaption>
     {{- end }}
