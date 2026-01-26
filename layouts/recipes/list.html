@@ -11,135 +11,155 @@
     line-height: 1;
     letter-spacing: -1px;
   }
-</style>
-
-<div class="wrapper">
-  <h1 style="text-align: center">Recipes</h1>
-
-  <div id="putta-da-recipes-here">
-    <h3>
-    </h3>
-  </div>
-
-</div>
-
-<style type="text/css" media="screen">
-  .underline-on-hover:hover {
+  .recipe-title {
+    cursor: pointer;
+  }
+  .recipe-title:hover {
     text-decoration: underline;
   }
-  input[type="text"] {
+  #search-input {
     padding: 10px;
     margin: 20px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
-    width: 300px;
+    width: 100%;
     font-size: 16px;
+    box-sizing: border-box;
   }
-
-  input[type="text"]:focus {
+  #search-input:focus {
     outline: none;
     border-color: #9ecaed;
     box-shadow: 0 0 10px #9ecaed;
   }
+  .recipe-content {
+    display: none;
+  }
+  .recipe-content.open {
+    display: block;
+  }
 </style>
-<script type="module">
-// Import h and render from preact
-import { h, Component, render } from 'https://esm.sh/preact@10';
-import { useState } from 'https://esm.sh/preact@10/hooks';
 
-// Define a component for a collapsible section
-function Collapsible({ title, children }) {
-  const [isOpen, setIsOpen] = useState(false);
+<div class="wrapper">
+  <h1 style="text-align: center">Recipes</h1>
+  <input type="text" id="search-input" placeholder="Search recipes...">
+  <div id="recipes-container"></div>
+</div>
 
-  const handleClick = () => setIsOpen(!isOpen);
-  const symbol = isOpen ? '[-]' : '[+]';
+<script>
+(function() {
+  var container = document.getElementById('recipes-container');
+  var searchInput = document.getElementById('search-input');
+  var allRecipes = [];
 
-  return h('div', {}, [
-	h(
-      'h2',
-	  {
-	    onClick: handleClick,
-		style: { cursor: 'pointer' },
-		class: "underline-on-hover"
-	  },
-	  `${symbol} ${title}`
-	),
-	isOpen && h('div', {}, children),
-  ]);
-}
+  function renderRecipe(recipe) {
+    var div = document.createElement('div');
+    div.className = 'recipe';
+    div.dataset.name = recipe.name.toLowerCase();
 
-// Define a component for a recipe
-function Recipe({ recipe }) {
-  return h(Collapsible, { title: recipe.name }, [
-	//h('div', {}, `Effort: ${recipe.effort}`),
-	h('strong', {}, 'Ingredients:'),
-	h('ul', {}, Object.entries(recipe.ingredients).map(([ingredient, amount]) =>
-	  h('li', {}, `${ingredient}: ${amount}`)
-	)),
-	h('strong', {}, 'Cookware:'),
-	h('ul', {}, recipe.cookware.map(description =>
-	  h('li', {}, description)
-	)),
-	h('strong', {}, 'Steps:'),
-	h('ul', {}, recipe.steps.map(step =>
-	  h('li', {}, step.text)
-	)),
-  ]);
-}
+    var title = document.createElement('h2');
+    title.className = 'recipe-title';
+    title.textContent = '[+] ' + recipe.name;
 
-// Define a component for the page
-function SearchBar({ onInput }) {
-  return h('input', { type: 'text', onInput , style: { width: "100%" }});
-}
+    var content = document.createElement('div');
+    content.className = 'recipe-content';
 
-// Define a component for the page
-function Page({ recipes }) {
-  const [search, setSearch] = useState('');
+    var ingredientsTitle = document.createElement('strong');
+    ingredientsTitle.textContent = 'Ingredients:';
+    var ingredientsList = document.createElement('ul');
+    for (var ingredient in recipe.ingredients) {
+      var li = document.createElement('li');
+      li.textContent = ingredient + ': ' + recipe.ingredients[ingredient];
+      ingredientsList.appendChild(li);
+    }
 
-  const handleInput = e => setSearch(e.target.value);
+    var cookwareTitle = document.createElement('strong');
+    cookwareTitle.textContent = 'Cookware:';
+    var cookwareList = document.createElement('ul');
+    recipe.cookware.forEach(function(item) {
+      var li = document.createElement('li');
+      li.textContent = item;
+      cookwareList.appendChild(li);
+    });
 
-  const filteredRecipes = recipes.filter(recipe =>
-    recipe.name.toLowerCase().includes(search.toLowerCase())
-  );
+    var stepsTitle = document.createElement('strong');
+    stepsTitle.textContent = 'Steps:';
+    var stepsList = document.createElement('ul');
+    recipe.steps.forEach(function(step) {
+      var li = document.createElement('li');
+      li.textContent = step.text;
+      stepsList.appendChild(li);
+    });
 
-  return h('div', {}, [
-    h(SearchBar, { onInput: handleInput }),
-    filteredRecipes.map(recipe => h(Recipe, { recipe })),
-  ]);
-}
+    content.appendChild(ingredientsTitle);
+    content.appendChild(ingredientsList);
+    content.appendChild(cookwareTitle);
+    content.appendChild(cookwareList);
+    content.appendChild(stepsTitle);
+    content.appendChild(stepsList);
 
-// Fetch the recipes and render the page
-const baseElement = document.getElementById("putta-da-recipes-here");
-function renderRecipes(recipes) {
-  recipes.sort((a, b) => a.name.localeCompare(b.name));
-  render(h(Page, { recipes }), baseElement)
-}
+    title.addEventListener('click', function() {
+      var isOpen = content.classList.toggle('open');
+      title.textContent = (isOpen ? '[-] ' : '[+] ') + recipe.name;
+    });
 
-fetch('/recipes.json', {
-  headers: new Headers({
-    'If-None-Match': localStorage.getItem('recipesETag') || '',
-  }),
-})
-  .then(response => {
+    div.appendChild(title);
+    div.appendChild(content);
+    return div;
+  }
+
+  function renderAllRecipes(recipes) {
+    recipes.sort(function(a, b) { return a.name.localeCompare(b.name); });
+    allRecipes = recipes;
+    container.innerHTML = '';
+    recipes.forEach(function(recipe) {
+      container.appendChild(renderRecipe(recipe));
+    });
+  }
+
+  function filterRecipes(query) {
+    var q = query.toLowerCase();
+    var recipeElements = container.querySelectorAll('.recipe');
+    recipeElements.forEach(function(el) {
+      el.style.display = el.dataset.name.includes(q) ? '' : 'none';
+    });
+  }
+
+  searchInput.addEventListener('input', function(e) {
+    filterRecipes(e.target.value);
+  });
+
+  // Try to render from cache immediately for instant display
+  var cached = localStorage.getItem('recipes');
+  if (cached) {
+    try {
+      renderAllRecipes(JSON.parse(cached));
+    } catch(e) {}
+  }
+
+  // Fetch with ETag support
+  fetch('/recipes.json', {
+    headers: { 'If-None-Match': localStorage.getItem('recipesETag') || '' }
+  })
+  .then(function(response) {
     if (response.status === 304) {
-      // Not Modified, use cached data
-      renderRecipes(JSON.parse(localStorage.getItem('recipes')));
+      // Already rendered from cache
+      if (!cached) {
+        console.error('304 but no cache');
+      }
     } else if (response.ok) {
-      // OK, cache the new data
-      const eTag = response.headers.get('ETag');
-      response.json().then(recipes => {
+      var eTag = response.headers.get('ETag');
+      response.json().then(function(recipes) {
         localStorage.setItem('recipes', JSON.stringify(recipes));
-        localStorage.setItem('recipesETag', eTag);
-        renderRecipes(recipes)
+        if (eTag) localStorage.setItem('recipesETag', eTag);
+        renderAllRecipes(recipes);
       });
     } else {
-      // Handle HTTP errors
       console.error('HTTP error', response.status);
     }
   })
-  .catch(error => {
-    // Handle network errors
+  .catch(function(error) {
     console.error('Network error', error);
   });
+})();
 </script>
 {{ end }}
