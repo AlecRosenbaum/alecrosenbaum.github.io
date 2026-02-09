@@ -24,20 +24,20 @@ title = "Alec Rosenbaum"
 # Menu configuration (header navigation)
 [menus]
   [[menus.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 10
+  [[menus.utils]]
     name = "Recipes"
     url = "/recipes/"
     weight = 10
-  [[menus.main]]
+  [[menus.utils]]
     name = "E-ink HN"
     url = "/hn/"
     weight = 20
-  [[menus.main]]
+  [[menus.utils]]
     name = "Lifting"
     url = "/lifting/"
-    weight = 25
-  [[menus.main]]
-    name = "Resume"
-    url = "/resume/"
     weight = 30
 
 # Image processing configuration
