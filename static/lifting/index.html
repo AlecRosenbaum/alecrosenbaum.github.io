@@ -26,6 +26,8 @@
   .small { font-size: 9pt; }
   .muted { color: #333; }
   .tight li { margin: 0; }
+  .day .tight li { margin: 4px 0; }
+  .sets { margin-left: auto; white-space: nowrap; padding-left: 8px; }
   .badge {
     display: inline-block;
     border: 1px solid #000;
@@ -35,7 +37,7 @@
     margin-right: 6px;
     white-space: nowrap;
   }
-  .header { margin: 0 0 6px 0; }
+  .header { margin: 0 0 6px 0; text-align: center; }
   .guidelines {
     border: 1px solid #000;
     border-radius: 8px;
@@ -65,59 +67,47 @@
     padding: 8px;
     break-inside: avoid;
   }
+  .day li {
+    display: flex;
+    align-items: baseline;
+  }
+  .wt {
+    display: inline-block;
+    width: 50px;
+    border-bottom: 1px dotted #000;
+    margin-left: 6px;
+    flex-shrink: 0;
+  }
   @media print { a { color: inherit; text-decoration: none; } }
 </style>
 </head>
 <body>
   <header class="header">
     <h1>3-Day Strength &amp; Resilience</h1>
-    <div class="guidelines">
-      <div><span class="badge">Rest: 2–3 min (main)</span><span class="badge">60–90s (accessories)</span>
-      <span class="badge">RPE: 7–8</span> <span class="badge">Deload: 6–8 wks</span></div>
-      <div class="small muted">Weekly schedule: Mon (Day 1), Wed (Day 2), Fri (Day 3) — or any ~48h spacing</div>
-    </div>
   </header>
 
   <section class="prep">
-    <h2>Standard Prep (start of every session, ~12–15 min)</h2>
+    <h2>Standard Prep</h2>
     <div class="prep-grid">
       <div class="prep-col">
         <ol class="tight">
           <li><strong>Jump rope</strong> — 3 min (progress to 60–90s continuous bouts)</li>
           <li><strong>Mobility Flows</strong>
             <ul class="tight">
-              <li><strong>Ankle mobility flow</strong> — 3 reps in-line, 3 reps perpendicular (just toes) per leg
-                <ul class="tight">
-                  <li>Stand on one leg on a half foam roller.</li>
-                  <li>Touch as far as possible: forward, backwards, cross front, cross backwards.</li>
-                </ul>
-              </li>
-              <li><strong>Split squat flow</strong> — 3×/side
-                <ul class="tight">
-                  <li>Arms above head; feet in line with front foot on half foam roller.</li>
-                  <li>Bring hands down and touch knee to the ground (sync with breath).</li>
-                </ul>
-              </li>
-              <li><strong>Hip mobility flow</strong> — 3×/side
-                <ul class="tight">
-                  <li>Single-leg kneeling; other leg knee bent at 90° pointed out laterally.</li>
-                  <li>Toes on half foam roller, heel on ground; hips pointed forward.</li>
-                  <li>Extend knee further back to end ROM while maintaining form.</li>
-                  <li>Hands up above head, then down on either side of knee (sync with breath).</li>
-                  <li>Hands up then down on inside of knee.</li>
-                </ul>
-              </li>
+              <li><strong>Ankle mobility flow</strong> — 3 reps in-line, 3 reps perpendicular (just toes) per leg</li>
+              <li><strong>Split squat flow</strong> — 3×/side</li>
+              <li><strong>Hip mobility flow</strong> — 3×/side</li>
             </ul>
           </li>
         </ol>
       </div>
       <div class="prep-col">
         <ol class="tight" start="3">
-          <li><strong>McGill Big 3</strong>
+          <li><strong>Core</strong>
             <ul class="tight">
-              <li>Modified curl-up — <strong>10×10s/side</strong></li>
-              <li>Side plank — <strong>10×10s/side</strong></li>
-              <li>Bird-dog — <strong>10×10s/side</strong></li>
+              <li>Ab roller <strong class="sets">2×10</strong></li>
+              <li>Side plank <strong class="sets">10×10s/side</strong></li>
+              <li>Bird-dog <strong class="sets">10×10s/side</strong></li>
             </ul>
           </li>
           <li><strong>Bretzel</strong> — 3×/side</li>
@@ -129,67 +119,67 @@
   <main class="days">
     <section class="day">
       <h2>Day 1 — Lower (Squat–Hinge) + Trunk</h2>
-      <h3>Power (5–8 min, full rest)</h3>
+      <h3>Power</h3>
       <ul class="tight">
-        <li>Kneeling landmine push press — <strong>3×8</strong> <span class="muted">(stop before speed drops)</span></li>
+        <li>Single-arm kettlebell swings <strong class="sets">2×15/side</strong> <span class="wt"></span></li>
       </ul>
 
-      <h3>Strength (35–45 min)</h3>
+      <h3>Strength</h3>
       <ol class="tight">
-        <li>Front squat (elevated heels) — <strong>4×5 @ RPE 7–8</strong></li>
-        <li>Barbell Romanian deadlift — <strong>3×6–8 @ RPE 7</strong></li>
-        <li>Front-foot-elevated split squat (goblet) — <strong>3×8/side @ RPE 7</strong></li>
-        <li>Suitcase carry — <strong>3×30–40m/side</strong></li>
+        <li>Front squat (elevated heels) <strong class="sets">4×5</strong> <span class="wt"></span></li>
+        <li>Barbell Romanian deadlift <strong class="sets">3×6–8</strong> <span class="wt"></span></li>
+        <li>Front-foot-elevated split squat (goblet) <strong class="sets">3×8/side</strong> <span class="wt"></span></li>
+        <li>Suitcase carry <strong class="sets">3×30–40m/side</strong> <span class="wt"></span></li>
       </ol>
 
-      <h3>Prehab/Balance (8–12 min)</h3>
+      <h3>Prehab/Balance</h3>
       <ul class="tight">
-        <li>Nordic hamstring (controlled eccentrics) — <strong>2×4–6</strong></li>
-        <li>Pallof press (cable) — <strong>2×10/side</strong> (2s hold)</li>
+        <li>Copenhagen adduction <strong class="sets">2×8–12/side</strong> <span class="wt"></span></li>
+        <li>Pallof press (cable, 2s hold) <strong class="sets">2×10/side</strong> <span class="wt"></span></li>
       </ul>
     </section>
 
     <section class="day">
       <h2>Day 2 — Upper Push/Pull + Rotation Control</h2>
-      <h3>Power (5–8 min)</h3>
+      <h3>Power</h3>
       <ul class="tight">
-        <li>Cable “speed press” (split-stance; light load, explosive concentric) — <strong>5×3</strong></li>
+        <li>Plyometric push-ups <strong class="sets">5×3</strong> <span class="wt"></span></li>
       </ul>
 
-      <h3>Strength (35–45 min)</h3>
+      <h3>Strength</h3>
       <ol class="tight">
-        <li>Barbell bench press — <strong>4×5–6 @ RPE 7–8</strong></li>
-        <li>Military press (strict OHP) — <strong>2×6–10 @ RPE 7</strong></li>
-        <li>1-arm cable row — <strong>3×8/side @ RPE 7</strong> <span class="muted">(pause + full reach)</span></li>
-        <li>Pull ups — <strong>3×AMRAP @ RPE 7–8</strong></li>
+        <li>Barbell bench press <strong class="sets">4×5–6</strong> <span class="wt"></span></li>
+        <li>Military press <strong class="sets">2×6–10</strong> <span class="wt"></span></li>
+        <li>1-arm cable row <strong class="sets">3×8/side</strong> <span class="wt"></span></li>
+        <li>1-arm pull downs <strong class="sets">3×8/side</strong> <span class="wt"></span></li>
       </ol>
 
-      <h3>Prehab/Rotation (8–12 min)</h3>
+      <h3>Prehab/Rotation</h3>
       <ul class="tight">
-        <li>Copenhagen adduction — <strong>2×8–12/side</strong></li>
-        <li>Cable external rotation @ ~90° <strong>+</strong> face-pulls — <strong>2×12–15 each</strong></li>
+        <li>Cable external rotation @ ~90° <strong class="sets">2×12–15</strong> <span class="wt"></span></li>
+        <li>Face-pulls <strong class="sets">2×12–15</strong> <span class="wt"></span></li>
       </ul>
     </section>
 
     <section class="day">
       <h2>Day 3 — Posterior Chain + Unilateral/Rotation</h2>
-      <h3>Power (5–8 min)</h3>
+      <h3>Power</h3>
       <ul class="tight">
-        <li>Landmine rotational clean-to-press — <strong>3×3/side</strong> <span class="muted">(full rest 60–90s)</span></li>
+        <li>Landmine rotational clean-to-press <strong class="sets">3×3/side</strong> <span class="wt"></span></li>
       </ul>
 
-      <h3>Strength (35–45 min)</h3>
+      <h3>Strength</h3>
       <ol class="tight">
-        <li>Conventional deadlift (from floor or 2″ blocks) — <strong>4×3–5 @ RPE 7–8</strong></li>
-        <li>Walking lunge (plates held at sides or chest) — <strong>3×8/leg @ RPE 7</strong></li>
-        <li>Seated cable row — <strong>3×8–10 @ RPE 7</strong></li>
-        <li>Cable chop <strong>or</strong> cable lift — <strong>2–3×10/side</strong></li>
+        <li>Conventional deadlift <strong class="sets">4×3–5</strong> <span class="wt"></span></li>
+        <li>Walking lunge <strong class="sets">3×8/leg</strong> <span class="wt"></span></li>
+        <li>Seated cable row <strong class="sets">3×8–10</strong> <span class="wt"></span></li>
+        <li>Cable chop <strong class="sets">2×10/side</strong> <span class="wt"></span></li>
       </ol>
 
-      <h3>Prehab/Balance (8–12 min)</h3>
+      <h3>Prehab/Balance</h3>
       <ul class="tight">
-        <li>Nordic hamstring (lighter) — <strong>2×3–5</strong></li>
-        <li>Single-leg RDL (bodyweight reach or light plate reach) — <strong>2×8/side</strong> (slow)</li>
+        <li>Nordic hamstring <strong class="sets">2×3–5</strong> <span class="wt"></span></li>
+        <li>Single-leg RDL <strong class="sets">2×8/side</strong> <span class="wt"></span></li>
       </ul>
     </section>
   </main>
