@@ -477,6 +477,8 @@
       "katsu curry paste": "2 tbsp",
       "stock (chicken or vegetable)": "2.5 cups",
       "red pepper, chopped": "1",
+      "onion, chopped": "1",
+      "broccoli, chopped": "1 head",
       "soy sauce": "to taste (optional)"
     },
     "cookware": [
@@ -492,7 +494,7 @@
         "text": "Combine coconut milk, katsu curry paste, and stock in a large pot or deep oven-safe dish. Stir to mix."
       },
       {
-        "text": "Add the chicken breast, noodles, and chopped red pepper to the pot."
+        "text": "Add the chicken breast, noodles, chopped red pepper, onion, and broccoli to the pot."
       },
       {
         "text": "Bake for 45 minutes, until chicken is cooked through."
