@@ -467,5 +467,42 @@
         "text": "Tips: No celery? Still great. No sausage? Use chicken only, add extra seasoning + a bit more salt. Too dry? Splash in broth and cover a few minutes. Too wet? Uncover and simmer a few minutes to reduce."
       }
     ]
+  },
+  {
+    "name": "Chicken Katsu Curry Noodles",
+    "ingredients": {
+      "chicken breast": "~10 oz (about 2 breasts)",
+      "noodles": "7 oz",
+      "coconut milk": "1 can (13.5 oz)",
+      "katsu curry paste": "2 tbsp",
+      "stock (chicken or vegetable)": "2.5 cups",
+      "red pepper, chopped": "1",
+      "onion, chopped": "1",
+      "broccoli, chopped": "1 head",
+      "soy sauce": "to taste (optional)",
+      "sesame oil": "1 tbsp"
+    },
+    "cookware": [
+      "oven",
+      "large pot or deep pan"
+    ],
+    "effort": "low+",
+    "steps": [
+      {
+        "text": "Preheat oven to 400°F."
+      },
+      {
+        "text": "Combine coconut milk, katsu curry paste, and stock in a large pot or deep oven-safe dish. Stir to mix."
+      },
+      {
+        "text": "Add the chicken breast, noodles, chopped red pepper, onion, and broccoli to the pot."
+      },
+      {
+        "text": "Bake for 45 minutes, until chicken is cooked through."
+      },
+      {
+        "text": "(Optional) Add soy sauce to taste before serving."
+      }
+    ]
   }
 ]
