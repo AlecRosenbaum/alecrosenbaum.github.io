@@ -506,6 +506,53 @@
     ]
   },
   {
+    "name": "Zucchini Bread",
+    "ingredients": {
+      "all-purpose flour": "3 cups",
+      "salt": "1 tsp",
+      "baking soda": "1 tsp",
+      "baking powder": "1 tsp",
+      "ground cinnamon": "1 1/2 tsp",
+      "ground nutmeg": "1 1/2 tsp",
+      "eggs": "3",
+      "extra virgin olive oil": "1 cup",
+      "white sugar": "2 1/4 cups",
+      "vanilla extract": "3 tsp + an extra cap",
+      "zucchini (grated)": "2 cups",
+      "walnuts (chopped)": "1 cup"
+    },
+    "cookware": [
+      "oven",
+      "two 8x4 inch loaf pans",
+      "2 mixing bowls",
+      "sifter"
+    ],
+    "effort": "medium",
+    "steps": [
+      {
+        "text": "Preheat oven to 325°F. Grease and flour two 8x4 inch loaf pans."
+      },
+      {
+        "text": "Sift flour, salt, baking powder, baking soda, cinnamon, and nutmeg together in a bowl."
+      },
+      {
+        "text": "Beat eggs, olive oil, vanilla, and sugar together in a large bowl."
+      },
+      {
+        "text": "Add the sifted dry ingredients to the wet mixture and beat well."
+      },
+      {
+        "text": "Stir in grated zucchini and chopped walnuts until well combined."
+      },
+      {
+        "text": "Pour batter into the two prepared loaf pans."
+      },
+      {
+        "text": "Bake for 40 to 60 minutes, or until a toothpick inserted in the center comes out clean."
+      }
+    ]
+  },
+  {
     "name": "Greek Yogurt Muffins",
     "ingredients": {
       "all-purpose flour": "3/4 cup",
