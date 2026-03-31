@@ -509,46 +509,48 @@
     "name": "Zucchini Bread",
     "ingredients": {
       "all-purpose flour": "3 cups",
-      "salt": "1 tsp",
-      "baking soda": "1 tsp",
-      "baking powder": "1 tsp",
-      "ground cinnamon": "1 1/2 tsp",
-      "ground nutmeg": "1 1/2 tsp",
-      "eggs": "3",
+      "salt": "1 teaspoon",
+      "baking powder": "1 teaspoon",
+      "baking soda": "1 teaspoon",
+      "ground cinnamon": "1 1/2 teaspoons",
+      "ground nutmeg": "1 1/2 teaspoons",
+      "large eggs": "3",
       "extra virgin olive oil": "1 cup",
       "white sugar": "2 1/4 cups",
-      "vanilla extract": "3 tsp + an extra cap",
-      "zucchini (grated)": "2 cups",
-      "walnuts (chopped)": "1 cup"
+      "vanilla extract": "3 teaspoons + an extra cap",
+      "shredded zucchini": "2 cups",
+      "chopped walnuts": "1 cup"
     },
     "cookware": [
       "oven",
-      "two 8x4 inch loaf pans",
-      "2 mixing bowls",
-      "sifter"
+      "two 8x4-inch loaf pans",
+      "2 large mixing bowls",
+      "electric mixer",
+      "sifter",
+      "wire rack"
     ],
     "effort": "medium",
     "steps": [
       {
-        "text": "Preheat oven to 325°F. Grease and flour two 8x4 inch loaf pans."
+        "text": "Preheat the oven to 325°F (165°C). Grease and flour two 8x4-inch loaf pans."
       },
       {
-        "text": "Sift flour, salt, baking powder, baking soda, cinnamon, and nutmeg together in a bowl."
+        "text": "Sift flour, salt, baking powder, baking soda, cinnamon, and nutmeg together in a large bowl."
       },
       {
-        "text": "Beat eggs, olive oil, vanilla, and sugar together in a large bowl."
+        "text": "Beat eggs, olive oil, sugar, and vanilla together in a separate large bowl with an electric mixer until combined; add flour mixture and beat well."
       },
       {
-        "text": "Add the sifted dry ingredients to the wet mixture and beat well."
+        "text": "Stir in shredded zucchini and chopped walnuts until well combined."
       },
       {
-        "text": "Stir in grated zucchini and chopped walnuts until well combined."
+        "text": "Pour batter into the prepared pans."
       },
       {
-        "text": "Pour batter into the two prepared loaf pans."
+        "text": "Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 40 to 60 minutes. Cool in the pans on a wire rack for 20 minutes."
       },
       {
-        "text": "Bake for 40 to 60 minutes, or until a toothpick inserted in the center comes out clean."
+        "text": "Run a table knife around the edges to loosen. Invert carefully onto a wire rack and let cool completely."
       }
     ]
   },
