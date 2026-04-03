@@ -601,5 +601,51 @@
         "text": "Remove from oven, then transfer muffins to a wire rack to cool fully."
       }
     ]
+  },
+  {
+    "name": "Slow Cooker Butter Chicken",
+    "ingredients": {
+      "coconut oil": "2 tbsp",
+      "yellow onion (chopped)": "1 large",
+      "garlic (minced)": "5 cloves",
+      "fresh ginger (chopped)": "1 inch knob",
+      "ground turmeric": "2 tsp",
+      "garam masala": "1 tbsp",
+      "cumin": "1 tbsp",
+      "chili powder": "1 tsp",
+      "sea salt": "1 tsp",
+      "ground pepper": "1/2 tsp",
+      "cayenne (optional)": "1/2 tsp",
+      "ground cinnamon": "1/2 tsp",
+      "boneless skinless chicken breast": "2 lbs, chopped into chunks",
+      "full fat coconut milk": "1 15oz can",
+      "tomato sauce": "1 15oz can",
+      "cinnamon stick": "1",
+      "fresh lemon juice": "2 tbsp",
+      "frozen green beans (thawed, optional)": "2 cups",
+      "chopped cilantro": "1/4 cup"
+    },
+    "cookware": [
+      "slow cooker",
+      "large skillet"
+    ],
+    "effort": "medium",
+    "steps": [
+      {
+        "text": "Add coconut oil to a large skillet and cook onion and garlic until soft and fragrant, about 5 minutes."
+      },
+      {
+        "text": "Add fresh ginger, turmeric, garam masala, cumin, chili powder, salt, pepper, cinnamon and cayenne and toss to combine. Cook for another 1-2 minutes."
+      },
+      {
+        "text": "Transfer onion and garlic mixture into your slow cooker. Add chicken, coconut milk, tomato sauce, lemon juice and cinnamon stick."
+      },
+      {
+        "text": "Cover and cook on high for 3 hours or low for 6 hours. Add green beans when there's about 1 hour left in the cooking process."
+      },
+      {
+        "text": "Serve butter chicken over cauliflower rice (or regular rice) with fresh cilantro and a wedge of lemon for squeezing."
+      }
+    ]
   }
 ]
