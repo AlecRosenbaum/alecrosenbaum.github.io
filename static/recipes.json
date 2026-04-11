@@ -647,5 +647,44 @@
         "text": "Serve butter chicken over cauliflower rice (or regular rice) with fresh cilantro and a wedge of lemon for squeezing."
       }
     ]
+  },
+  {
+    "name": "Slow Cooker Curried Lentil Soup",
+    "ingredients": {
+      "green lentils": "2 cups",
+      "diced carrots": "1½ cups (approx. 3 carrots)",
+      "diced celery": "1½ cups (approx. 3 stalks)",
+      "yellow onion (diced)": "1 medium",
+      "garlic (minced)": "3 cloves",
+      "dried bay leaf": "1",
+      "curry powder": "1 tbsp",
+      "dried thyme": "1 tsp",
+      "cumin": "1 tsp",
+      "ground coriander": "½ tsp",
+      "smoked paprika": "½ tsp",
+      "turmeric": "¼ tsp",
+      "white pepper": "⅛ tsp",
+      "cayenne pepper (optional)": "¼ tsp",
+      "sea salt": "1–1.5 tsp",
+      "black pepper": "¼ tsp",
+      "chopped kale": "2 cups",
+      "vegetable broth": "7 cups",
+      "white vinegar or lime juice (optional)": "½ tsp"
+    },
+    "cookware": [
+      "5-quart slow cooker or larger"
+    ],
+    "effort": "low",
+    "steps": [
+      {
+        "text": "Add everything to the slow cooker and stir to combine. Cook on low for 6–8 hours or high for 3–4 hours, until vegetables and lentils have softened. Taste for salt. If desired, add ½ tsp vinegar/lime juice."
+      },
+      {
+        "text": "Serve with crusty bread. Garnish with chopped cilantro and/or a dollop of Greek yogurt/sour cream."
+      },
+      {
+        "text": "Notes: A touch of vinegar helps balance the warm, earthy flavors. Works with green or brown lentils. Curly kale is recommended, but lacinato/Tuscan/dinosaur kale works too. Stores in the fridge 3–4 days."
+      }
+    ]
   }
 ]
