@@ -17,6 +17,9 @@
   .recipe-title:hover {
     text-decoration: underline;
   }
+  .recipe {
+    scroll-margin-top: 20px;
+  }
   #search-input {
     padding: 10px;
     margin: 20px 0;
@@ -50,10 +53,44 @@
   var container = document.getElementById('recipes-container');
   var searchInput = document.getElementById('search-input');
   var allRecipes = [];
+  var openSlugs = new Set();
+  var initialScrollDone = false;
+
+  function slugify(name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
+
+  function currentHashSlug() {
+    try {
+      return decodeURIComponent(location.hash.replace(/^#/, ''));
+    } catch (e) {
+      return location.hash.replace(/^#/, '');
+    }
+  }
+
+  function setHash(slug) {
+    var newUrl = location.pathname + location.search + (slug ? '#' + slug : '');
+    history.replaceState(null, '', newUrl);
+  }
+
+  function setOpen(div, title, recipe, open) {
+    var content = div.querySelector('.recipe-content');
+    if (open) {
+      content.classList.add('open');
+      title.textContent = '[-] ' + recipe.name;
+      openSlugs.add(div.id);
+    } else {
+      content.classList.remove('open');
+      title.textContent = '[+] ' + recipe.name;
+      openSlugs.delete(div.id);
+    }
+  }
 
   function renderRecipe(recipe) {
+    var slug = slugify(recipe.name);
     var div = document.createElement('div');
     div.className = 'recipe';
+    div.id = slug;
     div.dataset.name = recipe.name.toLowerCase();
 
     var title = document.createElement('h2');
@@ -98,12 +135,22 @@
     content.appendChild(stepsList);
 
     title.addEventListener('click', function() {
-      var isOpen = content.classList.toggle('open');
-      title.textContent = (isOpen ? '[-] ' : '[+] ') + recipe.name;
+      var willOpen = !content.classList.contains('open');
+      setOpen(div, title, recipe, willOpen);
+      if (willOpen) {
+        setHash(slug);
+      } else if (currentHashSlug() === slug) {
+        setHash('');
+      }
     });
 
     div.appendChild(title);
     div.appendChild(content);
+
+    if (openSlugs.has(slug)) {
+      setOpen(div, title, recipe, true);
+    }
+
     return div;
   }
 
@@ -114,7 +161,27 @@
     recipes.forEach(function(recipe) {
       container.appendChild(renderRecipe(recipe));
     });
+    handleHash();
   }
+
+  function handleHash() {
+    var slug = currentHashSlug();
+    if (!slug) return;
+    var el = document.getElementById(slug);
+    if (!el) return;
+    var title = el.querySelector('.recipe-title');
+    var content = el.querySelector('.recipe-content');
+    if (title && content && !content.classList.contains('open')) {
+      var recipe = allRecipes.find(function(r) { return slugify(r.name) === slug; });
+      if (recipe) setOpen(el, title, recipe, true);
+    }
+    if (!initialScrollDone) {
+      el.scrollIntoView({ behavior: 'auto', block: 'start' });
+      initialScrollDone = true;
+    }
+  }
+
+  window.addEventListener('hashchange', handleHash);
 
   function filterRecipes(query) {
     var q = query.toLowerCase();
