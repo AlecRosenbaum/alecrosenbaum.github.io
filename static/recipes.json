@@ -728,5 +728,46 @@
         "text": "(Optional) Garnish with fresh parsley, basil, Parmesan cheese, croutons, or a dollop of sour cream. For a creamy version, stir in 1/2 cup of half and half about 5 minutes before the soup is done."
       }
     ]
+  },
+  {
+    "name": "Slow Cooker Chili",
+    "ingredients": {
+      "ground beef": "1 lb",
+      "onion (diced)": "1",
+      "bell peppers (diced, green preferred)": "1-2",
+      "mushroom (sliced, optional)": "to taste",
+      "dark red kidney beans": "1 can",
+      "black beans": "1 can",
+      "pureed tomato": "1 can",
+      "paprika": "1 tbsp",
+      "chili powder": "1 tsp",
+      "semi-sweet chocolate chips (optional)": "1 tbsp",
+      "salt": "to taste"
+    },
+    "cookware": [
+      "slow cooker",
+      "skillet"
+    ],
+    "effort": "low",
+    "steps": [
+      {
+        "text": "Brown the ground beef in a skillet over medium-high heat, breaking it up as it cooks. Drain excess fat."
+      },
+      {
+        "text": "Add the browned beef to the slow cooker along with the diced onion, diced bell peppers, and sliced mushroom (if using)."
+      },
+      {
+        "text": "Drain and rinse the kidney beans and black beans, then add them to the slow cooker along with the pureed tomato."
+      },
+      {
+        "text": "Stir in the paprika and chili powder. Add the chocolate chips if using (they round out the flavor)."
+      },
+      {
+        "text": "Cover and slow cook for 4-6 hours."
+      },
+      {
+        "text": "Salt to taste before serving."
+      }
+    ]
   }
 ]
