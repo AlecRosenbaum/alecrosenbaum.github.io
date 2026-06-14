@@ -745,19 +745,15 @@
       "salt": "to taste"
     },
     "cookware": [
-      "slow cooker",
-      "skillet"
+      "slow cooker"
     ],
     "effort": "low",
     "steps": [
       {
-        "text": "Brown the ground beef in a skillet over medium-high heat, breaking it up as it cooks. Drain excess fat."
+        "text": "Add the ground beef, diced onion, diced bell peppers, and sliced mushroom (if using) to the slow cooker."
       },
       {
-        "text": "Add the browned beef to the slow cooker along with the diced onion, diced bell peppers, and sliced mushroom (if using)."
-      },
-      {
-        "text": "Drain and rinse the kidney beans and black beans, then add them to the slow cooker along with the pureed tomato."
+        "text": "Add the kidney beans and black beans (with their can juices) along with the pureed tomato."
       },
       {
         "text": "Stir in the paprika and chili powder. Add the chocolate chips if using (they round out the flavor)."
