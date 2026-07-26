@@ -765,5 +765,41 @@
         "text": "Salt to taste before serving."
       }
     ]
+  },
+  {
+    "name": "Slow Cooker Summer Squash & Chicken Curry",
+    "ingredients": {
+      "boneless chicken thigh (cut into chunks)": "1 lb",
+      "coconut milk": "1 can (13.5 oz)",
+      "diced onion": "2 cups",
+      "minced fresh ginger": "2 Tbsp",
+      "garlic (minced)": "3 cloves",
+      "yellow summer squash (cut into 1/2-inch cubes)": "1 medium (~1.5 cups)",
+      "zucchini (cut into 1/2-inch cubes)": "1 large or 2 small (~1.5 cups)",
+      "salt": "1 tsp",
+      "garam masala": "2 tsp",
+      "ground coriander": "1 tsp",
+      "ground cumin": "1 tsp",
+      "ground turmeric": "1 tsp",
+      "freshly ground black pepper": "to taste",
+      "chickpeas (drained and rinsed)": "one 15 oz can",
+      "tomato sauce or petite-diced tomatoes": "one 16 oz can sauce or one 14 oz can diced (your preference)",
+      "cooked rice (preferably brown basmati)": "for serving"
+    },
+    "cookware": [
+      "slow cooker"
+    ],
+    "effort": "easy",
+    "steps": [
+      {
+        "text": "Add everything except the rice to the slow cooker: chicken thigh chunks, coconut milk, onion, ginger, garlic, summer squash, zucchini, salt, garam masala, coriander, cumin, turmeric, black pepper, chickpeas, and the tomato sauce (or diced tomatoes). Stir to combine."
+      },
+      {
+        "text": "Cover and cook on low for 6-8 hours or on high for 3-4 hours, until the chicken is cooked through and the squash and zucchini are tender."
+      },
+      {
+        "text": "Serve the curry over rice (preferably brown basmati)."
+      }
+    ]
   }
 ]
