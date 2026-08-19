@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive" />
+<title>Days Since Last Incident</title>
+<style>
+  :root {
+    --page: #e9e9e6;
+    --sign: #ffffff;
+    --ink: #14161a;
+    --banner-bg: #2e7d4f;
+    --hairline: #c9c9c4;
+    --muted: #55585e;
+    --poo: #6b4423;
+    --poo-mid: #8a5a2b;
+    --poo-light: #a9743c;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--page);
+    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    color: var(--ink);
+    transition: background 600ms ease;
+    overflow: hidden;
+  }
+  .board {
+    width: min(720px, 100%);
+    background: var(--sign);
+    border: 3px solid var(--ink);
+    border-radius: 10px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+    padding: 26px 28px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: border-color 400ms ease, box-shadow 400ms ease;
+  }
+  .banner {
+    background: var(--banner-bg);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: clamp(10px, 2.1vw, 14px);
+    padding: 9px 12px;
+    border-radius: 3px;
+    transition: background 400ms ease;
+  }
+  h1 {
+    margin: 24px 0 16px;
+    font-size: clamp(15px, 3.6vw, 26px);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  /* The unfortunate word. */
+  .poo {
+    color: var(--poo);
+    background: linear-gradient(180deg, var(--poo-light) 0%, var(--poo-mid) 45%, var(--poo) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+    filter: drop-shadow(0 1px 1px rgba(75, 46, 20, 0.45));
+  }
+  h1 .poo {
+    font-size: 1.12em;
+    letter-spacing: 0.1em;
+    display: inline-block;
+  }
+  h1 .poo::after {
+    content: " \1F4A9";
+    -webkit-text-fill-color: initial;
+    filter: none;
+    font-size: 0.8em;
+    vertical-align: 0.05em;
+  }
+
+  .digits {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 0 16px;
+  }
+  .digit {
+    background: var(--sign);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    border-radius: 6px;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.12);
+    font-family: "Courier New", ui-monospace, monospace;
+    font-size: clamp(56px, 17vw, 130px);
+    font-weight: 700;
+    line-height: 1;
+    padding: 12px clamp(10px, 3vw, 24px);
+    transition: color 400ms ease, border-color 400ms ease, background 400ms ease;
+  }
+  .unit {
+    font-size: clamp(13px, 2.8vw, 18px);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .rule { height: 1px; background: var(--hairline); margin: 20px 0 14px; }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 28px;
+    font-size: clamp(11px, 2.2vw, 13px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .meta b { font-weight: 700; color: var(--ink); }
+  footer {
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8d9096;
+  }
+
+  /* ---------------------------------------------------------------
+     DOOMSDAY — engaged only while the counter reads zero.
+     --------------------------------------------------------------- */
+  .rain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+    display: none;
+  }
+  .doomsday .rain { display: block; }
+  .rain span {
+    position: absolute;
+    top: -12vh;
+    font-size: 28px;
+    animation: fall linear infinite;
+    opacity: 0.85;
+  }
+  @keyframes fall {
+    from { transform: translateY(-12vh) rotate(0deg); }
+    to   { transform: translateY(115vh) rotate(360deg); }
+  }
+
+  body.doomsday {
+    background:
+      radial-gradient(circle at 50% 20%, #7a5a33 0%, #4a341d 45%, #241a0f 100%);
+    animation: klaxon 1.6s ease-in-out infinite;
+  }
+  @keyframes klaxon {
+    0%, 100% { box-shadow: inset 0 0 140px rgba(150, 40, 20, 0.35); }
+    50%      { box-shadow: inset 0 0 220px rgba(190, 60, 25, 0.7); }
+  }
+
+  .doomsday .board {
+    border-color: var(--poo);
+    box-shadow: 0 0 0 6px rgba(107, 68, 35, 0.35), 0 24px 60px rgba(0,0,0,0.6);
+    animation: tremble 320ms steps(2, end) infinite;
+  }
+  @keyframes tremble {
+    0%   { transform: translate(0, 0) rotate(0deg); }
+    50%  { transform: translate(1px, -1px) rotate(-0.15deg); }
+    100% { transform: translate(-1px, 1px) rotate(0.15deg); }
+  }
+
+  .doomsday .banner {
+    background: repeating-linear-gradient(
+      45deg, #8a5a2b 0 14px, #3f2a14 14px 28px
+    );
+    animation: flashband 900ms steps(1, end) infinite;
+  }
+  @keyframes flashband {
+    0%, 49%   { color: #ffd9a0; }
+    50%, 100% { color: #ff6b3d; }
+  }
+
+  .doomsday h1 { color: #f3e6d5; }
+  .doomsday h1 .poo { font-size: 1.45em; animation: swell 1.2s ease-in-out infinite; }
+  .doomsday h1 .poo::after { content: " \1F4A9\1F4A9\1F4A9"; }
+  @keyframes swell {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.08); }
+  }
+
+  .doomsday .digit {
+    background: #2b1d10;
+    color: var(--poo-light);
+    border-color: var(--poo);
+    box-shadow: 0 0 24px rgba(169, 116, 60, 0.5), 0 4px 0 rgba(0,0,0,0.4);
+    animation: throb 1.6s ease-in-out infinite;
+  }
+  @keyframes throb {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.55; }
+  }
+
+  .doomsday .unit,
+  .doomsday .meta { color: #d8c3a5; }
+  .doomsday .meta b { color: #ffd9a0; }
+  .doomsday .rule { background: rgba(169, 116, 60, 0.5); }
+  .doomsday .board { background: #1d1409; }
+  .doomsday footer { color: #b08b5c; }
+
+  @media (prefers-reduced-motion: reduce) {
+    body.doomsday,
+    .doomsday .board,
+    .doomsday .banner,
+    .doomsday .digit,
+    .doomsday h1 .poo,
+    .rain span { animation: none; }
+    .rain { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="rain" id="rain" aria-hidden="true"></div>
+
+  <main class="board">
+    <div class="banner" id="banner">Safety is everyone&rsquo;s responsibility</div>
+
+    <h1 id="headline">Days since last <span class="poo">incident</span></h1>
+
+    <div class="digits" id="digits" aria-hidden="true"></div>
+    <p id="readout" style="position:absolute;left:-9999px"></p>
+    <div class="unit" id="unit">Days</div>
+
+    <div class="rule"></div>
+
+    <div class="meta">
+      <div>Last <span class="poo">incident</span>: <b id="last-incident"></b></div>
+      <div>Previous record: <b id="record">&mdash;</b></div>
+    </div>
+
+    <footer id="footer">This board resets automatically. Please do not test it.</footer>
+  </main>
+
+<script>
+  // Date of the most recent incident (local time).
+  var LAST_INCIDENT = "2026-08-18";
+  // Longest previous streak, in days. Update by hand when a record falls.
+  var RECORD = 0;
+
+  var CALM = {
+    banner: "Safety is everyone’s responsibility",
+    unit: "Days",
+    footer: "This board resets automatically. Please do not test it."
+  };
+  var DOOM = {
+    banner: "⚠ Containment breached — code brown in effect ⚠",
+    unit: "Days — streak terminated",
+    footer: "All personnel: hold your breath and remain calm."
+  };
+
+  function parseLocalDate(s) {
+    var p = s.split("-");
+    return new Date(+p[0], +p[1] - 1, +p[2]);
+  }
+
+  function daysSince(dateStr) {
+    var then = parseLocalDate(dateStr);
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.max(0, Math.round((today - then) / 86400000));
+  }
+
+  function seedRain() {
+    var rain = document.getElementById("rain");
+    if (rain.childElementCount) return;
+    for (var i = 0; i < 24; i++) {
+      var s = document.createElement("span");
+      s.textContent = "💩";
+      s.style.left = (Math.random() * 100).toFixed(2) + "vw";
+      s.style.fontSize = (18 + Math.random() * 30).toFixed(0) + "px";
+      s.style.animationDuration = (4 + Math.random() * 6).toFixed(2) + "s";
+      s.style.animationDelay = (-Math.random() * 10).toFixed(2) + "s";
+      rain.appendChild(s);
+    }
+  }
+
+  function render() {
+    var count = daysSince(LAST_INCIDENT);
+    var doom = count === 0;
+    var copy = doom ? DOOM : CALM;
+
+    var text = String(count);
+    while (text.length < 2) text = "0" + text;
+
+    var box = document.getElementById("digits");
+    box.innerHTML = "";
+    text.split("").forEach(function (ch) {
+      var d = document.createElement("div");
+      d.className = "digit";
+      d.textContent = ch;
+      box.appendChild(d);
+    });
+
+    document.body.classList.toggle("doomsday", doom);
+    if (doom) seedRain();
+
+    document.getElementById("banner").textContent = copy.banner;
+    document.getElementById("unit").textContent = copy.unit;
+    document.getElementById("footer").textContent = copy.footer;
+
+    document.getElementById("readout").textContent = count + " days since the last incident.";
+    document.getElementById("last-incident").textContent =
+      parseLocalDate(LAST_INCIDENT).toLocaleDateString(undefined, {
+        year: "numeric", month: "long", day: "numeric"
+      });
+    document.getElementById("record").textContent = RECORD + " days";
+    document.title = (doom ? "💩 " : "") + count + " days since last incident";
+  }
+
+  render();
+  // Roll over without a refresh if the page is left open past midnight.
+  setInterval(render, 60000);
+</script>
+</body>
+</html>
