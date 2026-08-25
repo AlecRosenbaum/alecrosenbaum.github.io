@@ -73,6 +73,57 @@
     history.replaceState(null, '', newUrl);
   }
 
+  // Keep the screen awake while a recipe is open, so a phone propped up on the
+  // counter doesn't sleep mid-cook. No-ops where the API is unavailable.
+  var wakeLockSupported = 'wakeLock' in navigator;
+  var wakeLock = null;
+  var wakeLockPending = false;
+
+  function requestWakeLock() {
+    if (!wakeLockSupported || wakeLock || wakeLockPending) return;
+    // The API only grants a lock to a visible page.
+    if (document.visibilityState !== 'visible') return;
+    wakeLockPending = true;
+    navigator.wakeLock.request('screen').then(function(lock) {
+      wakeLockPending = false;
+      if (openSlugs.size === 0) {
+        // Everything was collapsed again before the lock arrived.
+        lock.release().catch(function() {});
+        return;
+      }
+      wakeLock = lock;
+      lock.addEventListener('release', function() {
+        // Also fires when the browser drops the lock (page hidden, etc).
+        if (wakeLock === lock) wakeLock = null;
+      });
+    }).catch(function() {
+      // Denied by the browser (hidden page, battery saver, permissions policy).
+      wakeLockPending = false;
+    });
+  }
+
+  function releaseWakeLock() {
+    if (!wakeLock) return;
+    var lock = wakeLock;
+    wakeLock = null;
+    lock.release().catch(function() {});
+  }
+
+  function syncWakeLock() {
+    if (openSlugs.size > 0) {
+      requestWakeLock();
+    } else {
+      releaseWakeLock();
+    }
+  }
+
+  if (wakeLockSupported) {
+    document.addEventListener('visibilitychange', function() {
+      // The lock is released whenever the page is hidden, so take it back.
+      if (document.visibilityState === 'visible') syncWakeLock();
+    });
+  }
+
   function setOpen(div, title, recipe, open) {
     var content = div.querySelector('.recipe-content');
     if (open) {
@@ -84,6 +135,7 @@
       title.textContent = '[+] ' + recipe.name;
       openSlugs.delete(div.id);
     }
+    syncWakeLock();
   }
 
   function renderRecipe(recipe) {
