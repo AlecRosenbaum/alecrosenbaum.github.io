@@ -348,6 +348,25 @@ pre {
   }
 }
 
+.app-list {
+  margin-left: 0;
+  list-style: none;
+
+  > li {
+    margin-bottom: $spacing-unit * 0.75;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+}
+
+.app-description {
+  margin-bottom: 0;
+  color: $grey-color-dark;
+}
+
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;

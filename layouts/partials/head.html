@@ -9,6 +9,10 @@
   <title>{{ .Site.Title }}</title>
 {{- end -}}
 
+{{- with .Params.robots }}
+<meta name="robots" content="{{ . }}">
+{{ end -}}
+
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 
 {{- /* Canonical URL */ -}}

@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="home">
+  <h1 class="page-heading">{{ .Title }}</h1>
+
+  {{ .Content }}
+
+  <ul class="app-list">
+    {{- range sort .Params.apps "name" }}
+    <li>
+      <h2><a class="post-link" href="{{ .url | relURL }}">{{ .name }}</a></h2>
+      {{- with .description }}
+      <p class="app-description">{{ . }}</p>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+</div>
+{{ end }}
