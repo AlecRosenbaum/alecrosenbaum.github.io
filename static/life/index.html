@@ -53,6 +53,8 @@
     border-radius: 14px;
     overflow: hidden;
     background: #333;
+    /* The cq units below measure this panel, not the screen. */
+    container-type: size;
   }
   .player[hidden] { display: none; }
 
@@ -62,6 +64,33 @@
     position: absolute;
     inset: 0;
     display: flex;
+  }
+  .player[data-rot="180"] .inner { transform: rotate(180deg); }
+
+  /* A quarter turn is for a seat that is taller than it is wide: swapping the
+     wrapper's width and height first lets the name, total and tap zones run
+     along the panel's long edge instead of being squeezed across the short one. */
+  .player[data-rot="90"] .inner,
+  .player[data-rot="270"] .inner {
+    inset: auto;
+    top: 50%;
+    left: 50%;
+    width: 100cqh;
+    height: 100cqw;
+  }
+  .player[data-rot="90"] .inner { transform: translate(-50%, -50%) rotate(90deg); }
+  .player[data-rot="270"] .inner { transform: translate(-50%, -50%) rotate(-90deg); }
+
+  /* Held sideways, those seats are already wider than they are tall, so the
+     long edge is the one facing the far side of the phone again. */
+  @media (orientation: landscape) {
+    .player[data-rot="90"] .inner,
+    .player[data-rot="270"] .inner {
+      inset: 0;
+      width: auto;
+      height: auto;
+      transform: rotate(180deg);
+    }
   }
 
   .zone {
@@ -348,7 +377,10 @@
   ];
 
   // Seat layout per player count. Row 1 is the far side of the phone, so those
-  // seats are rotated to face the player sitting there.
+  // seats are rotated to face the player sitting there. The two far seats in a
+  // three-player game are half as wide as the phone and taller than they are
+  // wide, so they take a quarter turn instead: those players sit alongside the
+  // phone and read along the long edge of their panel.
   var SEATS = {
     2: [
       { row: '2', col: '1', rot: 0 },
@@ -356,8 +388,8 @@
     ],
     3: [
       { row: '2', col: '1 / span 2', rot: 0 },
-      { row: '1', col: '1', rot: 180 },
-      { row: '1', col: '2', rot: 180 }
+      { row: '1', col: '1', rot: 270 },
+      { row: '1', col: '2', rot: 90 }
     ],
     4: [
       { row: '2', col: '1', rot: 0 },
@@ -557,7 +589,7 @@
       var seat = seats[i];
       el.seat.style.gridRow = seat.row;
       el.seat.style.gridColumn = seat.col;
-      el.inner.style.transform = seat.rot ? 'rotate(180deg)' : '';
+      el.seat.dataset.rot = seat.rot;
       el.seat.style.background = state.players[i].color;
       el.seat.style.color = inkFor(state.players[i].color);
       paint(i);
