@@ -69,7 +69,8 @@
 
   /* A quarter turn is for a seat that is taller than it is wide: swapping the
      wrapper's width and height first lets the name, total and tap zones run
-     along the panel's long edge instead of being squeezed across the short one. */
+     along the panel's long edge instead of being squeezed across the short one.
+     90 faces a player off the left edge of the phone, 270 one off the right. */
   .player[data-rot="90"] .inner,
   .player[data-rot="270"] .inner {
     inset: auto;
@@ -376,11 +377,11 @@
     { name: 'Player 4', color: '#6b4ea8' }
   ];
 
-  // Seat layout per player count. Row 1 is the far side of the phone, so those
-  // seats are rotated to face the player sitting there. The two far seats in a
-  // three-player game are half as wide as the phone and taller than they are
-  // wide, so they take a quarter turn instead: those players sit alongside the
-  // phone and read along the long edge of their panel.
+  // Seat layout per player count. Every seat is turned so the top of its text
+  // points across the phone, away from the player reading it. The two far seats
+  // in a three-player game are half as wide as the phone and taller than they
+  // are wide, so they take a quarter turn instead of a half: those players sit
+  // along the left and right edges and read across the phone, not up it.
   var SEATS = {
     2: [
       { row: '2', col: '1', rot: 0 },
@@ -388,8 +389,8 @@
     ],
     3: [
       { row: '2', col: '1 / span 2', rot: 0 },
-      { row: '1', col: '1', rot: 270 },
-      { row: '1', col: '2', rot: 90 }
+      { row: '1', col: '1', rot: 90 },
+      { row: '1', col: '2', rot: 270 }
     ],
     4: [
       { row: '2', col: '1', rot: 0 },
