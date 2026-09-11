@@ -32,13 +32,9 @@ title = "Alec Rosenbaum"
     url = "/recipes/"
     weight = 10
   [[menus.utils]]
-    name = "E-ink HN"
-    url = "/hn/"
+    name = "Apps"
+    url = "/apps/"
     weight = 20
-  [[menus.utils]]
-    name = "Lifting"
-    url = "/lifting/"
-    weight = 30
 
 # Image processing configuration
 [imaging]
