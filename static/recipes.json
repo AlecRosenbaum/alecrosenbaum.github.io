@@ -801,5 +801,45 @@
         "text": "Serve the curry over rice (preferably brown basmati)."
       }
     ]
+  },
+  {
+    "name": "Simmered Acorn Squash with Hondashi",
+    "ingredients": {
+      "acorn squash (about 1 medium)": "700 grams",
+      "water": "250 milliliters",
+      "Hondashi granules": "0.5 teaspoons",
+      "sake": "4 tablespoons",
+      "sugar": "1 tablespoon + 1 teaspoon",
+      "soy sauce": "1.3 tablespoons"
+    },
+    "cookware": [
+      "wide, shallow pan with a lid",
+      "drop lid (or parchment with a small hole cut in the center)",
+      "skewer"
+    ],
+    "effort": "easy",
+    "steps": [
+      {
+        "text": "Prep the squash: Halve 700 grams acorn squash (about 1 medium), scoop out the seeds, and cut into roughly 4–5 cm chunks. Leave the skin on (peel off a few strips if it's very tough), and shave off sharp edges so pieces don't crumble while cooking."
+      },
+      {
+        "text": "Arrange in pan: Place the squash skin-side down in a single layer in a wide, shallow pan."
+      },
+      {
+        "text": "Add broth and bring to a boil: Pour in 250 milliliters water and sprinkle in 0.5 teaspoons Hondashi granules, then add 4 tablespoons sake and 1 tablespoon + 1 teaspoon sugar (the extra sake and sugar stand in for mirin). Swirl the pan gently to dissolve, and bring to a boil over medium heat."
+      },
+      {
+        "text": "Simmer covered: Reduce to low, cover with a drop lid (or a piece of parchment with a small hole cut in the center), and simmer gently."
+      },
+      {
+        "text": "Add soy sauce and finish: Add 1.3 tablespoons soy sauce, taste the broth, re-cover, and simmer until a skewer slides through easily. Acorn squash cooks faster than kabocha, so start checking early."
+      },
+      {
+        "text": "Rest: Turn off the heat and let the squash cool in the liquid so it absorbs the flavor. Serve warm or at room temperature, spooning a little broth over the top."
+      },
+      {
+        "text": "Notes: Hondashi is already salted, so the soy sauce is cut back slightly. Taste the broth after adding the soy and add a little more if you'd like it saltier. Adding soy after the sugar lets the sweetness soak in first. Avoid stirring; gently tilt the pan instead. Keeps 3–4 days in the fridge and is even better the next day."
+      }
+    ]
   }
 ]
